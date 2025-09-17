@@ -1,0 +1,11 @@
+@media only screen and (min-width: 60rem) {
+
+    header,main{
+        max-width: 60rem;
+        margin: 0 auto;
+    }
+    .assignments{
+        column-count: 3;
+    }
+
+} /* end media query*/

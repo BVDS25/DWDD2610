@@ -1,0 +1,176 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+body{
+    font-size: 16px;
+    font-family: "SUSE", sans-serif;
+    background: radial-gradient(#8594bf, #abb7cf);
+    min-height: 100vh;
+    color: white;
+    font-family: "Quicksand", serif;
+    font-weight: 300;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: .8rem 2vw;
+    gap: .4rem;
+    text-align: center;
+    font-family: "Aboreto", serif;
+}
+
+/* Logo in header */
+header img{
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    display: block;
+}
+
+header h1{
+    margin: 0;
+}
+
+header h1{
+    font-size: 1rem;
+    font-family: "Aboreto", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+main{
+    margin: 1rem 2%;
+    
+}
+
+section.who {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;}
+
+section.who p {
+    margin: 0;
+    margin-left: .7rem;
+}
+
+section.about {
+    display: block;
+    border: 1px solid rgba(186,186,186,0.35);
+    border-radius: 10px;
+    color: white;
+    padding: 1rem;
+    margin: 1rem 0.9rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent);
+    box-shadow: 0 6px 18px rgba(20,25,40,0.12);
+
+}
+
+section.about img {
+    border-radius: 8px;
+    border: 1px solid #bababa;
+}
+
+/* Layout for the new about-inner / about-text pairing */
+.about-inner{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-text h3{
+    margin: 0 0 0.25rem 0;
+    font-size: 1.05rem;
+    color: #fff;
+}
+
+.about-text p{
+    margin: 0;
+    color: #e8eef8;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+section.about p {
+    margin: 0;
+}
+
+section.about ul{
+    margin: 0;
+    padding: 0;
+    margin-top: 1.2rem;
+}
+
+section.about div {
+    display: flex;
+    flex-direction: column;
+    margin-left: .5rem;
+    width: 100%;
+}
+
+section.about div ul {
+    padding: .5rem;
+    list-style-position: inside;
+}
+
+h2 {
+    font-size: 1rem;
+    font-family: "Quicksand", serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+div.assignments {
+    padding: 1rem 2%;
+}
+
+div.assignments a{
+    display: block;
+    padding: .9rem 1rem;
+    margin-bottom: .6rem;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    color: #6b4b7a;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+div.assignments a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(10,15,30,0.12);
+    background: rgba(255,255,255,1);
+
+}
+
+footer {
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    font-size: .9rem;
+    font-weight: 500;
+    border: 1px solid #bababa;
+    background-color: #dedede;
+    color: #6c7ba7;
+}
+
+/* Small responsive tweaks */
+@media (max-width: 560px) {
+    header{ padding: .6rem 3vw; }
+    header h1{ font-size: 1.05rem; }
+    .about-inner{ flex-direction: row; }
+    .about-text p{ font-size: 0.92rem; }
+    div.assignments a{ padding: .8rem; }
+}
+
+@media (min-width: 561px) {
+    /* On wider screens place photo and text side-by-side */
+    .about-inner{ flex-direction: row; }
+}
