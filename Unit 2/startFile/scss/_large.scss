@@ -4,3 +4,8 @@ header, nav, main {
 }
 
 /* NAVIGATION STUFF GOES HERE  */
+
+nav ul li a{
+    padding: .5rem $gutter;
+    font-size: .9rem;
+}
