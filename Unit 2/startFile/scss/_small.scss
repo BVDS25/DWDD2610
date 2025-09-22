@@ -64,29 +64,56 @@ nav {
 }
 
 
-
-
-
-
-
-
-
-
-
 /* --------------------------- MAIN --------------------------- */
 main {
     h1 {
-        padding: 1rem $gutter.5rem $gutter;
+        padding: 1rem $gutter 0.5rem $gutter;
         font-size: 1.5rem;
         color: $secondaryColor;
-        font-weight: $lightWeight
+        font-weight: $lightWeight;
     }
+
+    /* general paragraphs inside main (body copy) */
     p {
         padding: .5rem $gutter;
         color: #333;
         line-height: $leading;
     }
-}// end main
+
+    /* gallery tiles: each direct child div */
+    > div {
+        padding: .5rem;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    /* image inside a tile keeps its aspect ratio on small screens */
+    > div img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border: 2px solid $primaryColor;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    }
+
+    /* caption inside a tile */
+    > div p {
+        margin-top: 0;
+        flex: 0 0 auto;
+        padding: .5rem;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        text-align: center;
+        font-size: .9rem;
+        background-color: $primaryColor;
+        color: white;
+    }
+
+} // end main
+
 
 
 

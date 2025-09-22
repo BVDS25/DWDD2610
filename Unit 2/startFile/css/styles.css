@@ -362,6 +362,12 @@ nav ul li.active a {
 }
 
 /* --------------------------- MAIN --------------------------- */
+main {
+  /* general paragraphs inside main (body copy) */
+  /* gallery tiles: each direct child div */
+  /* image inside a tile keeps its aspect ratio on small screens */
+  /* caption inside a tile */
+}
 main h1 {
   padding: 1rem 10px 0.5rem 10px;
   font-size: 1.5rem;
@@ -372,6 +378,32 @@ main p {
   padding: 0.5rem 10px;
   color: #333;
   line-height: 150%;
+}
+main > div {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+main > div img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: 2px solid #1d295f;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+main > div p {
+  margin-top: 0;
+  flex: 0 0 auto;
+  padding: 0.5rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: #1d295f;
+  color: white;
 }
 
 /* --------------------------- FOOTER --------------------------- */
@@ -403,15 +435,63 @@ footer a {
   nav ul li a:hover {
     text-decoration: underline 2px #3990c3;
   }
+  /* Medium screens: two-column gallery */
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: start;
+  }
+  main > div {
+    padding: 0.5rem;
+  }
+  main h1 {
+    grid-column: 1/-1;
+  }
+  main img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+  }
 }
 @media only screen and (min-width: 64rem) {
   header, nav, main {
     max-width: 960px;
     margin: auto;
   }
-  /* NAVIGATION STUFF GOES HERE  */
   nav ul li a {
     padding: 0.5rem 10px;
     font-size: 0.9rem;
+  }
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: start;
+  }
+  main h1 {
+    grid-column: 1/-1;
+  }
+  main > div {
+    padding: 0.5rem;
+  }
+  main img {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 3px solid #1d295f;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-color: black;
+  }
+  main p {
+    margin-top: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: #1d295f;
+    color: white;
   }
 }
