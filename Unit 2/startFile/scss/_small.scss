@@ -127,6 +127,8 @@ footer {
     padding: 1rem $gutter;
     color: $greyColor;
     text-align: center;
+    align-items: center;
+
     line-height: $leading;
     a {color: $greyColor;}
 }// end footer
