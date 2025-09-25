@@ -334,12 +334,12 @@ header {
 header span {
   font-size: 1.6rem;
   font-weight: 300;
-  color: #1d295f;
+  color: #3A2310;
 }
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 #navWrapper {
-  background-color: #1d295f;
+  background-color: #3A2310;
 }
 
 nav ul {
@@ -357,7 +357,7 @@ nav ul li a {
 }
 nav ul li.active a {
   background-color: rgba(255, 255, 255, 0.8);
-  color: #1d295f;
+  color: #3A2310;
   border-radius: 10px;
 }
 
@@ -371,7 +371,7 @@ main {
 main h1 {
   padding: 1rem 10px 0.5rem 10px;
   font-size: 1.5rem;
-  color: #7c1d47;
+  color: #4D3728;
   font-weight: 300;
 }
 main p {
@@ -391,7 +391,7 @@ main > div img {
   display: block;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  border: 2px solid #1d295f;
+  border: 2px solid #3A2310;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 main > div p {
@@ -402,13 +402,13 @@ main > div p {
   border-bottom-right-radius: 15px;
   text-align: center;
   font-size: 0.9rem;
-  background-color: #1d295f;
+  background-color: #3A2310;
   color: white;
 }
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-  background-color: #1d295f;
+  background-color: #3A2310;
 }
 
 footer {
@@ -416,6 +416,7 @@ footer {
   padding: 1rem 10px;
   color: #ccc;
   text-align: center;
+  align-items: center;
   line-height: 150%;
 }
 footer a {
@@ -433,7 +434,7 @@ footer a {
     margin: 10px 0;
   }
   nav ul li a:hover {
-    text-decoration: underline 2px #3990c3;
+    text-decoration: underline 2px #E3E1DF;
   }
   /* Medium screens: two-column gallery */
   main {
@@ -481,7 +482,7 @@ footer a {
     display: block;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    border: 3px solid #1d295f;
+    border: 3px solid #3A2310;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     border-color: black;
   }
@@ -491,7 +492,7 @@ footer a {
     border-bottom-right-radius: 15px;
     text-align: center;
     font-size: 0.9rem;
-    background-color: #1d295f;
+    background-color: #3A2310;
     color: white;
   }
 }
