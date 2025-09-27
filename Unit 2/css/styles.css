@@ -436,6 +436,21 @@ footer a {
   nav ul li a:hover {
     text-decoration: underline 2px #E3E1DF;
   }
+  #navWrapper nav ul {
+    display: flex; /* enable flexbox */
+    align-items: center; /* vertical alignment */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    gap: 10px;
+  }
+  #navWrapper nav ul li {
+    margin-right: 1rem; /* spacing between items */
+  }
+  #navWrapper nav ul li:last-child {
+    margin-left: auto;
+  }
   /* Medium screens: two-column gallery */
   main {
     display: grid;

@@ -23,7 +23,7 @@
   <body>
     <div id="headerWrapper">
       <header>
-        <img src="images/ACLogo.png" alt="logo" width="50" height="50" />
+        <a href="Home"><img src="images/logo1x.png" alt="logo" width="50" height="50" srcset="images/logo1x.png 1x,images/logo2x.png 2x, images/logo3x.png 3x "/></a>
         <span>Performing Arts Center</span>
       </header>
     </div>
@@ -32,12 +32,22 @@
     <div id="navWrapper">
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Meetings</a></li>
-          <li class="active"><a href="#">Shows</a></li>
-          <li><a href="#">Education</a></li>
-          <li><a href="#">Support</a></li>
+          <li ><a href="#">Home</a></li>
+          <li ><a href="#">Meetings</a></li>
+          <li class="active"><a href="index.html">Shows</a></li>
+          <li ><a href="#">Education</a></li>
+          <li ><a href="#">Support</a></li>
+        
+          <li>
+            <a href="tel:+18014554873" id="phoneNumber" title="Call us">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor" d="M6.6 10.8a15.05 15.05 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.5.8 3.9.8a1 1 0 011 1V21a1 1 0 01-1 1C9.4 22 2 14.6 2 5a1 1 0 011-1h3.7a1 1 0 011 1c0 1.4.3 2.7.8 3.9a1 1 0 01-.2 1.1L6.6 10.8z"/>
+              </svg>
+              <span>(801) 455 4873</span>
+            </a></li>
+          
         </ul>
+
       </nav>
     </div>
     <!-- end nav wrapper -->
@@ -181,5 +191,40 @@
       </footer>
     </div>
     <!-- end footer wrapper -->
+    
+    <!-- Inline styles for phone icon (keeps changes minimal and overrides minified file) -->
+    <style>
+      /* visually hidden helper */
+      .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+      nav ul li.phone a{display:inline-flex;align-items:center;gap:6px;padding:0.5rem 10px;color:#ccc}
+      nav ul li.phone svg{width:18px;height:18px;display:block;fill:currentColor}
+      nav ul li.phone a:hover, nav ul li.phone a:focus{color:#fff;text-decoration:none}
+      @media only screen and (min-width: 35rem){
+        nav ul{align-items:center}
+      }
+    </style>
+
+    <script>
+      // generate a random 7-digit phone suffix and set tel: link with area code 801
+      (function setRandom801Phone(){
+        try{
+          var area = '801';
+          // ensure a 7-digit number that doesn't start with 0
+          var min = 1000000; var max = 9999999;
+          var seven = Math.floor(Math.random() * (max - min + 1)) + min;
+          var tel = '+1' + area + seven; // E.164 style
+          var formatted = '(' + area + ') ' + seven.toString().slice(0,3) + '-' + seven.toString().slice(3);
+          var link = document.getElementById('phoneLink');
+          if(link){
+            link.setAttribute('href', 'tel:' + tel);
+            link.setAttribute('aria-label', 'Call ' + formatted);
+            link.setAttribute('title', 'Call ' + formatted);
+          }
+        }catch(e){
+          // fail silently
+          console.error(e);
+        }
+      })();
+    </script>
   </body>
 </html>
