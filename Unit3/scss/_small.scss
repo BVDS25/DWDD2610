@@ -1,0 +1,113 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $regularFont;
+    color: $fontcolor;
+}
+
+#headerWrapper {
+    background-color: $secondarycolor;
+    color: $secondarycolor;
+    // padding: 10px 0;
+    // text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem $gutter;
+    gap: 8px;
+
+
+    h1 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: $regularFont;
+        color: $primarycolor;
+        // padding: 0 20px;
+        // font-weight: $lightFont;
+        // font-size: 2.5rem;
+    }
+}
+
+#navWrapper {
+    background-color: $primarycolor;
+}
+
+nav {
+    ul {
+        list-style: none;
+        margin: 0;
+        // padding: 0;
+        display: flex;
+        // justify-content: center;
+
+        li {
+            flex: 1;
+            // padding: 1rem;
+            // color: white;
+        }
+    }
+
+    li.active {
+        background-color: $tertiarycolor;
+    }
+
+    a {
+        display: block;
+        padding: 1rem;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $quaternarycolor;
+        }
+    }
+}
+
+//main
+
+video {
+    width: 90%;
+    margin-left: 5%;
+}
+
+details {
+    margin: .5rem $gutter;
+    summary {
+        background-color: rgb(226, 226, 226);
+    }
+    
+}
+
+//begin the footer
+
+#footerWrapper {
+    background-color: $primarycolor;
+    color: $secondarycolor;
+    text-align: center;
+    padding: .5rem $gutter;
+    font-size: 0.8rem;
+    p {
+        margin: 0;
+        font-weight: $lightFont;
+        text-align: center;
+    }
+}
