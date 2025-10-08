@@ -331,60 +331,102 @@ body {
   color: #000000;
 }
 
+/* --------------------------- HEADER --------------------------- */
 #headerWrapper {
-  background-color: white;
-  color: white;
+  border-bottom: 1px solid #A68A7B;
 }
 
 header {
   display: flex;
   align-items: center;
-  padding: 1rem 16px;
-  gap: 8px;
 }
-header h1 {
+header span {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #A68A7B;
+}
+header .logopic {
+  width: 60px;
+  height: auto;
+  margin: 1rem;
+}
+
+h1 {
   margin: 0;
   font-size: 1.2rem;
   font-weight: 400;
   color: #A68A7B;
 }
 
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 #navWrapper {
   background-color: #A68A7B;
 }
 
+a {
+  justify-content: center;
+}
+
+nav {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
+}
 nav ul {
-  list-style: none;
-  margin: 0;
   display: flex;
+  margin: auto;
+  justify-content: center;
+  gap: 2rem;
 }
-nav ul li {
-  flex: 1;
+nav li {
+  list-style: none;
 }
-nav li.active {
-  background-color: #717340;
-}
-nav a {
-  display: block;
-  padding: 1rem;
+nav ul li a {
   color: white;
-  text-align: center;
   text-decoration: none;
+  display: block;
+  padding: 0.8rem 16px;
 }
-nav a:hover {
-  background-color: #bca69b;
+nav ul li.active a {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #A68A7B;
+  border-radius: 10px;
+}
+
+main {
+  margin: 0 auto;
+  justify-content: center;
+}
+
+img {
+  max-width: 90%;
+  display: block;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #000000;
+  margin-left: 5%;
 }
 
 video {
   width: 90%;
   margin-left: 5%;
+  margin-top: 1rem;
 }
 
 details {
   margin: 0.5rem 16px;
+  width: 90%;
+  margin-left: 5%;
 }
 details summary {
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(224, 224, 224);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 #footerWrapper {
@@ -401,10 +443,7 @@ details summary {
 }
 
 @media only screen and (min-width: 35rem) {
-  header {
-    padding: 2rem 16px;
-  }
-  header h1 {
+  h1 {
     font-size: 2.5rem;
     font-weight: 400;
     margin: 0;
@@ -412,7 +451,7 @@ details summary {
 }
 @media only screen and (min-width: 35rem) {
   header, nav, main, footer {
-    max-width: 60rem;
+    max-width: 80rem;
     margin: 0 auto;
   }
 }

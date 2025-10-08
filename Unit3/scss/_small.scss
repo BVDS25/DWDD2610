@@ -21,18 +21,21 @@ body {
 }
 
 /* --------------------------- HEADER --------------------------- */
-#headerWrapper {border-bottom: 1px solid $greyColor;}
+#headerWrapper {border-bottom: 1px solid $primarycolor;}
 header {
-    display: grid;
-    grid-template-columns: 50px auto;
-    column-gap: $gutter;
-    align-items: center; //vertically
-    padding: .5rem $gutter;
+    display: flex;
+    align-items: center; //vertically;
+    
     span {
         font-size: 1.6rem;
-        font-weight: $lightWeight;
+        font-weight: $lightFont;
         color: $primarycolor;
     }
+
+    .logopic {
+    width: 60px;   // adjust logo size
+    height: auto;
+    margin:1rem;}
 } // end header
 
 
@@ -53,18 +56,27 @@ header {
    background-color: $primarycolor;
 }
 
+a {
+    justify-content: center;
+}
+
+// No additional code needed at placeholder
 nav {
     width: 100%;
+    height: auto;
+    padding: .5rem;
     ul {
-        padding: 0;
-        margin: 0 $gutter;
+        
         display: flex;
+        margin: auto;
+        justify-content: center;
+        gap: 2rem;
     }
     li {
         list-style: none;
     }
     ul li a {
-        color: $greyColor;
+        color: white;
         text-decoration: none;
         display:block;
         padding: .8rem $gutter;
@@ -78,18 +90,24 @@ nav {
 //main
 
 main {
-  max-width: 1200px;   // or whatever
+    // or whatever
   margin: 0 auto;
   justify-content: center;
 }
 
 img {
-    max-width: 100%;
-    height: auto;   
+    max-width: 90%;
     display: block;
-    margin: 0 auto;
-    border-color: brown;
     margin: auto;
+    margin-bottom: 3rem;
+}
+
+
+h2 {
+    font-weight: $boldFont;
+    font-size: 2rem;
+    color: $fontcolor;
+    margin-left: 5%;
 }
 
 
@@ -97,13 +115,20 @@ img {
 
 video {
     width: 90%;
+    margin-left: 5%;
+    margin-top: 1rem;
    
 }
 
 details {
     margin: .5rem $gutter;
+    width: 90%;
+    margin-left: 5%;
     summary {
-        background-color: rgb(226, 226, 226);
+        background-color: rgb(224, 224, 224);
+        padding: .5rem;
+        border-radius: .5rem;
+        
     }
     
 }
