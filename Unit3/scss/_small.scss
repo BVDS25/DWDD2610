@@ -14,25 +14,26 @@ html {
 }
 
 body {
-
     height: 100%;
     font-family: $defaultFont;
     font-weight: $regularFont;
     color: $fontcolor;
 }
 
-#headerWrapper {
-    background-color: $secondarycolor;
-    color: $secondarycolor;
-    // padding: 10px 0;
-    // text-align: center;
-}
-
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {border-bottom: 1px solid $greyColor;}
 header {
-    display: flex;
-    align-items: center;
-    padding: 1rem $gutter;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+    span {
+        font-size: 1.6rem;
+        font-weight: $lightWeight;
+        color: $primarycolor;
+    }
+} // end header
 
 
     h1 {
@@ -44,45 +45,52 @@ header {
         // font-weight: $lightFont;
         // font-size: 2.5rem;
     }
-}
+
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 
 #navWrapper {
-    background-color: $primarycolor;
+   background-color: $primarycolor;
 }
 
 nav {
+    width: 100%;
     ul {
-        list-style: none;
-        margin: 0;
-        // padding: 0;
+        padding: 0;
+        margin: 0 $gutter;
         display: flex;
-        // justify-content: center;
-
-        li {
-            flex: 1;
-            // padding: 1rem;
-            // color: white;
-        }
     }
-
-    li.active {
-        background-color: $tertiarycolor;
+    li {
+        list-style: none;
     }
-
-    a {
-        display: block;
-        padding: 1rem;
-        color: white;
-        text-align: center;
+    ul li a {
+        color: $greyColor;
         text-decoration: none;
-
-        &:hover {
-            background-color: $quaternarycolor;
-        }
+        display:block;
+        padding: .8rem $gutter;
+    }
+    ul li.active a {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: $primarycolor ;   
+        border-radius: 10px;
     }
 }
-
 //main
+
+main {
+  max-width: 1200px;   // or whatever
+  margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;   
+    display: block;
+    margin: 0 auto;
+    border-color: brown;
+}
+
+//VIDEO
 
 video {
     width: 90%;
