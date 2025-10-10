@@ -331,48 +331,108 @@ body {
   color: #000000;
 }
 
+/* --------------------------- HEADER --------------------------- */
 #headerWrapper {
-  background-color: white;
-  color: white;
+  border-bottom: 1px solid #A68A7B;
 }
 
 header {
   display: flex;
   align-items: center;
-  padding: 1rem 16px;
-  gap: 8px;
 }
-header h1 {
+header span {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #A68A7B;
+}
+header .logopic {
+  width: 60px;
+  height: auto;
+  margin: 1rem;
+}
+
+h1 {
   margin: 0;
   font-size: 1.2rem;
   font-weight: 400;
   color: #A68A7B;
 }
 
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 #navWrapper {
   background-color: #A68A7B;
 }
 
+a {
+  justify-content: center;
+}
+
+nav {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
+}
 nav ul {
-  list-style: none;
-  margin: 0;
   display: flex;
+  margin: auto;
+  margin-right: 2.5rem;
+  justify-content: center;
+  gap: 2rem;
+  /* Stack navigation on small screens */
+  flex-direction: column;
+  align-items: stretch;
 }
-nav ul li {
-  flex: 1;
+nav li {
+  list-style: none;
 }
-nav li.active {
-  background-color: #717340;
-}
-nav a {
-  display: block;
-  padding: 1rem;
+nav ul li a {
   color: white;
-  text-align: center;
   text-decoration: none;
+  display: block;
+  padding: 0.8rem 16px;
+  text-align: center;
+  width: 100%; /* make links take full width when stacked */
 }
-nav a:hover {
-  background-color: #bca69b;
+nav ul li.active a {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #A68A7B;
+  border-radius: 10px;
+}
+
+main {
+  margin: 0 auto;
+  justify-content: center;
+}
+
+img {
+  max-width: 90%;
+  display: block;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #000000;
+  margin-left: 5%;
+}
+
+video {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 1rem;
+}
+
+details {
+  margin: 0.5rem 16px;
+  width: 90%;
+  margin-left: 5%;
+}
+details summary {
+  background-color: rgb(224, 224, 224);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 #footerWrapper {
@@ -389,86 +449,31 @@ nav a:hover {
 }
 
 @media only screen and (min-width: 35rem) {
-  header {
-    padding: 2rem 16px;
-  }
-  header h1 {
+  h1 {
     font-size: 2.5rem;
     font-weight: 400;
     margin: 0;
   }
+  /* Restore horizontal nav for medium and larger screens */
+}
+@media only screen and (min-width: 35rem) and (min-width: 48rem) {
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  nav ul li a {
+    width: auto;
+    text-align: center;
+  }
 }
 @media only screen and (min-width: 35rem) {
   header, nav, main, footer {
-    max-width: 60rem;
+    max-width: 80rem;
     margin: 0 auto;
   }
-}in > div {
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
 }
-main > div img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border: 2px solid #3A2310;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-}
-main > div p {
-  margin-top: 0;
-  flex: 0 0 auto;
-  padding: 0.5rem;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  text-align: center;
-  font-size: 0.9rem;
-  background-color: #3A2310;
-  color: white;
-}
-
-/* --------------------------- FOOTER --------------------------- */
-#footerWrapper {
-  background-color: #3A2310;
-}
-
-footer {
-  font-size: 0.85rem;
-  padding: 1rem 10px;
-  color: #ccc;
-  text-align: center;
-  align-items: center;
-  line-height: 150%;
-}
-footer a {
-  color: #ccc;
-}
-
-@media only screen and (min-width: 35rem) {
-  /* NAVIGATION STUFF GOES HERE  */
-  nav ul {
-    display: flex;
-    justify-content: flex-start;
-    column-gap: 10px;
-  }
-  nav ul li a {
-    margin: 10px 0;
-  }
-  nav ul li a:hover {
-    text-decoration: underline 2px #E3E1DF;
-  }
-  #navWrapper nav ul {
-    display: flex; /* enable flexbox */
-    align-items: center; /* vertical alignment */
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    width: 100%;
-    gap: 10px;
-  }
   #navWrapper nav ul li {
     margin-right: 1rem; /* spacing between items */
   }
