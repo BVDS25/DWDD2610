@@ -1,0 +1,83 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {border-bottom: 1px solid $greyColor;}
+header {
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+    span {
+        font-size: 1.6rem;
+        font-weight: $lightWeight;
+        color: $primaryColor;
+    }
+} // end header
+
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    h1 {
+        padding: 1rem $gutter.5rem $gutter;
+        font-size: 1.5rem;
+        color: $secondaryColor;
+        font-weight: $lightWeight
+    }
+    p {
+        padding: .5rem $gutter;
+        color: #333;
+        line-height: $leading;
+    }
+}// end main
+
+
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+    background-color: $primaryColor
+} // end footer wrapper
+
+footer {
+    font-size: .85rem;
+    padding: 1rem $gutter;
+    color: $greyColor;
+    text-align: center;
+    line-height: $leading;
+    a {color: $greyColor;}
+}// end footer
