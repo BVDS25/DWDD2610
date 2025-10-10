@@ -4,3 +4,19 @@
         font-weight: $regularFont;
         margin: 0;
     }
+
+/* Restore horizontal nav for medium and larger screens */
+@media (min-width: 48rem) {
+    nav {
+        ul {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+        ul li a {
+            width: auto;
+            text-align: center;
+        }
+    }
+}

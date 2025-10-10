@@ -375,8 +375,12 @@ nav {
 nav ul {
   display: flex;
   margin: auto;
+  margin-right: 3rem;
   justify-content: center;
   gap: 2rem;
+  /* Stack navigation on small screens */
+  flex-direction: column;
+  align-items: stretch;
 }
 nav li {
   list-style: none;
@@ -386,6 +390,8 @@ nav ul li a {
   text-decoration: none;
   display: block;
   padding: 0.8rem 16px;
+  text-align: center;
+  width: 100%; /* make links take full width when stacked */
 }
 nav ul li.active a {
   background-color: rgba(255, 255, 255, 0.8);
@@ -447,6 +453,19 @@ details summary {
     font-size: 2.5rem;
     font-weight: 400;
     margin: 0;
+  }
+  /* Restore horizontal nav for medium and larger screens */
+}
+@media only screen and (min-width: 35rem) and (min-width: 48rem) {
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  nav ul li a {
+    width: auto;
+    text-align: center;
   }
 }
 @media only screen and (min-width: 35rem) {

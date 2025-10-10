@@ -66,11 +66,14 @@ nav {
     height: auto;
     padding: .5rem;
     ul {
-        
         display: flex;
         margin: auto;
+        margin-right: 3rem;
         justify-content: center;
         gap: 2rem;
+        /* Stack navigation on small screens */
+        flex-direction: column;
+        align-items: stretch;
     }
     li {
         list-style: none;
@@ -78,8 +81,10 @@ nav {
     ul li a {
         color: white;
         text-decoration: none;
-        display:block;
+        display: block;
         padding: .8rem $gutter;
+        text-align: center;
+        width: 100%; /* make links take full width when stacked */
     }
     ul li.active a {
         background-color: rgba(255, 255, 255, 0.8);
