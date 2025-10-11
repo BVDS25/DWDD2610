@@ -4,3 +4,22 @@ header, nav, main {
 }
 
 /* NAVIGATION STUFF GOES HERE  */
+
+@media (min-width: 900px) {
+    nav ul {
+        justify-content: flex-start;
+        gap: 1.25rem;
+        padding-left: 0;
+    }
+
+    .allcards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 2rem 0;
+    }
+
+    .allcards section {
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+}

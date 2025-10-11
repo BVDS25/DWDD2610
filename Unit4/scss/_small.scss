@@ -17,11 +17,13 @@ body {
     font-family: $defaultFont;
     font-weight: $lightWeight;
     min-width: 320px;
+    background-color: $greyColor;
 }
 
 
 /* --------------------------- HEADER --------------------------- */
-#headerWrapper {border-bottom: 1px solid $greyColor;}
+#headerWrapper {border-bottom: 1px solid $greyColor;
+background-color: $accentColor;}
 header {
     display: grid;
     grid-template-columns: 50px auto;
@@ -31,13 +33,95 @@ header {
     span {
         font-size: 1.6rem;
         font-weight: $lightWeight;
-        color: $primaryColor;
+        color: black;
     }
 } // end header
 
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 
+#navWrapper {
+    background: #fff;
+    border-bottom: 1px solid $greyColor;
+    background-color: $primaryColor;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem $gutter;
+    display: flex;
+    flex-direction: column; /* stack on small */
+    gap: $gutter;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: .5rem;
+    display: block;
+}
+
+nav li.active a {
+    background: #fff;
+    color: #000000;
+    border-radius: 10px;
+}
+
+/* Cards - single column on small */
+.allcards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem $gutter;
+}
+
+.allcards section {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: .75rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.allcards img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.allcards h2 {
+    margin: .5rem 0 .25rem;
+    color: $secondaryColor;
+    font-weight: $normalWeight;
+}
+
+.allcards a {
+    display: inline-block;
+    color: $accentColor;
+    // margin: auto;
+}
+
+/* Button styles for links */
+.btn {
+    display: inline-block;
+    background: $primaryColor;
+    color: #fff !important;
+    width: 100%;
+    padding: .5rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: $normalWeight;
+  
+}
+
+.btn:hover,
+.btn:focus {
+    background: darken($accentColor, 8%);
+}
 
 
 
@@ -57,10 +141,10 @@ main {
         padding: 1rem $gutter.5rem $gutter;
         font-size: 1.5rem;
         color: $secondaryColor;
-        font-weight: $lightWeight
+        font-weight: $lightWeight;
+        margin-bottom: 0;
     }
     p {
-        padding: .5rem $gutter;
         color: #333;
         line-height: $leading;
     }
