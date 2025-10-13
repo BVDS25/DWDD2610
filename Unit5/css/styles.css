@@ -323,12 +323,11 @@ body {
 /* --------------------------- HEADER --------------------------- */
 #headerWrapper {
   border-bottom: 1px solid #eeeeee;
-  background-color: #e7e1ab;
+  background-color: #000000;
 }
 
 header {
-  display: grid;
-  grid-template-columns: 50px auto;
+  display: flex;
   column-gap: 10px;
   align-items: center;
   padding: 0.5rem 10px;
@@ -336,14 +335,14 @@ header {
 header span {
   font-size: 1.6rem;
   font-weight: 300;
-  color: black;
+  color: white;
 }
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 #navWrapper {
   background: #fff;
   border-bottom: 1px solid #eeeeee;
-  background-color: #c7721d;
+  background-color: #711b1b;
 }
 
 nav ul {
@@ -356,23 +355,29 @@ nav ul {
   gap: 10px;
 }
 nav ul :hover {
-  background: #e7e1ab;
+  background: #000000;
   opacity: 0.9;
-  color: #000000;
+  color: #fff;
   border-radius: 10px;
 }
 
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   padding: 0.5rem;
   display: block;
 }
 
 nav li.active a {
-  background: #fff;
-  color: #000000;
+  background: #000000;
+  color: #fff;
   border-radius: 10px;
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
 /* Cards - single column on small */
@@ -401,19 +406,19 @@ nav li.active a {
 
 .allcards h2 {
   margin: 0.5rem 0 0.25rem;
-  color: #630521;
+  color: #cd8900;
   font-weight: 500;
 }
 
 .allcards a {
   display: inline-block;
-  color: #e7e1ab;
+  color: #000000;
 }
 
 /* Button styles for links */
 .btn {
   display: inline-block;
-  background: #c7721d;
+  background: #711b1b;
   color: #fff !important;
   width: 100%;
   padding: 0.5rem 2rem;
@@ -425,14 +430,14 @@ nav li.active a {
 
 .btn:hover,
 .btn:focus {
-  background: rgb(163.3894736842, 93.6, 23.8105263158);
+  background: rgb(80.0685714286, 19.1314285714, 19.1314285714);
 }
 
 /* --------------------------- MAIN --------------------------- */
 main h1 {
   padding: 1rem 10px 0.5rem 10px;
   font-size: 1.5rem;
-  color: #630521;
+  color: #cd8900;
   font-weight: 300;
   margin-bottom: 0;
 }
@@ -444,7 +449,8 @@ main p {
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
   padding-top: 2rem;
-  background-color: #e7e1ab;
+  background-color: #000000;
+  color: #fff;
 }
 
 .footer-upper {
@@ -472,7 +478,7 @@ main p {
 
 .footer-social ion-icon {
   font-size: 2rem;
-  color: #c7721d;
+  color: #cd8900;
   margin-bottom: 2rem;
 }
 
@@ -501,7 +507,7 @@ footer {
   text-align: center;
 }
 footer a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -524,7 +530,7 @@ footer a {
 }
 
 .sitemap-col h4 {
-  color: #630521;
+  color: #cd8900;
 }
 
 .sitemap-col ul {

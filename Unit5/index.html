@@ -3,9 +3,16 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Navigation Example</title>
+    <title>AutoWorks Garage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css" />
+
+    <!-- Font Awesome Free -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-pVnYxPsH0sYqiBzsc6M0zTiDBFiiJzOXv0+0kclvqwldJIBEVjrPgJM8kC8fqglbY+TW1JtMI+bXJr9j6z+PIg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,8 +23,8 @@
 <body>
     <div id="headerWrapper">
         <header>
-            <img src="images/logo1x.png" alt="logo" />
-            <span>Italian Corner</span>
+            <img src="images/logo2x.png" alt="AutoWorks Garage logo" width="100px"/>
+            <span>AutoWorks Garage</span>
         </header>
     </div>
     <!-- end header wrapper -->
@@ -26,8 +33,8 @@
         <nav>
             <ul>
                 <li><a href="#">Clients</a></li>
-                <li><a href="#">Services</a></li>
-                <li class="active"><a href="#">Recipes</a></li>
+                <li class="active"><a href="#">Services</a></li>
+                <li><a href="#">Vehicles</a></li>
                 <li><a href="#">Our Team</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -37,58 +44,54 @@
 
     <div id="mainWrapper">
         <main>
-            <h1>Italian Recipes</h1>
+            <h1>Our Automotive Services</h1>
 
             <div class="allcards">
                 <section>
-                    <img src="images/Carbonara.webp" alt="Carbonara" width="300" height="300" />
-                    <h2>Carbonara</h2>
+                    <i class="fas fa-oil-can service-icon"></i>
+                    <h2>Oil Change</h2>
                     <p>
-                        Classic Italian pasta dish made with eggs, hard cheese, cured
-                        pork, and black pepper
+                        Keep your engine running smoothly with our premium oil and filter change services.
+                        Fast, affordable, and professional.
                     </p>
-                    <a class="btn" href="#">Learn Recipe</a>
+                    <a class="btn" href="#">Book Service</a>
                 </section>
 
                 <section>
-                    <img src="images/Gnocchi.webp" alt="gnocchi" width="300" height="300" />
-                    <h2>Gnocchi</h2>
+                    <i class="fas fa-brake-warning service-icon"></i>
+                    <h2>Brake Inspection & Repair</h2>
                     <p>
-                        Soft potato dumplings served with a rich sauce — a classic comfort
-                        dish in Italian cuisine.
+                        From pads to rotors, we ensure your brakes are in top shape for safety and performance.
                     </p>
-                    <a class="btn" href="#">Learn Recipe</a>
+                    <a class="btn" href="#">Book Service</a>
                 </section>
 
                 <section>
-                    <img src="images/Lasagna.webp" alt="lasagna" width="300" height="300" />
-                    <h2>Lasagna</h2>
+                    <i class="fas fa-spray-can service-icon"></i>
+                    <h2>Auto Detailing</h2>
                     <p>
-                        Layers of pasta, cheese, meat, and tomato sauce baked to
-                        perfection for a hearty family meal.
+                        Interior and exterior detailing to make your car look showroom-new.
+                        Choose from basic wash to full restoration packages.
                     </p>
-                    <a class="btn" href="#">Learn Recipe</a>
+                    <a class="btn" href="#">Book Service</a>
                 </section>
 
                 <section>
-                    <img src="images/Risotto.webp" alt="risotto" width="300" height="300" />
-                    <h2>Risotto</h2>
+                    <i class="fas fa-tire service-icon"></i>
+                    <h2>Tire Rotation & Replacement</h2>
                     <p>
-                        Creamy arborio rice cooked slowly with stock and finished with
-                        butter and Parmesan — elegant and satisfying.
+                        Extend tire life and improve handling with expert tire rotation and new tire installation.
                     </p>
-                    <a class="btn" href="#">Learn Recipe</a>
+                    <a class="btn" href="#">Book Service</a>
                 </section>
 
                 <section>
-                    <img src="images/Tiramisu.webp" alt="Tiramisu" width="300" height="300" />
-                    <h2>Tiramisu</h2>
+                    <i class="fas fa-car-burst service-icon"></i>
+                    <h2>Engine Diagnostics</h2>
                     <p>
-                        This easy tiramisu uses coffee-soaked ladyfingers, mascarpone, and
-                        cocoa powder, with no raw eggs, and is made by layering the
-                        ingredients.
+                        Check engine light on? Our advanced diagnostics pinpoint issues quickly so you can drive with confidence.
                     </p>
-                    <a class="btn" href="#">Learn Recipe</a>
+                    <a class="btn" href="#">Book Service</a>
                 </section>
             </div>
         </main>
@@ -104,11 +107,11 @@
             <div class="footer-social">
                 <div>
                     <h4>Follow Us</h4>
-                    <a href="#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
-                    <a href="#" aria-label="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
-                    <a href="#" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
-                    <a href="#" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
-                    <a href="#" aria-label="YouTube"><ion-icon name="logo-youtube"></ion-icon></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <!-- end social -->
@@ -116,10 +119,10 @@
             <!-- start brand text -->
             <div class="brand-text">
                 <div>
-                    <img src="images/logo1x.png" alt="Italian Corner logo" width="50" height="50" />
+                    <img src="images/logo1x.png" alt="AutoWorks Garage logo" width="50" height="50" />
                 </div>
-                <strong>Italian Corner</strong>
-                <p>1234 Main St, City • (555) 555-5555</p>
+                <strong>AutoWorks Garage</strong>
+                <p>1234 Motor Ave, City • (555) 555-5555</p>
             </div>
             <!-- end brand text -->
 
@@ -154,7 +157,7 @@
                         <ul>
                             <li><a href="#">Clients</a></li>
                             <li><a href="#">Services</a></li>
-                            <li><a href="#">Recipes</a></li>
+                            <li><a href="#">Vehicles</a></li>
                         </ul>
                     </div>
                     <div class="sitemap-col">
@@ -179,7 +182,7 @@
 
             <div class="footer-bottom">
                 <p>
-                    &copy; 2025 Italian Corner. All rights reserved.
+                    &copy; 2025 AutoWorks Garage. All rights reserved.
                     <a href="#">Privacy Policy</a> | <a href="#">Sitemap</a> |
                     <a href="#">Contact</a>
                 </p>
@@ -187,8 +190,6 @@
         </footer>
     </div>
     <!-- end footer wrapper -->
-
-    <!-- <script src="js/scripts.js"> </script> -->
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
