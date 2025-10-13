@@ -351,8 +351,15 @@ nav ul {
   margin: 0;
   padding: 0.5rem 10px;
   display: flex;
-  flex-direction: column; /* stack on small */
+  flex-direction: column;
+  /* stack on small */
   gap: 10px;
+}
+nav ul :hover {
+  background: #e7e1ab;
+  opacity: 0.9;
+  color: #000000;
+  border-radius: 10px;
 }
 
 nav a {
@@ -418,7 +425,7 @@ nav li.active a {
 
 .btn:hover,
 .btn:focus {
-  background: rgb(221.9333333333, 213.6666666667, 139.2666666667);
+  background: rgb(163.3894736842, 93.6, 23.8105263158);
 }
 
 /* --------------------------- MAIN --------------------------- */
@@ -436,18 +443,110 @@ main p {
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-  background-color: #c7721d;
+  padding-top: 2rem;
+  background-color: #e7e1ab;
+}
+
+.footer-upper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aligns columns at the top */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.footer-upper > div {
+  flex: 1; /* Equal column widths */
+  text-align: center;
+  min-width: 200px;
+}
+
+.footer-social {
+  gap: 0.5rem;
+  width: 10rem;
+}
+
+.footer-social ion-icon {
+  font-size: 2rem;
+  color: #c7721d;
+  margin-bottom: 2rem;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-form input[type=email] {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+}
+
+#signup-form {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 footer {
-  font-size: 0.85rem;
   padding: 1rem 10px;
-  color: #eeeeee;
   text-align: center;
-  line-height: 150%;
 }
 footer a {
-  color: #eeeeee;
+  color: black;
+  text-decoration: none;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 1rem;
+}
+
+.login-link {
+  text-decoration: underline;
+  margin-right: 0.5rem;
+}
+
+.footer-sitemap {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.sitemap-col h4 {
+  color: #630521;
+}
+
+.sitemap-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid #eeeeee;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+}
+
+/* utilities */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
 }
 
 @media only screen and (min-width: 35rem) {
@@ -482,6 +581,47 @@ footer a {
     margin-bottom: 0.5rem;
   }
 }
+@media only screen and (min-width: 35rem) and (min-width: 600px) {
+  .footer-upper > div {
+    flex: 1; /* Makes all columns equal width */
+    text-align: center; /* Centers their content */
+    min-width: 0; /* Prevents overflow from long content */
+  }
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 1.5rem;
+  }
+  .footer-brand {
+    align-items: flex-start;
+  }
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .footer-social {
+    grid-column: 2;
+  }
+}
+@media only screen and (min-width: 35rem) {
+  .brand-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .brand-copy p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #666;
+  }
+  .footer-form {
+    order: 3;
+    align-self: center;
+  }
+}
 @media only screen and (min-width: 64rem) {
   header, nav, main {
     max-width: 960px;
@@ -503,5 +643,39 @@ footer a {
   .allcards section {
     padding: 1rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  }
+}
+@media only screen and (min-width: 64rem) and (min-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: start;
+    gap: 2rem;
+  }
+  .footer-upper {
+    align-items: flex-start; /* Aligns columns at the top */
+  }
+  .footer-brand {
+    grid-column: 1;
+  }
+  .footer-sitemap {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .footer-social {
+    grid-column: 3;
+    align-self: start;
+  }
+  .brand-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .brand-copy strong {
+    display: block;
+  }
+  .footer-form {
+    margin-left: auto;
   }
 }
