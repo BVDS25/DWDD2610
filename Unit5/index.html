@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Navigation Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="headerWrapper">
+        <header>
+            <img src="images/logo1x.png" alt="logo" />
+            <span>Italian Corner</span>
+        </header>
+    </div>
+    <!-- end header wrapper -->
+
+    <div id="navWrapper">
+        <nav>
+            <ul>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Services</a></li>
+                <li class="active"><a href="#">Recipes</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- end nav wrapper -->
+
+    <div id="mainWrapper">
+        <main>
+            <h1>Italian Recipes</h1>
+
+            <div class="allcards">
+                <section>
+                    <img src="images/Carbonara.webp" alt="Carbonara" width="300" height="300" />
+                    <h2>Carbonara</h2>
+                    <p>
+                        Classic Italian pasta dish made with eggs, hard cheese, cured
+                        pork, and black pepper
+                    </p>
+                    <a class="btn" href="#">Learn Recipe</a>
+                </section>
+
+                <section>
+                    <img src="images/Gnocchi.webp" alt="gnocchi" width="300" height="300" />
+                    <h2>Gnocchi</h2>
+                    <p>
+                        Soft potato dumplings served with a rich sauce — a classic comfort
+                        dish in Italian cuisine.
+                    </p>
+                    <a class="btn" href="#">Learn Recipe</a>
+                </section>
+
+                <section>
+                    <img src="images/Lasagna.webp" alt="lasagna" width="300" height="300" />
+                    <h2>Lasagna</h2>
+                    <p>
+                        Layers of pasta, cheese, meat, and tomato sauce baked to
+                        perfection for a hearty family meal.
+                    </p>
+                    <a class="btn" href="#">Learn Recipe</a>
+                </section>
+
+                <section>
+                    <img src="images/Risotto.webp" alt="risotto" width="300" height="300" />
+                    <h2>Risotto</h2>
+                    <p>
+                        Creamy arborio rice cooked slowly with stock and finished with
+                        butter and Parmesan — elegant and satisfying.
+                    </p>
+                    <a class="btn" href="#">Learn Recipe</a>
+                </section>
+
+                <section>
+                    <img src="images/Tiramisu.webp" alt="Tiramisu" width="300" height="300" />
+                    <h2>Tiramisu</h2>
+                    <p>
+                        This easy tiramisu uses coffee-soaked ladyfingers, mascarpone, and
+                        cocoa powder, with no raw eggs, and is made by layering the
+                        ingredients.
+                    </p>
+                    <a class="btn" href="#">Learn Recipe</a>
+                </section>
+            </div>
+        </main>
+    </div>
+    <!-- end main wrapper -->
+
+    <!-- start footer -->
+
+    <div id="footerWrapper">
+        <div class="footer-upper">
+
+            <!-- start social -->
+            <div class="footer-social">
+                <div>
+                    <h4>Follow Us</h4>
+                    <a href="#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#" aria-label="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a href="#" aria-label="YouTube"><ion-icon name="logo-youtube"></ion-icon></a>
+                </div>
+            </div>
+            <!-- end social -->
+
+            <!-- start brand text -->
+            <div class="brand-text">
+                <div>
+                    <img src="images/logo1x.png" alt="Italian Corner logo" width="50" height="50" />
+                </div>
+                <strong>Italian Corner</strong>
+                <p>1234 Main St, City • (555) 555-5555</p>
+            </div>
+            <!-- end brand text -->
+
+            <!-- start form -->
+            <div class="footer-form">
+                <form id="signup-form" action="#" novalidate>
+                    <label for="email" class="visually-hidden">Email address</label>
+                    <input id="email" type="email" placeholder="Enter your email" required />
+                    <button class="btn" type="submit">Sign Up</button>
+                </form>
+            </div>
+            <!-- end form -->
+
+        </div>
+
+        <footer>
+            <div>
+                <div>
+                    <div>
+                        <a class="login-link" href="#">Login</a>
+                        <label for="lang" class="visually-hidden">Language</label>
+                        <select id="lang" name="lang" aria-label="Language selector">
+                            <option value="en">EN</option>
+                            <option value="es">ES</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="footer-sitemap">
+                    <div class="sitemap-col">
+                        <h4>Sitemap</h4>
+                        <ul>
+                            <li><a href="#">Clients</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Recipes</a></li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="sitemap-col">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2025 Italian Corner. All rights reserved.
+                    <a href="#">Privacy Policy</a> | <a href="#">Sitemap</a> |
+                    <a href="#">Contact</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <!-- end footer wrapper -->
+
+    <!-- <script src="js/scripts.js"> </script> -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+    background-color: $greyColor;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {
+    border-bottom: 1px solid $greyColor;
+    background-color: $accentColor;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+
+    span {
+        font-size: 1.6rem;
+        font-weight: $lightWeight;
+        color: black;
+    }
+}
+
+// end header
+
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+
+#navWrapper {
+    background: #fff;
+    border-bottom: 1px solid $greyColor;
+    background-color: $primaryColor;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem $gutter;
+    display: flex;
+    flex-direction: column;
+    /* stack on small */
+    gap: $gutter;
+
+    :hover {
+        background: $accentColor;
+        opacity: .9;
+        color: #000000;
+        border-radius: 10px;
+    }
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: .5rem;
+    display: block;
+
+}
+
+nav li.active a {
+    background: #fff;
+    color: #000000;
+    border-radius: 10px;
+}
+
+/* Cards - single column on small */
+.allcards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem $gutter;
+}
+
+.allcards section {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: .75rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.allcards img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.allcards h2 {
+    margin: .5rem 0 .25rem;
+    color: $secondaryColor;
+    font-weight: $normalWeight;
+}
+
+.allcards a {
+    display: inline-block;
+    color: $accentColor;
+    // margin: auto;
+}
+
+/* Button styles for links */
+.btn {
+    display: inline-block;
+    background: $primaryColor;
+    color: #fff !important;
+    width: 100%;
+    padding: .5rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: $normalWeight;
+
+}
+
+.btn:hover,
+.btn:focus {
+    background: darken($primaryColor, 8%);
+}
+
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    h1 {
+        padding: 1rem $gutter.5rem $gutter;
+        font-size: 1.5rem;
+        color: $secondaryColor;
+        font-weight: $lightWeight;
+        margin-bottom: 0;
+    }
+
+    p {
+        color: #333;
+        line-height: $leading;
+    }
+}
+
+// end main
+
+
+
+/* --------------------------- FOOTER --------------------------- */
+
+
+#footerWrapper {
+    padding-top: 2rem;
+    background-color: $accentColor;
+}
+
+
+
+.footer-upper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  /* Aligns columns at the top */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;          
+  border-bottom: 1px solid $greyColor;     
+}
+
+.footer-upper > div {
+  flex: 1;                 /* Equal column widths */
+  text-align: center;
+  min-width: 200px;   
+}
+
+
+.footer-social {
+    // display: flex;
+    // justify-content: start;
+    gap: .5rem;
+    // gap: 5rem;
+    // margin-top: 1rem;
+    // margin-left: auto;
+    width: 10rem;
+}
+
+.footer-social ion-icon {
+    font-size: 2rem;
+    color: $primaryColor;
+    margin-bottom: 2rem;
+
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-form input[type="email"] {
+    margin-bottom: .5rem;
+    padding: .5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+    
+}
+
+#signup-form {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+footer {
+    padding: 1rem $gutter;
+    text-align: center;
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.footer-inner {
+    display: grid;
+    gap: 1rem;
+}
+
+.login-link {
+    text-decoration: underline;
+    margin-right: .5rem;
+
+}
+
+.footer-sitemap {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem
+}
+
+.sitemap-col h4 {
+    // margin: 0 0 .5rem;
+    color: $secondaryColor
+}
+
+.sitemap-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+
+.footer-bottom {
+    border-top: 1px solid $greyColor;
+    // margin-top: 1rem;
+    padding-top: 1rem;
+    font-size: .85rem;
+}
+
+/* utilities */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap
+}
