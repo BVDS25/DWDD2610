@@ -1,117 +1,78 @@
-/* NAVIGATION STUFF GOES HERE  */
+// /* NAVIGATION STUFF GOES HERE  */
 
 @media (min-width: 600px) {
+  /* --------------------------- NAVIGATION --------------------------- */
+  header.nav {
+    justify-content: flex-start;
+    gap: 1rem;
+	width: 90%;
+	  
+    .menu-button { display: none; }
 
-	// nav
+    .nav-links {
+      display: flex !important;
+      position: static;
+      flex-direction: row;
+      height: auto;
+      width: auto;
+      transform: none;
+      background: none;
+      box-shadow: none;
+      padding: 0;
+      margin-left: auto;
 
-	header.nav {
-		justify-content: flex-start;
-		gap: 1rem;
+      li a {
+        color: #fff;
+        padding: 0.5rem 1rem;
 
-		.menu-button {
-			display: none; // hide hamburger
-		}
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 8px;
+        }
+      }
+    }
+  }
 
-		.nav-links {
-			display: flex !important;
-			position: static;
-			flex-direction: row;
-			height: auto;
-			width: auto;
-			transform: none;
-			background: none;
-			box-shadow: none;
-			padding: 0;
-			margin-left: auto;
-		}
+  /* --------------------------- CARDS --------------------------- */
+  .allcards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1.5rem $gutter;
 
-		.nav-links li a {
-			color: #fff;
-			padding: 0.5rem 1rem;
-		}
+    section {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 
-		.nav-links li a:hover {
-			background: rgba(255, 255, 255, 0.1);
-			border-radius: 8px;
-		}
-	}
+  .reviews-section .container {
+    padding-bottom: 3rem;
+  }
 
+  /* --------------------------- FOOTER --------------------------- */
+  .footer-upper > div {
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+  }
 
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 1.5rem;
+  }
 
-	.allcards {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1rem;
-		padding: 1.5rem $gutter;
-	}
+  .brand-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
-	.allcards section {
-		// text-align: left;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.allcards img {
-		height: auto;
-		margin-bottom: .5rem;
-	}
-
-
-	.reviews-section .container {
-		padding-bottom: 3rem;
-	}
-
-
-
-	.footer-upper>div {
-		flex: 1;
-		/* Makes all columns equal width */
-		text-align: center;
-		/* Centers their content */
-		min-width: 0;
-		/* Prevents overflow from long content */
-	}
-
-	.footer-inner {
-		grid-template-columns: 1fr 1fr;
-		align-items: start;
-		gap: 1.5rem;
-	}
-
-	.footer-brand {
-		align-items: flex-start
-	}
-
-	.footer-form {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end
-	}
-
-	// .footer-sitemap{grid-template-columns:repeat(2,1fr)}
-	.footer-social {
-		grid-column: 2
-	}
-
-
-	.brand-text {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		max-width: 900px;
-		margin: 0 auto;
-		margin-bottom: 0rem;
-	}
-
-
-	// .brand-info {order:1;display:flex;gap:.75rem;align-items:center}
-	.brand-copy p {
-		margin: 0;
-		font-size: .95rem;
-		color: #666
-	}
-
-	.footer-form {
-		order: 3;
-		align-self: center
-	}
+  .footer-form {
+    order: 3;
+    align-self: center;
+  }
 }
+

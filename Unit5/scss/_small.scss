@@ -1,23 +1,21 @@
-/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+// /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+
+/* --------------------------- GLOBAL RESETS --------------------------- */
 html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-/*  Apply a natural box layout model to all elements  */
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 
 /* --------------------------- BODY --------------------------- */
 body {
-    font-family: $defaultFont;
-    font-weight: $lightWeight;
-    min-width: 320px;
-    background-color: $greyColor;
+  font-family: $defaultFont;
+  font-weight: $lightWeight;
+  min-width: 320px;
+  background-color: $greyColor;
 }
 
 /* --------------------------- HEADER --------------------------- */
@@ -48,6 +46,7 @@ header.nav {
     flex: 1;
   }
 
+  /* Hamburger menu */
   .menu-button {
     background: none;
     border: none;
@@ -59,7 +58,6 @@ header.nav {
     z-index: 1100;
   }
 
-  /* hamburger bars */
   .menu-icon,
   .menu-icon::before,
   .menu-icon::after {
@@ -113,12 +111,12 @@ header.nav {
     padding: 5rem 1.5rem;
     transform: translateX(100%);
     transition: transform 0.3s ease;
-    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
     z-index: 1050;
   }
 
   .nav-links.open {
     transform: translateX(0);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
 
   .nav-links li a {
@@ -133,99 +131,96 @@ header.nav {
   .nav-links li a:hover {
     color: #f1c40f;
   }
-
-  
 }
-/* --------------------------- END HEADER --------------------------- */
 
+/* --------------------------- HERO SECTION --------------------------- */
 .hero-image {
-    position: relative; // allows absolute positioning of text inside
-    padding-bottom: 2rem;
+  position: relative;
+  padding-bottom: 2rem;
 
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    p {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); // perfectly center text
-        margin: 0;
-        padding: 1rem 2rem;
-        text-align: center;
-
-        width: 80%; // flexible width
-        max-width: 400px; // keeps it from being too wide
-
-        color: #000;
-        background-color: rgba($secondaryColor, 0.8); // translucent bg for readability
-        font-size: 1.25rem;
-        border-radius: 25px;
-        font-weight: $normalWeight;
-    }
-}
-
-
-/* Cards - single column on small */
-.allcards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem $gutter;
-}
-
-.allcards section {
-     display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* pushes last element to the bottom */
-  background: #fff;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  min-height: 360px; /* ensures consistent height */
-}
-
-.allcards img {
+  img {
+    width: 100%;
     height: auto;
+    display: block;
+  }
+
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 1rem 2rem;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    color: #000;
+    background-color: rgba($secondaryColor, 0.8);
+    font-size: 1.25rem;
+    border-radius: 25px;
+    font-weight: $normalWeight;
+  }
+}
+
+/* --------------------------- SERVICE CARDS --------------------------- */
+
+h1 {
+    margin-left: .5rem;
+}
+
+.allcards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem $gutter;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    min-height: 360px;
+  }
+
+  img {
     display: block;
     border-radius: 8px;
     margin: auto;
-}
+  }
 
-.allcards h2 {
+  h2 {
     margin: .5rem 0 .25rem;
     color: $secondaryColor;
     font-weight: $normalWeight;
-}
+  }
 
-.allcards a {
-    display: inline-block;
+  a {
     color: $accentColor;
-    // margin: auto;
+  }
 }
 
-/* Button styles for links */
+/* Button */
 .btn {
-    display: inline-block;
-    background: $primaryColor;
-    color: #fff !important;
-    width: 100%;
-    padding: .5rem 2rem;
-    border-radius: 10px;
-    text-decoration: none;
-    text-align: center;
-    font-weight: $normalWeight;
+  display: inline-block;
+  background: $primaryColor;
+  color: #fff !important;
+  width: 100%;
+  padding: .5rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: $normalWeight;
 
-}
-
-.btn:hover, .btn:focus {
+  &:hover,
+  &:focus {
     background: darken($primaryColor, 8%);
+  }
 }
 
+/* Card Icon Animation */
 .wrap {
   display: flex;
   justify-content: center;
@@ -234,25 +229,16 @@ header.nav {
   transition: transform 0.3s ease;
 }
 
-/* Bounce animation */
 @keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  30% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
 }
 
-/* Trigger bounce when hovering over the card */
 section:hover .wrap {
   animation: bounce 0.6s ease;
 }
 
-/* Optional: add a subtle scale for smoother feedback */
 section:hover .wrap svg,
 section:hover .wrap img {
   transform: scale(1.05);
@@ -261,49 +247,42 @@ section:hover .wrap img {
 
 /* --------------------------- MAIN --------------------------- */
 main {
-    h1 {
-        font-size: 1.6rem;
-         margin-bottom: 0.25rem;
-        // padding: 1rem $gutter.5rem $gutter;
-        // font-size: 1.6rem;
-        // margin-bottom: 0;
-    }
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+  }
 
-    p {
-        color: #333;
-        line-height: $leading;
-    }
+  p {
+    color: #333;
+    line-height: $leading;
+  }
 }
-
 
 /* --------------------------- REVIEWS --------------------------- */
-
 .reviews-section {
-  padding: 0rem;
+  padding: 0;
   color: #222;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: .5rem;
+    padding-bottom: 3rem;
+  }
+
+  .reviews-intro {
+    margin-bottom: 1.25rem;
+    color: #444;
+  }
+
+  .reviews-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+  }
 }
 
-.reviews-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: .5rem;
-  padding-bottom: 3rem;
-}
-
-
-.reviews-intro {
-  margin-bottom: 1.25rem;
-  color: #444;
-}
-
-/* Grid */
-.reviews-grid {
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(1, 1fr);
-}
-
-/* Card */
+/* Review Card */
 .review-card {
   background: #fff;
   border-radius: 12px;
@@ -313,12 +292,11 @@ main {
   gap: 0.85rem;
   align-items: flex-start;
   transition: transform 200ms ease, box-shadow 200ms ease;
-}
 
-.review-card:focus-within,
-.review-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(15,20,25,0.10);
+  &:hover,
+  &:focus-within {
+    transform: translateY(-4px);
+  }
 }
 
 /* Avatar */
@@ -329,27 +307,23 @@ main {
   border-radius: 50%;
   background: linear-gradient(135deg, #e67e22 0%, #f3a65a 100%);
   color: white;
-  display: inline-grid;
+  display: grid;
   place-items: center;
   font-weight: 600;
   font-size: 0.95rem;
   text-transform: uppercase;
-}
 
-/* If avatar image present */
-.review-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
 }
 
 /* Content */
-.review-body {
-  flex: 1 1 auto;
-  min-width: 0;
-}
+.review-body { flex: 1 1 auto; min-width: 0; }
 
 .review-meta {
   display: flex;
@@ -364,165 +338,122 @@ main {
 .reviewer-location { color: #666; font-weight: 500; font-size: 0.85rem; }
 
 .review-quote {
-  margin: 0;
+  margin: 0.35rem 0 0;
   color: #333;
   line-height: 1.4;
   font-size: 0.95rem;
-  margin-top: 0.35rem;
 }
 
-/* Stars */
 .stars {
   display: inline-flex;
   margin-left: auto;
+
+  .star {
+    width: 16px;
+    height: 16px;
+    fill: #f1c40f;
+  }
 }
 
-.star {
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  fill: #f1c40f;
+#loadMoreReviews {
+  margin-top: 1.25rem;
 }
-
-/* Small note and error */
-.reviews-footer { margin-top: 1rem; text-align: center; }
-.reviews-error {
-  color: #a94442;
-  background: #fcebea;
-  border: 1px solid rgba(169,68,66,0.15);
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
-  display: inline-block;
-}
-
-
-/* --------------------------- END MAIN --------------------------- */
 
 /* --------------------------- FOOTER --------------------------- */
-
-
 #footerWrapper {
-    padding-top: 2rem;
-    background-color: $accentColor;
-    color: #fff;
+  padding-top: 2rem;
+  background-color: $accentColor;
+  color: #fff;
 }
 
 .footer-upper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    /* Aligns columns at the top */
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    border-bottom: 1px solid $greyColor;
-}
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  border-bottom: 1px solid $greyColor;
 
-.footer-upper>div {
+  > div {
     flex: 1;
-    /* Equal column widths */
     text-align: center;
     min-width: 200px;
+  }
 }
-
 
 .footer-social {
-    // display: flex;
-    // justify-content: start;
-    gap: .5rem;
-    // gap: 5rem;
-    // margin-top: 1rem;
-    // margin-left: auto;
-    width: 10rem;
-    margin-bottom: 2rem;
-}
+  width: 10rem;
+  margin-bottom: 2rem;
 
-.footer-social ion-icon {
+  ion-icon {
     font-size: 2rem;
-    color: $secondaryColor;
-
     color: white;
-
+  }
 }
 
 .brand-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-.footer-form input[type="email"] {
+.footer-form {
+  input[type="email"] {
     margin-bottom: .5rem;
     padding: .5rem;
     border: 1px solid #ddd;
     border-radius: 10px;
     width: 100%;
+  }
 
-}
-
-#signup-form {
-    margin-left: .5rem;
-    margin-right: .5rem;
+  #signup-form {
+    margin: 0 .5rem;
+  }
 }
 
 footer {
-    padding: 1rem $gutter;
-    text-align: center;
+  padding: 1rem $gutter;
+  text-align: center;
 
-    a {
-        color: white;
-        text-decoration: none;
-    }
-}
-
-.footer-inner {
-    display: grid;
-    gap: 1rem;
-}
-
-.login-link {
-    text-decoration: underline;
-    margin-right: .5rem;
-
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .footer-sitemap {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem
-}
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 
-.sitemap-col h4 {
-    // margin: 0 0 .5rem;
-    color: $secondaryColor
-}
+  h4 {
+    color: $secondaryColor;
+  }
 
-.sitemap-col ul {
+  ul {
     list-style: none;
     margin: 0;
-    padding: 0
+    padding: 0;
+  }
 }
-
 
 .footer-bottom {
-    border-top: 1px solid $greyColor;
-    // margin-top: 1rem;
-    padding-top: 1rem;
-    font-size: .85rem;
+  border-top: 1px solid $greyColor;
+  padding-top: 1rem;
+  font-size: .85rem;
 }
 
-/* utilities */
+/* Utility */
 .visually-hidden {
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-    white-space: nowrap
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px);
+  white-space: nowrap;
 }

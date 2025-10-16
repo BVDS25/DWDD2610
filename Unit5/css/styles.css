@@ -300,16 +300,13 @@ template {
   display: none;
 }
 
-/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+/* --------------------------- GLOBAL RESETS --------------------------- */
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
-/*  Apply a natural box layout model to all elements  */
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -334,7 +331,7 @@ header.nav {
   position: relative;
   z-index: 1000;
   background-color: #000000;
-  /* hamburger bars */
+  /* Hamburger menu */
   /* Animate into “X” when active */
   /* Nav links */
 }
@@ -409,11 +406,11 @@ header.nav .nav-links {
   padding: 5rem 1.5rem;
   transform: translateX(100%);
   transition: transform 0.3s ease;
-  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
   z-index: 1050;
 }
 header.nav .nav-links.open {
   transform: translateX(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 header.nav .nav-links li a {
   color: white;
@@ -427,7 +424,7 @@ header.nav .nav-links li a:hover {
   color: #f1c40f;
 }
 
-/* --------------------------- END HEADER --------------------------- */
+/* --------------------------- HERO SECTION --------------------------- */
 .hero-image {
   position: relative;
   padding-bottom: 2rem;
@@ -454,45 +451,42 @@ header.nav .nav-links li a:hover {
   font-weight: 500;
 }
 
-/* Cards - single column on small */
+/* --------------------------- SERVICE CARDS --------------------------- */
+h1 {
+  margin-left: 0.5rem;
+}
+
 .allcards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   padding: 1rem 10px;
 }
-
 .allcards section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* pushes last element to the bottom */
+  justify-content: space-between;
   background: #fff;
   border-radius: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  min-height: 360px; /* ensures consistent height */
+  min-height: 360px;
 }
-
 .allcards img {
-  height: auto;
   display: block;
   border-radius: 8px;
   margin: auto;
 }
-
 .allcards h2 {
   margin: 0.5rem 0 0.25rem;
   color: #cd8900;
   font-weight: 500;
 }
-
 .allcards a {
-  display: inline-block;
   color: #000000;
 }
 
-/* Button styles for links */
+/* Button */
 .btn {
   display: inline-block;
   background: #711b1b;
@@ -504,11 +498,11 @@ header.nav .nav-links li a:hover {
   text-align: center;
   font-weight: 500;
 }
-
 .btn:hover, .btn:focus {
   background: rgb(80.0685714286, 19.1314285714, 19.1314285714);
 }
 
+/* Card Icon Animation */
 .wrap {
   display: flex;
   justify-content: center;
@@ -517,7 +511,6 @@ header.nav .nav-links li a:hover {
   transition: transform 0.3s ease;
 }
 
-/* Bounce animation */
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
@@ -529,12 +522,10 @@ header.nav .nav-links li a:hover {
     transform: translateY(-5px);
   }
 }
-/* Trigger bounce when hovering over the card */
 section:hover .wrap {
   animation: bounce 0.6s ease;
 }
 
-/* Optional: add a subtle scale for smoother feedback */
 section:hover .wrap svg,
 section:hover .wrap img {
   transform: scale(1.05);
@@ -553,30 +544,26 @@ main p {
 
 /* --------------------------- REVIEWS --------------------------- */
 .reviews-section {
-  padding: 0rem;
+  padding: 0;
   color: #222;
 }
-
 .reviews-section .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.5rem;
   padding-bottom: 3rem;
 }
-
-.reviews-intro {
+.reviews-section .reviews-intro {
   margin-bottom: 1.25rem;
   color: #444;
 }
-
-/* Grid */
-.reviews-grid {
+.reviews-section .reviews-grid {
   display: grid;
   gap: 1.25rem;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
 }
 
-/* Card */
+/* Review Card */
 .review-card {
   background: #fff;
   border-radius: 12px;
@@ -587,11 +574,8 @@ main p {
   align-items: flex-start;
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
-
-.review-card:focus-within,
-.review-card:hover {
+.review-card:hover, .review-card:focus-within {
   transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(15, 20, 25, 0.1);
 }
 
 /* Avatar */
@@ -602,14 +586,12 @@ main p {
   border-radius: 50%;
   background: linear-gradient(135deg, #e67e22 0%, #f3a65a 100%);
   color: white;
-  display: inline-grid;
+  display: grid;
   place-items: center;
   font-weight: 600;
   font-size: 0.95rem;
   text-transform: uppercase;
 }
-
-/* If avatar image present */
 .review-avatar img {
   width: 100%;
   height: 100%;
@@ -644,42 +626,26 @@ main p {
 }
 
 .review-quote {
-  margin: 0;
+  margin: 0.35rem 0 0;
   color: #333;
   line-height: 1.4;
   font-size: 0.95rem;
-  margin-top: 0.35rem;
 }
 
-/* Stars */
 .stars {
   display: inline-flex;
   margin-left: auto;
 }
-
-.star {
+.stars .star {
   width: 16px;
   height: 16px;
-  display: inline-block;
   fill: #f1c40f;
 }
 
-/* Small note and error */
-.reviews-footer {
-  margin-top: 1rem;
-  text-align: center;
+#loadMoreReviews {
+  margin-top: 1.25rem;
 }
 
-.reviews-error {
-  color: #a94442;
-  background: #fcebea;
-  border: 1px solid rgba(169, 68, 66, 0.15);
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
-  display: inline-block;
-}
-
-/* --------------------------- END MAIN --------------------------- */
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
   padding-top: 2rem;
@@ -691,7 +657,6 @@ main p {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  /* Aligns columns at the top */
   gap: 20px;
   width: 100%;
   max-width: 1200px;
@@ -699,23 +664,18 @@ main p {
   flex-wrap: wrap;
   border-bottom: 1px solid #eeeeee;
 }
-
 .footer-upper > div {
   flex: 1;
-  /* Equal column widths */
   text-align: center;
   min-width: 200px;
 }
 
 .footer-social {
-  gap: 0.5rem;
   width: 10rem;
   margin-bottom: 2rem;
 }
-
 .footer-social ion-icon {
   font-size: 2rem;
-  color: #cd8900;
   color: white;
 }
 
@@ -723,7 +683,6 @@ main p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -734,10 +693,8 @@ main p {
   border-radius: 10px;
   width: 100%;
 }
-
-#signup-form {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.footer-form #signup-form {
+  margin: 0 0.5rem;
 }
 
 footer {
@@ -749,29 +706,16 @@ footer a {
   text-decoration: none;
 }
 
-.footer-inner {
-  display: grid;
-  gap: 1rem;
-}
-
-.login-link {
-  text-decoration: underline;
-  margin-right: 0.5rem;
-}
-
 .footer-sitemap {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
-
-.sitemap-col h4 {
+.footer-sitemap h4 {
   color: #cd8900;
 }
-
-.sitemap-col ul {
+.footer-sitemap ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -783,23 +727,22 @@ footer a {
   font-size: 0.85rem;
 }
 
-/* utilities */
+/* Utility */
 .visually-hidden {
   position: absolute !important;
   height: 1px;
   width: 1px;
   overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
+  clip: rect(1px, 1px, 1px);
   white-space: nowrap;
 }
 
-@media only screen and (min-width: 35rem) {
-  /* NAVIGATION STUFF GOES HERE  */
-}
 @media only screen and (min-width: 35rem) and (min-width: 600px) {
+  /* --------------------------- NAVIGATION --------------------------- */
   header.nav {
     justify-content: flex-start;
     gap: 1rem;
+    width: 90%;
   }
   header.nav .menu-button {
     display: none;
@@ -824,6 +767,7 @@ footer a {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
   }
+  /* --------------------------- CARDS --------------------------- */
   .allcards {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -833,36 +777,19 @@ footer a {
     display: flex;
     flex-direction: column;
   }
-  .allcards img {
-    height: auto;
-    margin-bottom: 0.5rem;
-  }
   .reviews-section .container {
     padding-bottom: 3rem;
   }
+  /* --------------------------- FOOTER --------------------------- */
   .footer-upper > div {
     flex: 1;
-    /* Makes all columns equal width */
     text-align: center;
-    /* Centers their content */
     min-width: 0;
-    /* Prevents overflow from long content */
   }
   .footer-inner {
     grid-template-columns: 1fr 1fr;
     align-items: start;
     gap: 1.5rem;
-  }
-  .footer-brand {
-    align-items: flex-start;
-  }
-  .footer-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .footer-social {
-    grid-column: 2;
   }
   .brand-text {
     display: flex;
@@ -870,25 +797,19 @@ footer a {
     justify-content: space-between;
     max-width: 900px;
     margin: 0 auto;
-    margin-bottom: 0rem;
-  }
-  .brand-copy p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: #666;
   }
   .footer-form {
     order: 3;
     align-self: center;
   }
 }
-@media only screen and (min-width: 64rem) {
-  /* NAVIGATION STUFF GOES HERE  */
-}
 @media only screen and (min-width: 64rem) and (min-width: 900px) {
-  header, nav, main {
+  header,
+  nav,
+  main {
     max-width: 960px;
     margin: auto;
+    width: 100%;
   }
   .hero-image p {
     font-size: 2rem;
@@ -902,6 +823,9 @@ footer a {
   .nav .nav-links a {
     margin: 0;
   }
+  h1 {
+    margin-left: 0rem;
+  }
   .allcards {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
@@ -912,7 +836,7 @@ footer a {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   }
   .reviews-section .container {
-    padding: 0rem;
+    padding: 0;
     padding-bottom: 3rem;
   }
   .footer-inner {
@@ -921,10 +845,7 @@ footer a {
     gap: 2rem;
   }
   .footer-upper {
-    align-items: flex-start; /* Aligns columns at the top */
-  }
-  .footer-brand {
-    grid-column: 1;
+    align-items: flex-start;
   }
   .footer-sitemap {
     grid-column: 2;
@@ -935,14 +856,6 @@ footer a {
   .footer-social {
     grid-column: 3;
     align-self: start;
-  }
-  .brand-info {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-  .brand-copy strong {
-    display: block;
   }
   .footer-form {
     margin-left: auto;

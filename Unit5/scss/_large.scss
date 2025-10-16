@@ -1,59 +1,73 @@
-/* NAVIGATION STUFF GOES HERE  */
+// /* NAVIGATION STUFF GOES HERE  */
 
 @media (min-width: 900px) {
-
-header, nav, main {
+  header,
+  nav,
+  main {
     max-width: 960px;
     margin: auto;
-}
+            width: 100%;
+  }
 
-      .hero-image p {
+  .hero-image p {
     font-size: 2rem;
     width: 40%;
   }
 
+  nav ul {
+    justify-content: flex-start;
+    gap: 1.25rem;
+    padding-left: 0;
+  }
 
-    nav ul {
-        justify-content: flex-start;
-        gap: 1.25rem;
-        padding-left: 0;
-    }
+  .nav .nav-links a {
+    margin: 0;
+  }
 
-    .nav .nav-links a {
-        margin: 0;
-    }
-    
-    .allcards {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-        padding: 2rem 0;
-    }
-
-    .allcards section {
-        padding: 1rem;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-    }
-
-
-.reviews-section .container {
-  padding: 0rem;
-    padding-bottom: 3rem;
+  h1 {
+    margin-left: 0rem;
 }
 
-    .footer-inner {
-        grid-template-columns: 1fr 2fr 1fr;
-        align-items: start;
-        gap: 2rem;
+  .allcards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 0;
+
+    section {
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
     }
+  }
 
-    .footer-upper {
-        align-items: flex-start;  /* Aligns columns at the top */
-    }
+  .reviews-section .container {
+    padding: 0;
+    padding-bottom: 3rem;
+  }
 
-    .footer-brand {grid-column:1}
-    .footer-sitemap {grid-column:2; display:grid; grid-template-columns:repeat(3,1fr); gap:1rem}
-    .footer-social {grid-column:3; align-self:start}
+  .footer-inner {
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: start;
+    gap: 2rem;
+  }
 
-    .brand-info {display:flex;gap:1rem;align-items:center}
-    .brand-copy strong{display:block}
-    .footer-form {margin-left:auto}}
+  .footer-upper {
+    align-items: flex-start;
+  }
+
+  .footer-sitemap {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .footer-social {
+    grid-column: 3;
+    align-self: start;
+  }
+
+  .footer-form {
+    margin-left: auto;
+  }
+}
+
