@@ -322,7 +322,6 @@ body {
 
 /* --------------------------- HEADER --------------------------- */
 #headerWrapper {
-  border-bottom: 1px solid #eeeeee;
   background-color: #000000;
 }
 
@@ -341,7 +340,6 @@ header span {
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 #navWrapper {
   background: #fff;
-  border-bottom: 1px solid #eeeeee;
   background-color: #711b1b;
 }
 
@@ -374,10 +372,48 @@ nav li.active a {
   border-radius: 10px;
 }
 
-.service-icon {
-  font-size: 3rem;
-  color: #333;
-  margin-bottom: 1rem;
+#menuButton::before {
+  content: "\f0c9";
+  /* Unicode for hamburger icon in FontAwesome */
+}
+
+#menuButton {
+  border: none;
+  background: none;
+  font-size: 2rem;
+  padding: 0%;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.hero-image {
+  position: relative;
+  padding-bottom: 2rem;
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hero-image p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 1rem 2rem;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  color: #000;
+  background-color: rgba(205, 137, 0, 0.8);
+  font-size: 1.25rem;
+  border-radius: 25px;
+  font-weight: 500;
 }
 
 /* Cards - single column on small */
@@ -389,15 +425,18 @@ nav li.active a {
 }
 
 .allcards section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes last element to the bottom */
   background: #fff;
-  border: 1px solid #eee;
-  padding: 0.75rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  border-radius: 10px;
+  min-height: 360px; /* ensures consistent height */
 }
 
 .allcards img {
-  max-width: 100%;
   height: auto;
   display: block;
   border-radius: 8px;
@@ -433,19 +472,209 @@ nav li.active a {
   background: rgb(80.0685714286, 19.1314285714, 19.1314285714);
 }
 
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+/* Trigger bounce when hovering over the card */
+section:hover .wrap {
+  animation: bounce 0.6s ease;
+}
+
+/* Optional: add a subtle scale for smoother feedback */
+section:hover .wrap svg,
+section:hover .wrap img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* --------------------------- HAMBURGER MENU --------------------------- */
+#menuButton {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-left: auto;
+  display: block;
+  /* visible on small screens */
+}
+
+/* Hide nav by default on small screens */
+#mainNav {
+  display: none;
+}
+
+/* When nav is open */
+#mainNav.open {
+  display: block;
+}
+
+/* Style active/open state of button (optional) */
+#menuButton.open {
+  color: #cd8900;
+}
+
+/* Optional smooth slide-down animation */
+#mainNav {
+  transition: all 0.3s ease;
+}
+
 /* --------------------------- MAIN --------------------------- */
 main h1 {
-  padding: 1rem 10px 0.5rem 10px;
-  font-size: 1.5rem;
-  color: #cd8900;
-  font-weight: 300;
-  margin-bottom: 0;
+  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
 }
 main p {
   color: #333;
   line-height: 150%;
 }
 
+/* --------------------------- REVIEWS --------------------------- */
+.reviews-section {
+  padding: 0rem;
+  color: #222;
+}
+
+.reviews-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  padding-bottom: 3rem;
+}
+
+.reviews-intro {
+  margin-bottom: 1.25rem;
+  color: #444;
+}
+
+/* Grid */
+.reviews-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+/* Card */
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(15, 20, 25, 0.06);
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.review-card:focus-within,
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(15, 20, 25, 0.1);
+}
+
+/* Avatar */
+.review-avatar {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e67e22 0%, #f3a65a 100%);
+  color: white;
+  display: inline-grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+/* If avatar image present */
+.review-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Content */
+.review-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.review-meta {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.reviewer-name {
+  font-weight: 700;
+}
+
+.reviewer-location {
+  color: #666;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.review-quote {
+  margin: 0;
+  color: #333;
+  line-height: 1.4;
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+}
+
+/* Stars */
+.stars {
+  display: inline-flex;
+  margin-left: auto;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: #f1c40f;
+}
+
+/* Small note and error */
+.reviews-footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.reviews-error {
+  color: #a94442;
+  background: #fcebea;
+  border: 1px solid rgba(169, 68, 66, 0.15);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* --------------------------- END MAIN --------------------------- */
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
   padding-top: 2rem;
@@ -456,7 +685,8 @@ main p {
 .footer-upper {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Aligns columns at the top */
+  align-items: flex-start;
+  /* Aligns columns at the top */
   gap: 20px;
   width: 100%;
   max-width: 1200px;
@@ -466,7 +696,8 @@ main p {
 }
 
 .footer-upper > div {
-  flex: 1; /* Equal column widths */
+  flex: 1;
+  /* Equal column widths */
   text-align: center;
   min-width: 200px;
 }
@@ -474,12 +705,13 @@ main p {
 .footer-social {
   gap: 0.5rem;
   width: 10rem;
+  margin-bottom: 2rem;
 }
 
 .footer-social ion-icon {
   font-size: 2rem;
   color: #cd8900;
-  margin-bottom: 2rem;
+  color: white;
 }
 
 .brand-text {
@@ -487,6 +719,7 @@ main p {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .footer-form input[type=email] {
@@ -560,12 +793,19 @@ footer a {
   /* Medium screens - horizontal nav and 2-column cards */
 }
 @media only screen and (min-width: 35rem) and (min-width: 600px) {
+  .hero-image p {
+    font-size: 1.5rem;
+    width: 60%;
+  }
   nav ul {
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 0.5rem 1rem;
+  }
+  h1 {
+    margin-left: 0.5rem;
   }
   nav a {
     padding: 0.5rem 1rem;
@@ -576,22 +816,33 @@ footer a {
     padding: 1.5rem 10px;
   }
   .allcards section {
-    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
   }
   .allcards img {
-    width: 100%;
     height: auto;
     margin-bottom: 0.5rem;
   }
 }
-@media only screen and (min-width: 35rem) and (min-width: 600px) {
+@media only screen and (min-width: 35rem) {
+  .reviews-section .container {
+    padding-bottom: 3rem;
+  }
+  #menuButton {
+    display: none;
+    /* hide hamburger on medium+ */
+  }
+  #mainNav {
+    display: block !important;
+    /* always show nav */
+  }
   .footer-upper > div {
-    flex: 1; /* Makes all columns equal width */
-    text-align: center; /* Centers their content */
-    min-width: 0; /* Prevents overflow from long content */
+    flex: 1;
+    /* Makes all columns equal width */
+    text-align: center;
+    /* Centers their content */
+    min-width: 0;
+    /* Prevents overflow from long content */
   }
   .footer-inner {
     grid-template-columns: 1fr 1fr;
@@ -609,14 +860,13 @@ footer a {
   .footer-social {
     grid-column: 2;
   }
-}
-@media only screen and (min-width: 35rem) {
   .brand-text {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 900px;
     margin: 0 auto;
+    margin-bottom: 0rem;
   }
   .brand-copy p {
     margin: 0;
@@ -636,6 +886,10 @@ footer a {
   /* NAVIGATION STUFF GOES HERE  */
 }
 @media only screen and (min-width: 64rem) and (min-width: 900px) {
+  .hero-image p {
+    font-size: 2rem;
+    width: 40%;
+  }
   nav ul {
     justify-content: flex-start;
     gap: 1.25rem;
@@ -651,7 +905,11 @@ footer a {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   }
 }
-@media only screen and (min-width: 64rem) and (min-width: 900px) {
+@media only screen and (min-width: 64rem) {
+  .reviews-section .container {
+    padding: 0rem;
+    padding-bottom: 3rem;
+  }
   .footer-inner {
     grid-template-columns: 1fr 2fr 1fr;
     align-items: start;

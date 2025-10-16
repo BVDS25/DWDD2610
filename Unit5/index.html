@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css" />
 
-    <!-- Font Awesome Free -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          integrity="sha512-pVnYxPsH0sYqiBzsc6M0zTiDBFiiJzOXv0+0kclvqwldJIBEVjrPgJM8kC8fqglbY+TW1JtMI+bXJr9j6z+PIg=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,80 +23,147 @@
 <body>
     <div id="headerWrapper">
         <header>
-            <img src="images/logo2x.png" alt="AutoWorks Garage logo" width="100px"/>
+            <img src="images/logo2x.png" alt="AutoWorks Garage logo" width="100px" />
             <span>AutoWorks Garage</span>
         </header>
     </div>
     <!-- end header wrapper -->
 
     <div id="navWrapper">
-        <nav>
-            <ul>
-                <li><a href="#">Clients</a></li>
-                <li class="active"><a href="#">Services</a></li>
-                <li><a href="#">Vehicles</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+        <nav id="mainNav">
+            <button id="menuButton" aria-label="Menu Button">
+                <ul>
+                    <li><a href="#">Clients</a></li>
+                    <li class="active"><a href="#">Services</a></li>
+                    <li><a href="#">Vehicles</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
         </nav>
+
     </div>
     <!-- end nav wrapper -->
+<div id="mainWrapper">
 
-    <div id="mainWrapper">
-        <main>
-            <h1>Our Automotive Services</h1>
+  <!-- Hero Section -->
+  <div class="hero-image">
+    <img src="images/herocar.webp" alt="Car repair service" width="1200" height="500" />
+    <p>Having car issues?</p>
+  </div>
 
-            <div class="allcards">
-                <section>
-                    <i class="fas fa-oil-can service-icon"></i>
-                    <h2>Oil Change</h2>
-                    <p>
-                        Keep your engine running smoothly with our premium oil and filter change services.
-                        Fast, affordable, and professional.
-                    </p>
-                    <a class="btn" href="#">Book Service</a>
-                </section>
+  <main>
+    <h1>Our Services</h1>
 
-                <section>
-                    <i class="fas fa-brake-warning service-icon"></i>
-                    <h2>Brake Inspection & Repair</h2>
-                    <p>
-                        From pads to rotors, we ensure your brakes are in top shape for safety and performance.
-                    </p>
-                    <a class="btn" href="#">Book Service</a>
-                </section>
+    <div class="allcards">
 
-                <section>
-                    <i class="fas fa-spray-can service-icon"></i>
-                    <h2>Auto Detailing</h2>
-                    <p>
-                        Interior and exterior detailing to make your car look showroom-new.
-                        Choose from basic wash to full restoration packages.
-                    </p>
-                    <a class="btn" href="#">Book Service</a>
-                </section>
+      <!-- Oil Change -->
+      <section>
+        <div class="wrap" title="Oil Change">
+<svg class="icon icon--oil" width="100" height="100" viewBox="0 0 100 100"
+     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Oil change icon">
+  <title>Oil Change</title>
+  <rect x="18" y="40" width="46" height="20" rx="3"
+        stroke="currentColor" stroke-width="6" fill="none" stroke-linejoin="round"/>
+  <rect x="60" y="36" width="10" height="6" rx="1.5"
+        stroke="currentColor" stroke-width="6" fill="none" stroke-linejoin="round"
+        transform="rotate(-18 65 39)"/>
+  <path d="M74 34 L90 28" stroke="currentColor" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <circle cx="30" cy="32" r="6" stroke="currentColor" stroke-width="6" fill="none"/>
+  <path d="M86 34
+           c-2 3 -4 6 -3 9
+           c1.2 3 4 5 6 3
+           c2 -2 1 -6 -3 -12 z"
+        fill="currentColor" />
+</svg>
+        </div>
+        <h2>Oil Change</h2>
+        <p>Keep your engine running smoothly with our premium oil and filter change services. Fast, affordable, and professional.</p>
+        <a class="btn" href="#">Book Service</a>
+      </section>
 
-                <section>
-                    <i class="fas fa-tire service-icon"></i>
-                    <h2>Tire Rotation & Replacement</h2>
-                    <p>
-                        Extend tire life and improve handling with expert tire rotation and new tire installation.
-                    </p>
-                    <a class="btn" href="#">Book Service</a>
-                </section>
+      <!-- Brake Inspection -->
+      <section>
+        <div class="wrap" title="Brake Inspection">
+          <!-- Torque Wrench Icon -->
+<img src="images/wrench.svg" alt="Brake Inspection & Repair" width="80" height="80">
 
-                <section>
-                    <i class="fas fa-car-burst service-icon"></i>
-                    <h2>Engine Diagnostics</h2>
-                    <p>
-                        Check engine light on? Our advanced diagnostics pinpoint issues quickly so you can drive with confidence.
-                    </p>
-                    <a class="btn" href="#">Book Service</a>
-                </section>
-            </div>
-        </main>
+        </div>
+        <h2>Brake Inspection & Repair</h2>
+        <p>From pads to rotors, we ensure your brakes are in top shape for safety and performance.</p>
+        <a class="btn" href="#">Book Service</a>
+      </section>
+
+      <!-- Auto Detailing -->
+      <section>
+        <div class="wrap" title="Auto Detailing">
+          <img src="images/clean.svg" alt="Auto Detailing" width="100" height="100">
+        </div>
+        <h2>Auto Detailing</h2>
+        <p>Interior and exterior detailing to make your car look showroom-new. Choose from basic wash to full restoration packages.</p>
+        <a class="btn" href="#">Book Service</a>
+      </section>
+
+      <!-- Tire Rotation -->
+      <section>
+        <div class="wrap" title="Tire Rotation">
+          <svg class="icon" width="100" height="100" viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tire rotation icon">
+            <title>Tire Rotation</title>
+            <circle cx="12" cy="12" r="7" stroke="currentColor" stroke-width="1.8" fill="none" />
+            <circle cx="12" cy="12" r="2" fill="currentColor" />
+            <path d="M12 5 v2 M12 17 v2 M5 12 h2 M17 12 h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            <path d="M8 8 l2 2 M14 14 l2 2 M8 16 l2 -2 M14 10 l2 -2"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h2>Tire Rotation & Replacement</h2>
+        <p>Extend tire life and improve handling with expert tire rotation and new tire installation.</p>
+        <a class="btn" href="#">Book Service</a>
+      </section>
+
+      <!-- Engine Diagnostics -->
+      <section>
+        <div class="wrap" title="Engine Diagnostics">
+          <svg class="icon" width="100" height="100" viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Engine diagnostics icon">
+            <title>Engine Diagnostics</title>
+            <path d="M5 9 h3 l2 -2 h4 l2 2 h3 v6 h-3 l-2 2 h-4 l-2 -2 h-3 z"
+                  stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round" />
+            <path d="M12 8 v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            <circle cx="12" cy="12" r="0.8" fill="currentColor" />
+          </svg>
+        </div>
+        <h2>Engine Diagnostics</h2>
+        <p>Check engine light on? Our advanced diagnostics pinpoint issues quickly so you can drive with confidence.</p>
+        <a class="btn" href="#">Book Service</a>
+      </section>
+
     </div>
-    <!-- end main wrapper -->
+
+<!-- reviews -->
+
+<h1 id="reviews-title">What our costumers say</h1>
+
+<section id="reviews" aria-labelledby="reviews-title" class="reviews-section">
+  <div class="container">
+
+    <p class="reviews-intro">Real feedback from real customers — see why drivers trust AutoWorks Garage.</p>
+
+    <!-- reviews grid (empty — filled by JS) -->
+    <div id="reviewsGrid" class="reviews-grid" role="list" aria-live="polite"></div>
+
+    <!-- optional: show more button if you want pagination in the future -->
+    <div class="reviews-footer">
+      <button id="loadMoreReviews" class="btn btn-secondary" type="button" hidden>Load more reviews</button>
+    </div>
+  </div>
+</section>
+
+
+
+  </main>
+</div>
+
 
     <!-- start footer -->
 
@@ -107,11 +174,11 @@
             <div class="footer-social">
                 <div>
                     <h4>Follow Us</h4>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#" aria-label="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a href="#" aria-label="YouTube"><ion-icon name="logo-youtube"></ion-icon></a>
                 </div>
             </div>
             <!-- end social -->
@@ -191,8 +258,8 @@
     </div>
     <!-- end footer wrapper -->
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/scripts.js"></script>
+
 </body>
 
 </html>

@@ -6,12 +6,20 @@ header, nav, main {
 /* NAVIGATION STUFF GOES HERE  */
 
 @media (min-width: 900px) {
+
+
+      .hero-image p {
+    font-size: 2rem;
+    width: 40%;
+  }
+
+
     nav ul {
         justify-content: flex-start;
         gap: 1.25rem;
         padding-left: 0;
     }
-
+    
     .allcards {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
@@ -24,7 +32,13 @@ header, nav, main {
     }
 }
 
-@media (min-width: 900px) {
+
+
+.reviews-section .container {
+  padding: 0rem;
+    padding-bottom: 3rem;
+}
+
     .footer-inner {
         grid-template-columns: 1fr 2fr 1fr;
         align-items: start;
@@ -45,4 +59,4 @@ header, nav, main {
     .brand-info {display:flex;gap:1rem;align-items:center}
     .brand-copy strong{display:block}
     .footer-form {margin-left:auto}
-}
+

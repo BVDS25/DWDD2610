@@ -25,7 +25,7 @@ body {
 
 /* --------------------------- HEADER --------------------------- */
 #headerWrapper {
-    border-bottom: 1px solid $greyColor;
+    // border-bottom: 1px solid $greyColor;
     background-color: $accentColor;
 }
 
@@ -50,7 +50,7 @@ header {
 
 #navWrapper {
     background: #fff;
-    border-bottom: 1px solid $greyColor;
+    // border-bottom: 1px solid $greyColor;
     background-color: $primaryColor;
 }
 
@@ -87,11 +87,66 @@ nav li.active a {
     border-radius: 10px;
 }
 
-.service-icon {
-    font-size: 3rem;
-    color: #333;
-    margin-bottom: 1rem;
+// .service-icon {
+//     font-size: 3rem;
+//     color: #333;
+//     margin-bottom: 1rem;
+// }
+
+#menuButton::before {
+    content: "\f0c9";
+    /* Unicode for hamburger icon in FontAwesome */
+    // display: none; /* hidden on large screens */
 }
+
+#menuButton {
+    border: none;
+    background: none;
+    font-size: 2rem;
+    padding: 0%;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+
+}
+
+
+// MAIN
+
+.hero-image {
+    position: relative; // allows absolute positioning of text inside
+    padding-bottom: 2rem;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // perfectly center text
+        margin: 0;
+        padding: 1rem 2rem;
+        text-align: center;
+
+        width: 80%; // flexible width
+        max-width: 400px; // keeps it from being too wide
+
+        color: #000;
+        background-color: rgba($secondaryColor, 0.8); // translucent bg for readability
+        font-size: 1.25rem;
+        border-radius: 25px;
+        font-weight: $normalWeight;
+    }
+}
+
+
 /* Cards - single column on small */
 .allcards {
     display: grid;
@@ -101,15 +156,24 @@ nav li.active a {
 }
 
 .allcards section {
-    background: #fff;
-    border: 1px solid #eee;
-    padding: .75rem;
-    text-align: center;
-    border-radius: 10px;
+    // background: #fff;
+    // border: 1px solid #eee;
+    // padding: .75rem;
+    // text-align: center;
+    // border-radius: 10px;
+    // align-items: center;
+     display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes last element to the bottom */
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  min-height: 360px; /* ensures consistent height */
 }
 
 .allcards img {
-    max-width: 100%;
     height: auto;
     display: block;
     border-radius: 8px;
@@ -147,15 +211,80 @@ nav li.active a {
     background: darken($primaryColor, 8%);
 }
 
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Trigger bounce when hovering over the card */
+section:hover .wrap {
+  animation: bounce 0.6s ease;
+}
+
+/* Optional: add a subtle scale for smoother feedback */
+section:hover .wrap svg,
+section:hover .wrap img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* --------------------------- HAMBURGER MENU --------------------------- */
+#menuButton {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-left: auto;
+    display: block;
+    /* visible on small screens */
+}
+
+/* Hide nav by default on small screens */
+#mainNav {
+    display: none;
+}
+
+/* When nav is open */
+#mainNav.open {
+    display: block;
+}
+
+/* Style active/open state of button (optional) */
+#menuButton.open {
+    color: $secondaryColor;
+}
+
+/* Optional smooth slide-down animation */
+#mainNav {
+    transition: all 0.3s ease;
+}
+
 
 /* --------------------------- MAIN --------------------------- */
 main {
     h1 {
-        padding: 1rem $gutter.5rem $gutter;
-        font-size: 1.5rem;
-        color: $secondaryColor;
-        font-weight: $lightWeight;
-        margin-bottom: 0;
+        font-size: 1.6rem;
+         margin-bottom: 0.25rem;
+        // padding: 1rem $gutter.5rem $gutter;
+        // font-size: 1.6rem;
+        // margin-bottom: 0;
     }
 
     p {
@@ -164,7 +293,134 @@ main {
     }
 }
 
-// end main
+
+/* --------------------------- REVIEWS --------------------------- */
+
+.reviews-section {
+  padding: 0rem;
+  color: #222;
+}
+
+.reviews-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: .5rem;
+  padding-bottom: 3rem;
+}
+
+// .reviews-section h2 {
+//   font-size: 1.6rem;
+//   margin-bottom: 0.25rem;
+// }
+
+.reviews-intro {
+  margin-bottom: 1.25rem;
+  color: #444;
+}
+
+/* Grid */
+.reviews-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+/* Card */
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(15,20,25,0.06);
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.review-card:focus-within,
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(15,20,25,0.10);
+}
+
+/* Avatar */
+.review-avatar {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e67e22 0%, #f3a65a 100%);
+  color: white;
+  display: inline-grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+/* If avatar image present */
+.review-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Content */
+.review-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.review-meta {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.reviewer-name { font-weight: 700; }
+.reviewer-location { color: #666; font-weight: 500; font-size: 0.85rem; }
+
+.review-quote {
+  margin: 0;
+  color: #333;
+  line-height: 1.4;
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+}
+
+/* Stars */
+.stars {
+  display: inline-flex;
+  margin-left: auto;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: #f1c40f;
+}
+
+/* Small note and error */
+.reviews-footer { margin-top: 1rem; text-align: center; }
+.reviews-error {
+  color: #a94442;
+  background: #fcebea;
+  border: 1px solid rgba(169,68,66,0.15);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+
+/* --------------------------- END MAIN --------------------------- */
+
+
 
 
 
@@ -180,21 +436,23 @@ main {
 
 
 .footer-upper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;  /* Aligns columns at the top */
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;          
-  border-bottom: 1px solid $greyColor;     
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Aligns columns at the top */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $greyColor;
 }
 
-.footer-upper > div {
-  flex: 1;                 /* Equal column widths */
-  text-align: center;
-  min-width: 200px;   
+.footer-upper>div {
+    flex: 1;
+    /* Equal column widths */
+    text-align: center;
+    min-width: 200px;
 }
 
 
@@ -206,12 +464,14 @@ main {
     // margin-top: 1rem;
     // margin-left: auto;
     width: 10rem;
+    margin-bottom: 2rem;
 }
 
 .footer-social ion-icon {
     font-size: 2rem;
     color: $secondaryColor;
-    margin-bottom: 2rem;
+
+    color: white;
 
 }
 
@@ -220,6 +480,7 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .footer-form input[type="email"] {
@@ -228,7 +489,7 @@ main {
     border: 1px solid #ddd;
     border-radius: 10px;
     width: 100%;
-    
+
 }
 
 #signup-form {
