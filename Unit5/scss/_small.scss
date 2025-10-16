@@ -399,6 +399,7 @@ main {
   flex-direction: column;
   align-items: center;
   margin-bottom: 2rem;
+  margin-right: .5rem;
 }
 
 .footer-form {
@@ -413,6 +414,10 @@ main {
   #signup-form {
     margin: 0 .5rem;
   }
+
+    button {
+        margin-bottom: 1.25rem;
+    }
 }
 
 footer {
@@ -446,6 +451,16 @@ footer {
   border-top: 1px solid $greyColor;
   padding-top: 1rem;
   font-size: .85rem;
+}
+
+.brand-text a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 /* Utility */

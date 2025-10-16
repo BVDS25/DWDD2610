@@ -684,6 +684,7 @@ main p {
   flex-direction: column;
   align-items: center;
   margin-bottom: 2rem;
+  margin-right: 0.5rem;
 }
 
 .footer-form input[type=email] {
@@ -695,6 +696,9 @@ main p {
 }
 .footer-form #signup-form {
   margin: 0 0.5rem;
+}
+.footer-form button {
+  margin-bottom: 1.25rem;
 }
 
 footer {
@@ -725,6 +729,14 @@ footer a {
   border-top: 1px solid #eeeeee;
   padding-top: 1rem;
   font-size: 0.85rem;
+}
+
+.brand-text a {
+  color: inherit;
+  text-decoration: none;
+}
+.brand-text a:hover, .brand-text a:focus {
+  text-decoration: underline;
 }
 
 /* Utility */
