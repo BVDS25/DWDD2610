@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -325,71 +326,108 @@ body {
   background-color: #000000;
 }
 
-header {
+header.nav {
   display: flex;
-  column-gap: 10px;
   align-items: center;
-  padding: 0.5rem 10px;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  position: relative;
+  z-index: 1000;
+  background-color: #000000;
+  /* hamburger bars */
+  /* Animate into “X” when active */
+  /* Nav links */
 }
-header span {
-  font-size: 1.6rem;
-  font-weight: 300;
-  color: white;
-}
-
-/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
-#navWrapper {
-  background: #fff;
-  background-color: #711b1b;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0.5rem 10px;
-  display: flex;
-  flex-direction: column;
-  /* stack on small */
-  gap: 10px;
-}
-nav ul :hover {
-  background: #000000;
-  opacity: 0.9;
-  color: #fff;
-  border-radius: 10px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #ffffff;
-  padding: 0.5rem;
+header.nav img {
+  width: 60px;
+  height: auto;
   display: block;
 }
-
-nav li.active a {
-  background: #000000;
-  color: #fff;
-  border-radius: 10px;
+header.nav .brand-name {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-left: 0.75rem;
+  flex: 1;
 }
-
-#menuButton::before {
-  content: "\f0c9";
-  /* Unicode for hamburger icon in FontAwesome */
-}
-
-#menuButton {
-  border: none;
+header.nav .menu-button {
   background: none;
-  font-size: 2rem;
-  padding: 0%;
-  width: 44px;
-  height: 44px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  width: 32px;
+  height: 24px;
+  z-index: 1100;
+}
+header.nav .menu-icon,
+header.nav .menu-icon::before,
+header.nav .menu-icon::after {
+  content: "";
+  display: block;
+  background: #fff;
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
   position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+header.nav .menu-icon {
+  top: 50%;
+  transform: translateY(-50%);
+}
+header.nav .menu-icon::before {
+  top: -8px;
+}
+header.nav .menu-icon::after {
+  top: 8px;
+}
+header.nav .menu-button.active .menu-icon {
+  background: transparent;
+}
+header.nav .menu-button.active .menu-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+header.nav .menu-button.active .menu-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+header.nav .nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: fixed;
   top: 0;
   right: 0;
-  cursor: pointer;
+  height: 100vh;
+  width: 75%;
+  max-width: 320px;
+  background: #111;
+  padding: 5rem 1.5rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
+  z-index: 1050;
+}
+header.nav .nav-links.open {
+  transform: translateX(0);
+}
+header.nav .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  padding: 0.75rem 0;
+  transition: color 0.3s;
+}
+header.nav .nav-links li a:hover {
+  color: #f1c40f;
 }
 
+/* --------------------------- END HEADER --------------------------- */
 .hero-image {
   position: relative;
   padding-bottom: 2rem;
@@ -467,8 +505,7 @@ nav li.active a {
   font-weight: 500;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover, .btn:focus {
   background: rgb(80.0685714286, 19.1314285714, 19.1314285714);
 }
 
@@ -502,38 +539,6 @@ section:hover .wrap svg,
 section:hover .wrap img {
   transform: scale(1.05);
   transition: transform 0.3s ease;
-}
-
-/* --------------------------- HAMBURGER MENU --------------------------- */
-#menuButton {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.8rem;
-  cursor: pointer;
-  margin-left: auto;
-  display: block;
-  /* visible on small screens */
-}
-
-/* Hide nav by default on small screens */
-#mainNav {
-  display: none;
-}
-
-/* When nav is open */
-#mainNav.open {
-  display: block;
-}
-
-/* Style active/open state of button (optional) */
-#menuButton.open {
-  color: #cd8900;
-}
-
-/* Optional smooth slide-down animation */
-#mainNav {
-  transition: all 0.3s ease;
 }
 
 /* --------------------------- MAIN --------------------------- */
@@ -790,25 +795,34 @@ footer a {
 
 @media only screen and (min-width: 35rem) {
   /* NAVIGATION STUFF GOES HERE  */
-  /* Medium screens - horizontal nav and 2-column cards */
 }
 @media only screen and (min-width: 35rem) and (min-width: 600px) {
-  .hero-image p {
-    font-size: 1.5rem;
-    width: 60%;
-  }
-  nav ul {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  header.nav {
+    justify-content: flex-start;
     gap: 1rem;
+  }
+  header.nav .menu-button {
+    display: none;
+  }
+  header.nav .nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    transform: none;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin-left: auto;
+  }
+  header.nav .nav-links li a {
+    color: #fff;
     padding: 0.5rem 1rem;
   }
-  h1 {
-    margin-left: 0.5rem;
-  }
-  nav a {
-    padding: 0.5rem 1rem;
+  header.nav .nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
   }
   .allcards {
     grid-template-columns: repeat(2, 1fr);
@@ -823,18 +837,8 @@ footer a {
     height: auto;
     margin-bottom: 0.5rem;
   }
-}
-@media only screen and (min-width: 35rem) {
   .reviews-section .container {
     padding-bottom: 3rem;
-  }
-  #menuButton {
-    display: none;
-    /* hide hamburger on medium+ */
-  }
-  #mainNav {
-    display: block !important;
-    /* always show nav */
   }
   .footer-upper > div {
     flex: 1;
@@ -879,13 +883,13 @@ footer a {
   }
 }
 @media only screen and (min-width: 64rem) {
+  /* NAVIGATION STUFF GOES HERE  */
+}
+@media only screen and (min-width: 64rem) and (min-width: 900px) {
   header, nav, main {
     max-width: 960px;
     margin: auto;
   }
-  /* NAVIGATION STUFF GOES HERE  */
-}
-@media only screen and (min-width: 64rem) and (min-width: 900px) {
   .hero-image p {
     font-size: 2rem;
     width: 40%;
@@ -894,6 +898,9 @@ footer a {
     justify-content: flex-start;
     gap: 1.25rem;
     padding-left: 0;
+  }
+  .nav .nav-links a {
+    margin: 0;
   }
   .allcards {
     grid-template-columns: repeat(3, 1fr);
@@ -904,8 +911,6 @@ footer a {
     padding: 1rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   }
-}
-@media only screen and (min-width: 64rem) {
   .reviews-section .container {
     padding: 0rem;
     padding-bottom: 3rem;

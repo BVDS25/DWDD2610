@@ -1,28 +1,42 @@
 /* NAVIGATION STUFF GOES HERE  */
 
-/* Medium screens - horizontal nav and 2-column cards */
 @media (min-width: 600px) {
 
-.hero-image p {
-    font-size: 1.5rem;
-    width: 60%;
-  }
+	// nav
 
-	nav ul {
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
+	header.nav {
+		justify-content: flex-start;
 		gap: 1rem;
-		padding: .5rem 1rem;
+
+		.menu-button {
+			display: none; // hide hamburger
+		}
+
+		.nav-links {
+			display: flex !important;
+			position: static;
+			flex-direction: row;
+			height: auto;
+			width: auto;
+			transform: none;
+			background: none;
+			box-shadow: none;
+			padding: 0;
+			margin-left: auto;
+		}
+
+		.nav-links li a {
+			color: #fff;
+			padding: 0.5rem 1rem;
+		}
+
+		.nav-links li a:hover {
+			background: rgba(255, 255, 255, 0.1);
+			border-radius: 8px;
+		}
 	}
 
-	h1 {
-    margin-left: .5rem;
-}
 
-	nav a {
-		padding: .5rem 1rem;
-	}
 
 	.allcards {
 		grid-template-columns: repeat(2, 1fr);
@@ -40,73 +54,64 @@
 		height: auto;
 		margin-bottom: .5rem;
 	}
-}
 
-.reviews-section .container {
-  padding-bottom: 3rem;
-}
 
-#menuButton {
-	display: none;
-	/* hide hamburger on medium+ */
-}
-
-#mainNav {
-	display: block !important;
-	/* always show nav */
-}
+	.reviews-section .container {
+		padding-bottom: 3rem;
+	}
 
 
 
-.footer-upper>div {
-	flex: 1;
-	/* Makes all columns equal width */
-	text-align: center;
-	/* Centers their content */
-	min-width: 0;
-	/* Prevents overflow from long content */
-}
+	.footer-upper>div {
+		flex: 1;
+		/* Makes all columns equal width */
+		text-align: center;
+		/* Centers their content */
+		min-width: 0;
+		/* Prevents overflow from long content */
+	}
 
-.footer-inner {
-	grid-template-columns: 1fr 1fr;
-	align-items: start;
-	gap: 1.5rem;
-}
+	.footer-inner {
+		grid-template-columns: 1fr 1fr;
+		align-items: start;
+		gap: 1.5rem;
+	}
 
-.footer-brand {
-	align-items: flex-start
-}
+	.footer-brand {
+		align-items: flex-start
+	}
 
-.footer-form {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end
-}
+	.footer-form {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end
+	}
 
-// .footer-sitemap{grid-template-columns:repeat(2,1fr)}
-.footer-social {
-	grid-column: 2
-}
-
-
-.brand-text {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	max-width: 900px;
-	margin: 0 auto;
-	margin-bottom: 0rem;
-}
+	// .footer-sitemap{grid-template-columns:repeat(2,1fr)}
+	.footer-social {
+		grid-column: 2
+	}
 
 
-// .brand-info {order:1;display:flex;gap:.75rem;align-items:center}
-.brand-copy p {
-	margin: 0;
-	font-size: .95rem;
-	color: #666
-}
+	.brand-text {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 900px;
+		margin: 0 auto;
+		margin-bottom: 0rem;
+	}
 
-.footer-form {
-	order: 3;
-	align-self: center
+
+	// .brand-info {order:1;display:flex;gap:.75rem;align-items:center}
+	.brand-copy p {
+		margin: 0;
+		font-size: .95rem;
+		color: #666
+	}
+
+	.footer-form {
+		order: 3;
+		align-self: center
+	}
 }

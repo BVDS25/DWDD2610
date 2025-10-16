@@ -1,10 +1,23 @@
- const menuButton = document.querySelector("#menuButton");
-    const nav = document.querySelector("#mainNav");
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("menuList");
 
     menuButton.addEventListener("click", () => {
-      nav.classList.toggle("open");
-      menuButton.classList.toggle("open");
+      const expanded = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", !expanded);
+      menuButton.classList.toggle("active");
+      navLinks.classList.toggle("open");
     });
+
+    // Optional: close menu when a link is clicked (mobile UX)
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.classList.remove("active");
+        navLinks.classList.remove("open");
+      });
+    });
+  });
 
 // Reviews fetch & render
 
