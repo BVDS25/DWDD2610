@@ -23,7 +23,16 @@
 <body>
     <div id="headerWrapper">
         <header class="nav">
-            <img src="images/logo2x.png" alt="AutoWorks Garage logo" width="100" height="auto" />
+            <picture class="site-logo">
+  <!-- Large screens (≥900px) -->
+  <source srcset="images/logo3x.png" media="(min-width: 900px)">
+  <!-- Medium screens (≥600px) -->
+  <source srcset="images/logo2x.png" media="(min-width: 600px)">
+    <!-- Small screens (<600px, fallback) -->
+    <img src="images/logo1x.png" alt="AutoWorks Garage logo">
+</picture>
+
+        
             <span class="brand-name">AutoWorks Garage</span>
 
             <!-- Hamburger menu button -->

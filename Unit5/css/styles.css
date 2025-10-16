@@ -335,10 +335,36 @@ header.nav {
   /* Animate into “X” when active */
   /* Nav links */
 }
-header.nav img {
-  width: 60px;
-  height: auto;
+/* Site logo (responsive) */
+header.nav .site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 0 0 auto; /* don't grow/shrink unexpectedly */
+}
+
+/* Target the fallback img inside the <picture> and ensure it scales by max-height.
+   We prefer controlling height so the logo keeps its aspect ratio across widths. */
+header.nav .site-logo img {
   display: block;
+  width: auto;
+  height: auto;
+  max-height: 3rem; /* ~48px on small screens */
+  max-width: 160px;
+}
+
+/* Larger logo on medium screens */
+@media only screen and (min-width: 600px) {
+  header.nav .site-logo img {
+    max-height: 3.5rem; /* ~56px */
+  }
+}
+
+/* Even larger logo on wide screens */
+@media only screen and (min-width: 900px) {
+  header.nav .site-logo img {
+    max-height: 4.5rem; /* ~72px */
+  }
 }
 header.nav .brand-name {
   color: white;

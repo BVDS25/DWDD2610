@@ -32,11 +32,17 @@ header.nav {
   z-index: 1000;
   background-color: $accentColor;
 
-  img {
-    width: 60px;
+    picture img {
     height: auto;
-    display: block;
+    width: 100px;
+    max-width: 100%;
   }
+
+  // img {
+  //   width: 60px;
+  //   height: auto;
+  //   display: block;
+  // }
 
   .brand-name {
     color: white;
@@ -45,6 +51,13 @@ header.nav {
     margin-left: 0.75rem;
     flex: 1;
   }
+
+// header.nav picture img {
+//     height: auto;
+//     width: 100px;
+//     max-width: 100%;
+// }
+
 
   /* Hamburger menu */
   .menu-button {
@@ -57,6 +70,7 @@ header.nav {
     height: 24px;
     z-index: 1100;
   }
+
 
   .menu-icon,
   .menu-icon::before,
