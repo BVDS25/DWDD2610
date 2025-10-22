@@ -1,0 +1,43 @@
+// Large screen styles
+.logo {
+    max-width: 180px; // Larger logo for desktop
+}
+
+// Generate column classes for large screens
+@for $i from 1 through $grid-columns {
+    .col-lg-#{$i} {
+        flex: 0 0 percentage($i / $grid-columns);
+        max-width: percentage($i / $grid-columns);
+    }
+}
+
+// Adjust container width
+main {
+    padding: $spacing-large * 1.5;
+}
+
+// Enhanced navigation styles
+.nav-menu {
+    li {
+        margin-left: $spacing-large;
+    }
+    
+    a {
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+        
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}
+
+// Refined grid spacing
+.row {
+    margin-bottom: $spacing-large;
+}
+
+.highlight-bg {
+    margin: $spacing-large * 2 (-$spacing-large * 1.5);
+    padding: $spacing-large * 2;
+}

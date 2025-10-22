@@ -1,0 +1,139 @@
+// Base styles
+body {
+    font-family: $font-primary;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+// Header styles
+header {
+    position: relative;
+    background: $nav-background;
+    padding: $spacing-small;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 120px;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+// Navigation styles for mobile
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: $text-color;
+    cursor: pointer;
+    padding: $spacing-small;
+}
+
+.nav-menu {
+    display: none;
+    position: fixed;
+    top: $nav-height;
+    left: 0;
+    right: 0;
+    background: $nav-background;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    &.active {
+        display: block;
+    }
+
+    li {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    a {
+        display: block;
+        padding: $spacing-medium;
+        color: $nav-text-color;
+        text-decoration: none;
+        
+        &.active {
+            color: $nav-active-color;
+            font-weight: 500;
+        }
+    }
+}
+
+// Grid system
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -($grid-gutter / 2);
+    margin-right: -($grid-gutter / 2);
+}
+
+[class^="col-"] {
+    position: relative;
+    width: 100%;
+    padding-left: ($grid-gutter / 2);
+    padding-right: ($grid-gutter / 2);
+    margin-bottom: $spacing-medium;
+}
+
+// Generate column classes for small screens
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        flex: 0 0 percentage($i / $grid-columns);
+        max-width: percentage($i / $grid-columns);
+    }
+}
+
+// Main content styles
+main {
+    padding: $spacing-medium;
+    max-width: $container-max-width;
+    margin: 0 auto;
+}
+
+.highlight-bg {
+    background-color: $highlight-bg;
+    padding: $spacing-large;
+    margin: $spacing-large (-$spacing-medium);
+}
+
+.feature-box {
+    text-align: center;
+    padding: $spacing-medium;
+    
+    img {
+        max-width: 64px;
+        height: auto;
+        margin-bottom: $spacing-small;
+    }
+    
+    h3 {
+        margin: $spacing-small 0;
+        color: $secondary-color;
+    }
+}
+
+// Images
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// Footer
+footer {
+    text-align: center;
+    padding: $spacing-large;
+    background-color: $secondary-color;
+    color: $background-color;
+}

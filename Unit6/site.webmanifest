@@ -1,0 +1,9 @@
+{
+    "name": "X-Mobile",
+    "short_name": "X-Mobile",
+    "description": "X-Mobile - Your Mobile Solutions Provider",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0066cc"
+}

@@ -1,0 +1,51 @@
+// Medium screen styles
+.menu-toggle {
+    display: none; // Hide hamburger menu
+}
+
+.nav-menu {
+    display: flex;
+    position: static;
+    background: none;
+    
+    li {
+        border: none;
+        margin-left: $spacing-medium;
+    }
+    
+    a {
+        padding: $spacing-small;
+        
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+// Generate column classes for medium screens
+@for $i from 1 through $grid-columns {
+    .col-md-#{$i} {
+        flex: 0 0 percentage($i / $grid-columns);
+        max-width: percentage($i / $grid-columns);
+    }
+}
+
+.logo {
+    max-width: 150px; // Slightly larger logo for medium screens
+}
+
+// Adjust spacing for medium screens
+main {
+    padding: $spacing-large;
+}
+
+.highlight-bg {
+    margin: $spacing-large (-$spacing-large);
+    padding: $spacing-large * 1.5;
+}
+
+.feature-box {
+    img {
+        max-width: 80px; // Larger icons for medium screens
+    }
+}

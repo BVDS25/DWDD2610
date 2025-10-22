@@ -1,0 +1,18 @@
+// Import variables first
+@import 'variables';
+
+// Import normalize
+@import 'normalize';
+
+// Import base styles (small screens first)
+@import 'small';
+
+// Medium screens
+@media screen and (min-width: $breakpoint-md) {
+    @import 'medium';
+}
+
+// Large screens
+@media screen and (min-width: $breakpoint-lg) {
+    @import 'large';
+}
