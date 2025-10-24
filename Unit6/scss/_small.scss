@@ -6,17 +6,24 @@ body {
     color: $text-color;
     margin: 0;
     padding: 0;
+    background-color: $background-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
+    color: $primary-color;
 }
 
 // Header styles
 header {
     position: relative;
     background: $nav-background;
-    padding: $spacing-small;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: $spacing-medium;
+    border-bottom: 2px solid $accent-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 12px rgba($primary-color, 0.1);
 }
 
 .logo {
@@ -69,6 +76,7 @@ header {
         }
     }
 }
+
 
 // Grid system
 .row {

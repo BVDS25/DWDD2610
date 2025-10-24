@@ -7,6 +7,9 @@
 // Import base styles (small screens first)
 @import 'small';
 
+// Import custom styles
+@import 'custom';
+
 // Medium screens
 @media screen and (min-width: $breakpoint-md) {
     @import 'medium';

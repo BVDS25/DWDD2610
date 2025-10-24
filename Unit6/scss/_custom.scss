@@ -1,0 +1,120 @@
+// Custom styles for vintage theme
+.main-title {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    color: $primary-color;
+    font-family: $font-heading;
+}
+
+.product-feature {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba($background-color, 0.9);
+    border: 1px solid $accent-color;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    h2 {
+        margin-bottom: 1rem;
+        color: $primary-color;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .feature-image {
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba($primary-color, 0.1);
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.full-width-image {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba($primary-color, 0.15);
+}
+
+.feature-grid {
+    margin-top: 3rem;
+    
+    .feature-box {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: rgba($background-color, 0.8);
+        border: 1px solid $accent-color;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        img {
+            max-width: 64px;
+            height: auto;
+            margin-bottom: 1rem;
+            filter: sepia(20%);
+        }
+
+        h3 {
+            margin: 1rem 0;
+            color: $primary-color;
+            font-family: $font-heading;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.highlight-bg {
+    padding: 3rem 1.5rem;
+    margin: 3rem -1.5rem;
+    background-color: $highlight-bg;
+    border-top: 2px solid $accent-color;
+    border-bottom: 2px solid $accent-color;
+    
+    h2 {
+        margin-bottom: 1rem;
+        color: $primary-color;
+    }
+
+    p {
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+}
+
+// Header and Navigation Styles
+header {
+    background-color: $background-color;
+    border-bottom: 2px solid $accent-color;
+    
+    .nav-menu {
+        a {
+            font-family: $font-heading;
+            color: $text-color;
+            transition: color 0.3s ease;
+            
+            &:hover {
+                color: $accent-color;
+            }
+            
+            &.active {
+                color: $primary-color;
+                border-bottom: 2px solid $accent-color;
+            }
+        }
+    }
+}

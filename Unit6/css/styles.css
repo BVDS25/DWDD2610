@@ -308,22 +308,29 @@ template {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 16px;
-  line-height: 1.5;
-  color: #333333;
+  line-height: 1.6;
+  color: #2F4F4F;
   margin: 0;
   padding: 0;
+  background-color: #FDF5E6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Special Elite", cursive;
+  color: #8B4513;
 }
 
 header {
   position: relative;
-  background: #ffffff;
-  padding: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #FDF5E6;
+  padding: 1rem;
+  border-bottom: 2px solid #CD853F;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.1);
 }
 
 .logo {
@@ -339,7 +346,7 @@ header {
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #333333;
+  color: #2F4F4F;
   cursor: pointer;
   padding: 0.5rem;
 }
@@ -350,7 +357,7 @@ header {
   top: 60px;
   left: 0;
   right: 0;
-  background: #ffffff;
+  background: #FDF5E6;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -364,11 +371,11 @@ header {
 .nav-menu a {
   display: block;
   padding: 1rem;
-  color: #333333;
+  color: #2F4F4F;
   text-decoration: none;
 }
 .nav-menu a.active {
-  color: #0066cc;
+  color: #8B4513;
   font-weight: 500;
 }
 
@@ -454,7 +461,7 @@ main {
 }
 
 .highlight-bg {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   padding: 2rem;
   margin: 2rem -1rem;
 }
@@ -470,7 +477,7 @@ main {
 }
 .feature-box h3 {
   margin: 0.5rem 0;
-  color: #333333;
+  color: #2F4F4F;
 }
 
 img {
@@ -482,8 +489,112 @@ img {
 footer {
   text-align: center;
   padding: 2rem;
-  background-color: #333333;
-  color: #ffffff;
+  background-color: #2F4F4F;
+  color: #FDF5E6;
+}
+
+.main-title {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  color: #8B4513;
+  font-family: "Special Elite", cursive;
+}
+
+.product-feature {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(253, 245, 230, 0.9);
+  border: 1px solid #CD853F;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.product-feature:hover {
+  transform: translateY(-5px);
+}
+.product-feature h2 {
+  margin-bottom: 1rem;
+  color: #8B4513;
+}
+.product-feature p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.product-feature .feature-image {
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(139, 69, 19, 0.1);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.full-width-image {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.15);
+}
+
+.feature-grid {
+  margin-top: 3rem;
+}
+.feature-grid .feature-box {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(253, 245, 230, 0.8);
+  border: 1px solid #CD853F;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.feature-grid .feature-box:hover {
+  transform: translateY(-5px);
+}
+.feature-grid .feature-box img {
+  max-width: 64px;
+  height: auto;
+  margin-bottom: 1rem;
+  filter: sepia(20%);
+}
+.feature-grid .feature-box h3 {
+  margin: 1rem 0;
+  color: #8B4513;
+  font-family: "Special Elite", cursive;
+  letter-spacing: 1px;
+}
+
+.highlight-bg {
+  padding: 3rem 1.5rem;
+  margin: 3rem -1.5rem;
+  background-color: #ffffff;
+  border-top: 2px solid #CD853F;
+  border-bottom: 2px solid #CD853F;
+}
+.highlight-bg h2 {
+  margin-bottom: 1rem;
+  color: #8B4513;
+}
+.highlight-bg p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #FDF5E6;
+  border-bottom: 2px solid #CD853F;
+}
+header .nav-menu a {
+  font-family: "Special Elite", cursive;
+  color: #2F4F4F;
+  transition: color 0.3s ease;
+}
+header .nav-menu a:hover {
+  color: #CD853F;
+}
+header .nav-menu a.active {
+  color: #8B4513;
+  border-bottom: 2px solid #CD853F;
 }
 
 @media screen and (min-width: 768px) {
@@ -503,7 +614,7 @@ footer {
     padding: 0.5rem;
   }
   .nav-menu a:hover {
-    color: #0066cc;
+    color: #8B4513;
   }
   .col-md-1 {
     flex: 0 0 8.3333333333%;
@@ -630,7 +741,7 @@ footer {
     transition: color 0.3s ease;
   }
   .nav-menu a:hover {
-    color: #ff6b00;
+    color: #CD853F;
   }
   .row {
     margin-bottom: 2rem;
