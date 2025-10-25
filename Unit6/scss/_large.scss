@@ -3,17 +3,9 @@
     max-width: 180px; // Larger logo for desktop
 }
 
-// Generate column classes for large screens
-@for $i from 1 through $grid-columns {
-    .col-lg-#{$i} {
-        flex: 0 0 percentage($i / $grid-columns);
-        max-width: percentage($i / $grid-columns);
-    }
-}
-
 // Adjust container width
 main {
-    padding: $spacing-large * 1.5;
+    // padding: $spacing-large * 1.5;
 }
 
 // Enhanced navigation styles
@@ -37,7 +29,7 @@ main {
     margin-bottom: $spacing-large;
 }
 
-.highlight-bg {
-    margin: $spacing-large * 2 (-$spacing-large * 1.5);
-    padding: $spacing-large * 2;
-}
+// .highlight-bg {
+//     margin: $spacing-large * 2 (-$spacing-large * 1.5);
+//     padding: $spacing-large * 2;
+// }

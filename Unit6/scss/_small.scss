@@ -12,6 +12,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-heading;
     color: $primary-color;
+    text-align: start;
 }
 
 // Header styles
@@ -80,50 +81,90 @@ header {
 
 // Grid system
 .row {
+    border: 1px solid red;
+
     display: flex;
     flex-wrap: wrap;
-    margin-left: calc(-#{$grid-gutter} * 0.5);
-    margin-right: calc(-#{$grid-gutter} * 0.5);
+    justify-content: center;
+    margin: 1rem 0;
+    padding: 0 8px;
+    border: purple;
+    // margin-left: calc(-#{$grid-gutter} * 0.5);
+    // margin-right: calc(-#{$grid-gutter} * 0.5);
 }
 
 [class^="col-"] {
-    position: relative;
-    width: 100%;
-    padding-left: calc(#{$grid-gutter} * 0.5);
-    padding-right: calc(#{$grid-gutter} * 0.5);
+    border: 1px solid blue;
+    background-color: yellow;
+
+    padding: 0 8px;
+    margin: 8px 0;
+    border: plum dashed;
+    // position: relative;
+    // width: 100%;
+    // padding-left: calc(#{$grid-gutter} * 0.5);
+    // padding-right: calc(#{$grid-gutter} * 0.5);
     margin-bottom: $spacing-medium;
 }
 
-// Generate column classes for small screens
+// Generate column classes for small screens FOR LOOP
 @for $i from 1 through $grid-columns {
-    .col-#{$i} {
-        $width: calc($i / $grid-columns * 100%);
-        flex: 0 0 $width;
-        max-width: $width;
-    }
+    $w: calc($i/$grid-columns)* 100%;
+    .small-#{$i} {flex-basis: $w;}
+
+    // .col-#{$i} {
+    //     $width: calc($i / $grid-columns * 100%);
+    //     flex: 0 0 $width;
+    //     max-width: $width;
+    //     background-color: pink;
+    // }
 }
+
+@for $i from 1 through $grid-columns {
+    $w: calc($i/$grid-columns)* 100%;
+    .medium-#{$i} {flex-basis: $w;}
+}
+
+@for $i from 1 through $grid-columns {
+    $w: calc($i/$grid-columns)* 100%;
+    .large-#{$i} {flex-basis: $w;}
+}
+
+
 
 // Main content styles
-main {
-    padding: $spacing-medium;
-    max-width: $container-max-width;
-    margin: 0 auto;
-}
+// main {
+//     // padding: $spacing-medium;
+//     // max-width: $container-max-width;
+//     // margin: 0 auto;
+// }
 
-.highlight-bg {
-    background-color: $highlight-bg;
-    padding: $spacing-large;
-    margin: $spacing-large (-$spacing-medium);
-}
+// .highlight-bg {
+//     background-color: $highlight-bg;
+//     padding: $spacing-large;
+//     margin: $spacing-large (-$spacing-medium);
+// }
+
+// .row {
+// display: flex;
+//   gap: .5rem; 
+// }
 
 .feature-box {
-    text-align: center;
-    padding: $spacing-medium;
+    // display: flex;
+    text-align: start;
+    justify-content: start;
+    margin-left: .2rem;
+    margin-right: .2rem;
+    // padding: $spacing-medium;
+    
     
     img {
-        max-width: 64px;
-        height: auto;
-        margin-bottom: $spacing-small;
+        // max-width: 64px;
+    //    margin-left: auto;
+    // max-height: 19rem;
+    margin: auto;
+        // margin-bottom: $spacing-small;
     }
     
     h3 {
