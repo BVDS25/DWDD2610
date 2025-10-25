@@ -28,10 +28,23 @@ header {
 }
 
 .logo {
-    max-width: 120px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    /* allow logo image and text to sit side-by-side */
+
     img {
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 3rem; /* consistent logo height */
+        display: block;
+    }
+
+    span {
+        white-space: nowrap; /* keep the text on one line */
+        font-family: $font-heading;
+        font-size: 1.125rem;
+        color: $primary-color;
+        margin-left: 0.25rem;
     }
 }
 
@@ -81,25 +94,32 @@ header {
 
 // Grid system
 .row {
-    border: 1px solid red;
+    // border: 1px solid red;
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 1rem 0;
     padding: 0 8px;
-    border: purple;
+    // border: purple;
     // margin-left: calc(-#{$grid-gutter} * 0.5);
     // margin-right: calc(-#{$grid-gutter} * 0.5);
 }
 
+#highlight {
+    background-color:white;
+}
+
+
+
 [class^="col-"] {
-    border: 1px solid blue;
-    background-color: yellow;
+    // border: 1px solid blue;
+    // background-color: white;
 
     padding: 0 8px;
     margin: 8px 0;
-    border: plum dashed;
+    
+    // border: plum dashed;
     // position: relative;
     // width: 100%;
     // padding-left: calc(#{$grid-gutter} * 0.5);
@@ -120,15 +140,9 @@ header {
     // }
 }
 
-@for $i from 1 through $grid-columns {
-    $w: calc($i/$grid-columns)* 100%;
-    .medium-#{$i} {flex-basis: $w;}
-}
 
-@for $i from 1 through $grid-columns {
-    $w: calc($i/$grid-columns)* 100%;
-    .large-#{$i} {flex-basis: $w;}
-}
+
+
 
 
 
@@ -183,7 +197,7 @@ img {
 // Footer
 footer {
     text-align: center;
-    padding: $spacing-large;
+    padding: .5rem;
     background-color: $secondary-color;
     color: $background-color;
 }

@@ -3,10 +3,10 @@
     max-width: 180px; // Larger logo for desktop
 }
 
-// Adjust container width
-main {
-    // padding: $spacing-large * 1.5;
-}
+// // Adjust container width
+// main {
+//     // padding: $spacing-large * 1.5;
+// }
 
 // Enhanced navigation styles
 .nav-menu {
@@ -24,9 +24,17 @@ main {
     }
 }
 
+
 // Refined grid spacing
 .row {
     margin-bottom: $spacing-large;
+    padding: $spacing-large;
+    
+}
+
+@for $i from 1 through $grid-columns {
+    $w: calc($i/$grid-columns)* 100%;
+    .large-#{$i} {flex-basis: $w;}
 }
 
 // .highlight-bg {
