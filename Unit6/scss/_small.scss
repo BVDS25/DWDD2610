@@ -101,13 +101,19 @@ header {
     justify-content: center;
     margin: 1rem 0;
     padding: 0 8px;
+    // gap: .5rem;
     // border: purple;
-    // margin-left: calc(-#{$grid-gutter} * 0.5);
-    // margin-right: calc(-#{$grid-gutter} * 0.5);
+    // margin-left: 0.5rem;
+    // margin-right: 0.5rem;
+    #row1, p, h2{
+        margin: .5rem;
+    }
 }
 
 #highlight {
     background-color:white;
+    display: flex;
+    align-items: center;
 }
 
 
