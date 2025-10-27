@@ -1,0 +1,33 @@
+/* Compiled minimal CSS for Unit7 - kept small for page weight */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Roboto, system-ui, -apple-system, 'Segoe UI', sans-serif;color:#111;background:#fff;overflow-x:hidden}
+.container{max-width:1200px;margin:0 auto;padding:0 1rem}
+header.site-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.logo{display:flex;align-items:center;gap:.5rem}
+.logo img{height:56px;width:auto}
+.site-title{font-size:1.5rem;color:#0a48a8;font-weight:700}
+nav.primary a{display:inline-block;padding:.5rem .6rem;color:#0a48a8;text-decoration:none}
+nav.primary a.active{background:#f5a623;color:#fff;border-radius:6px}
+.header-accent{position:relative}
+.header-accent::after{content:'';position:absolute;right:-12%;top:50%;width:60vw;height:18px;background:#f5a623;transform:rotate(-6deg);opacity:.85;z-index:0}
+header.site-header *{position:relative;z-index:1}
+main{margin-top:1rem}
+.card{background:#fff;border:1px solid #e6e9ee;padding:1rem;border-radius:8px}
+form label{display:block;font-size:.9rem;color:#6b7280;margin-bottom:.25rem}
+form input,form select,form button{width:100%;padding:.5rem;margin-top:.35rem;border:1px solid #cbd5e1;border-radius:6px}
+form .row{display:flex;gap:.5rem}
+form .row > *{flex:1}
+button.primary{background:#0a48a8;color:#fff;border:none;padding:.6rem 1rem;border-radius:6px;cursor:pointer}
+button.primary:hover{opacity:.92}
+footer.site-footer{text-align:center;padding:1rem 0;color:#6b7280;margin-top:1.5rem}
+
+/* medium screens */
+@media (min-width:480px){
+  nav.primary{display:flex;justify-content:space-evenly;align-items:center}
+  .logo img{height:56px}
+}
+@media (min-width:1024px){
+  nav.primary{display:flex;justify-content:flex-end;gap:1rem}
+  .logo img{height:72px}
+  h1.page-title{font-size:2rem}
+}

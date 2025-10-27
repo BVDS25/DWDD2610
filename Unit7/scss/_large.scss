@@ -1,0 +1,8 @@
+/* Large screens - justify right using flex to meet requirement */
+@media (min-width:1024px){
+  header.site-header{display:flex;align-items:center;justify-content:space-between}
+  nav.primary{display:flex;justify-content:flex-end;gap:1rem}
+  .container{max-width:$max-width}
+  .logo img{height:72px}
+  h1.page-title{font-size:2rem}
+}

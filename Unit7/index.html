@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Unit 7 - Enrollment Form</title>
+  <!-- Google font appropriate for university audience -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header header-accent" role="banner">
+      <div class="logo" aria-hidden="false">
+        <!-- 1x,2x,3x versions (srcset) -->
+        <img src="images/logo1x.png" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x" alt="University logo">
+        <div class="site-title">State University</div>
+      </div>
+
+      <nav class="primary" role="navigation" aria-label="Primary">
+        <!-- Small: provide skip to footer link for tiny screens; CSS will control layout -->
+        <a href="#footer">Skip to page bottom navigation</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="programs.html">Programs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main role="main">
+      <h1 class="page-title">Apply to State University</h1>
+      <p class="lead">Use this form to submit your contact and educational information. Required fields are marked.</p>
+
+      <section class="card" aria-labelledby="form-heading">
+        <h2 id="form-heading">Contact & Education</h2>
+        <form action="#" method="post">
+          <!-- Required contact inputs (wrapped in labels) -->
+          <label class="field">First Name
+            <input type="text" name="firstName" required>
+          </label>
+
+          <label class="field">Last Name
+            <input type="text" name="lastName" required>
+          </label>
+
+          <label class="field">Cell Phone
+            <input type="tel" name="cell" placeholder="(555) 555-5555" required>
+          </label>
+
+          <label class="field">Email
+            <input type="email" name="email" required>
+          </label>
+
+          <!-- Optional contact inputs -->
+          <label class="field">Address
+            <input type="text" name="address">
+          </label>
+
+          <div class="row">
+            <label class="field">City
+              <input type="text" name="city">
+            </label>
+            <label class="field">State
+              <input type="text" name="state">
+            </label>
+            <label class="field">Zip
+              <input type="text" name="zip">
+            </label>
+          </div>
+
+          <!-- Communication preferences Radio Buttons -->
+          <fieldset style="border:0;margin:0;padding:0.5rem 0">
+            <legend style="font-weight:600">Communication Preference</legend>
+            <label><input type="radio" name="comm" value="email" checked> Email</label>
+            <label><input type="radio" name="comm" value="phone"> Phone</label>
+            <label><input type="radio" name="comm" value="text"> Text</label>
+          </fieldset>
+
+          <!-- Previous School dropdown -->
+          <label class="field">Previous School
+            <select name="prevSchool">
+              <option>-- Select --</option>
+              <option>High School A</option>
+              <option>Community College B</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <!-- High School graduation date -->
+          <label class="field">High School Graduation Date
+            <input type="date" name="gradDate">
+          </label>
+
+          <!-- Education completed check boxes -->
+          <fieldset style="border:0;margin:0;padding:0.5rem 0">
+            <legend style="font-weight:600">Education Completed</legend>
+            <label><input type="checkbox" name="edu" value="hs"> High School</label>
+            <label><input type="checkbox" name="edu" value="aa"> Associate</label>
+            <label><input type="checkbox" name="edu" value="ba"> Bachelor</label>
+          </fieldset>
+
+          <!-- Username pattern 5-10 upper or lowercase letters -->
+          <label class="field">Username
+            <input type="text" name="username" pattern="[A-Za-z]{5,10}" title="5 to 10 letters only" required>
+          </label>
+
+          <!-- Password minlength 6 -->
+          <label class="field">Password
+            <input type="password" name="password" minlength="6" required>
+          </label>
+
+          <p style="margin-top:.5rem">
+            <button type="submit" class="primary">Submit Application</button>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer id="footer" class="site-footer" role="contentinfo">
+      <p>&copy; <span id="year">2025</span> • Bianca (Student)</p>
+    </footer>
+  </div>
+
+</body>
+</html>
