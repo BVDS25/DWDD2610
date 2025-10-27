@@ -9,22 +9,22 @@
    - Media queries are placed here per requirement; partials include scoped rules
 */
 /* Demonstrate visual tangent: small diagonal accent overlapping header */
-.header-accent{
-  position:relative;
-}
-.header-accent::after{
-  content:'';
-  position:absolute;
-  right:-12%;
-  top:50%;
-  width:60vw;
-  height:18px;
-  background:$accent;
-  transform:rotate(-6deg);
-  opacity:.85;
-  z-index:0;
-}
-header.site-header *{position:relative;z-index:1}
+// .header-accent{
+//   position:relative;
+// }
+// .header-accent::after{
+//   content:'';
+//   position:absolute;
+//   right:-12%;
+//   top:50%;
+//   width:60vw;
+//   height:18px;
+//   background:$accent;
+//   transform:rotate(-6deg);
+//   opacity:.85;
+//   z-index:0;
+// // }
+// header.site-header *{position:relative;z-index:1}
 
 /* Wayfinding: focus style on interactive elements */
 a:focus, button:focus, input:focus{outline:3px solid rgba(10,72,168,0.25)}

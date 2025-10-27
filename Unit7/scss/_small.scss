@@ -1,27 +1,108 @@
 /* Mobile-first styles (320px - small devices) */
-body{
-  padding:1rem;
+body {
+    padding: 1rem;
 }
-.container{
-  max-width:100%;
-  margin:0 auto;
-}
-header.site-header{display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.logo{display:flex;align-items:center;gap:.5rem}
-.logo img{height:44px;width:auto}
-.site-title{font-size:1.25rem;font-weight:700;color:$brand}
-nav.primary{margin-top:.5rem}
-nav.primary a{display:inline-block;padding:.5rem .6rem;color:$brand;text-decoration:none}
-nav.primary a.active{background:$accent;color:#fff;border-radius:$radius}
 
-main{margin-top:1rem}
-.card{background:#fff;border:1px solid #e6e9ee;padding:1rem;border-radius:8px}
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem
+}
+
+.logo img {
+    height: 44px;
+    width: auto
+}
+
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $brand
+}
+
+nav.primary {
+    margin-top: .5rem
+}
+
+nav.primary a {
+    display: inline-block;
+    padding: .5rem .6rem;
+    color: $brand;
+    text-decoration: none
+}
+
+nav.primary a.active {
+    background: $accent;
+    color: #fff;
+    border-radius: $radius
+}
+
+
+
+
+main {
+    margin-top: 1rem;
+   
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e6e9ee;
+    padding: 1rem;
+    border-radius: 8px
+}
 
 /* Form styles - each input wrapped in label per requirement */
-form .field{display:block;margin-bottom:.75rem}
-form label{display:block;font-size:.9rem;color:$muted}
-form input, form select, form button{width:100%;padding:.5rem;margin-top:.35rem;border:1px solid #cbd5e1;border-radius:6px}
-form .row{display:flex;gap:.5rem}
-form .row > *{flex:1}
+form .field {
+    display: block;
+    margin-bottom: .75rem
+}
 
-footer.site-footer{text-align:center;padding:1rem 0;color:$muted;margin-top:1.5rem}
+form label {
+    display: block;
+    font-size: .9rem;
+    color: $muted
+}
+
+
+form input,
+select, 
+form button {
+    width: 100%;
+    padding: .5rem;
+    margin-top: .35rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    
+}
+.radio-input {
+        color: purple;
+    }
+
+form .row {
+    display: flex;
+    gap: .5rem
+}
+
+form .row>* {
+    flex: 1
+}
+
+footer.site-footer {
+    text-align: center;
+    padding: 1rem 0;
+    color: $muted;
+    margin-top: 1.5rem
+}
