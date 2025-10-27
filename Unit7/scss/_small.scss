@@ -87,9 +87,11 @@ form button {
     border-radius: 6px;
     
 }
-.radio-input {
-        color: purple;
-    }
+form input.radio-input {
+  width: auto;
+  display: inline-block;
+  margin-right: 0.25rem;
+}
 
 form .row {
     display: flex;

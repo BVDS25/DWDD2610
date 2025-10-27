@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+**/*.map
 
 # Generated CSS map files
 *.css.map
@@ -17,3 +18,4 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
