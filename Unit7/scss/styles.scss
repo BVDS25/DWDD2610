@@ -1,44 +1,65 @@
-// Main stylesheet - imports partials and includes media queries here
+// Import variables first
 @import 'variables';
+
+// Import normalize
 @import 'normalize';
+
+// Import base styles (small screens first)
 @import 'small';
-@import 'medium';
-@import 'large';
 
-/* Media queries / fine-tuning and demonstration notes
-   - Media queries are placed here per requirement; partials include scoped rules
-*/
-/* Demonstrate visual tangent: small diagonal accent overlapping header */
-// .header-accent{
-//   position:relative;
-// }
-// .header-accent::after{
-//   content:'';
-//   position:absolute;
-//   right:-12%;
-//   top:50%;
-//   width:60vw;
-//   height:18px;
-//   background:$accent;
-//   transform:rotate(-6deg);
-//   opacity:.85;
-//   z-index:0;
+// Medium screens
+@media screen and (min-width: $breakpoint-md) {
+    @import 'medium';
+}
+
+// Large screens
+@media screen and (min-width: $breakpoint-lg) {
+    @import 'large';
+}
+
+
+
+// // Main stylesheet - imports partials and includes media queries here
+// @use 'variables';
+// @use 'normalize';
+// @use 'small';
+// @use 'medium';
+// @use 'large';
+
+// /* Media queries / fine-tuning and demonstration notes
+//    - Media queries are placed here per requirement; partials include scoped rules
+// */
+// /* Demonstrate visual tangent: small diagonal accent overlapping header */
+// // .header-accent{
+// //   position:relative;
 // // }
-// header.site-header *{position:relative;z-index:1}
+// // .header-accent::after{
+// //   content:'';
+// //   position:absolute;
+// //   right:-12%;
+// //   top:50%;
+// //   width:60vw;
+// //   height:18px;
+// //   background:$accent;
+// //   transform:rotate(-6deg);
+// //   opacity:.85;
+// //   z-index:0;
+// // // }
+// // header.site-header *{position:relative;z-index:1}
 
-/* Wayfinding: focus style on interactive elements */
-a:focus, button:focus, input:focus{outline:3px solid rgba(10,72,168,0.25)}
+// /* Wayfinding: focus style on interactive elements */
+// a:focus, button:focus, input:focus{outline:3px solid rgba(10,72,168,0.25)}
 
-/* Ensure no horizontal scrollbar across the target range */
-html,body{overflow-x:hidden}
+// /* Ensure no horizontal scrollbar across the target range */
+// html,body{overflow-x:hidden}
 
-/* Additional visual hierarchy */
-h1.page-title{font-size:1.6rem;color:$brand;margin-bottom:.5rem}
-.lead{color:$muted;margin-bottom:1rem}
+// /* Additional visual hierarchy */
+// h1.page-title{font-size:1.6rem;color:$brand;margin-bottom:.5rem}
+// .lead{color:$muted;margin-bottom:1rem}
 
-/* Small visual improvement for submit */
-button.primary{background:$brand;color:#fff;border:none;padding:.6rem 1rem;border-radius:$radius;cursor:pointer}
-/* fallback hover; keep small */
-button.primary:hover{opacity:.92}
+// /* Small visual improvement for submit */
+// button.primary{background:$brand;color:#fff;border:none;padding:.6rem 1rem;border-radius:$radius;cursor:pointer}
+// /* fallback hover; keep small */
+// button.primary:hover{opacity:.92}
 
-/* Keep CSS small and efficient to remain under 500KB total page weight */
+// /* Keep CSS small and efficient to remain under 500KB total page weight */

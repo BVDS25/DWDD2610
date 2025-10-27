@@ -80,6 +80,7 @@ nav.primary a.active {
 
 main {
   margin-top: 1rem;
+  background-color: purple;
 }
 
 .card {
@@ -101,6 +102,24 @@ form label {
   color: #6b7280;
 }
 
+form input,
+select,
+form button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.35rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+form input.radio-input {
+  width: auto;
+  display: inline-block;
+  margin-right: 0.25rem;
+  margin-bottom: 0.5rem;
+  background-color: purple;
+}
+
 form .row {
   display: flex;
   gap: 0.5rem;
@@ -117,8 +136,10 @@ footer.site-footer {
   margin-top: 1.5rem;
 }
 
-/* Medium screens - spread navigation evenly */
-@media (min-width: 480px) {
+@media screen and (min-width: 768px) {
+  /* Medium screens - spread navigation evenly */
+}
+@media screen and (min-width: 768px) and (min-width: 480px) {
   .container {
     max-width: 1200px;
     padding: 0 1rem;
@@ -138,8 +159,10 @@ footer.site-footer {
     flex-direction: row;
   }
 }
-/* Large screens - justify right using flex to meet requirement */
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  /* Large screens - justify right using flex to meet requirement */
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
   header.site-header {
     display: flex;
     align-items: center;
@@ -160,67 +183,5 @@ footer.site-footer {
     font-size: 2rem;
   }
 }
-/* Media queries / fine-tuning and demonstration notes
-   - Media queries are placed here per requirement; partials include scoped rules
-*/
-/* Demonstrate visual tangent: small diagonal accent overlapping header */
-.header-accent {
-  position: relative;
-}
 
-.header-accent::after {
-  content: "";
-  position: absolute;
-  right: -12%;
-  top: 50%;
-  width: 60vw;
-  height: 18px;
-  background: #f5a623;
-  transform: rotate(-6deg);
-  opacity: 0.85;
-  z-index: 0;
-}
-
-header.site-header * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Wayfinding: focus style on interactive elements */
-a:focus, button:focus, input:focus {
-  outline: 3px solid rgba(10, 72, 168, 0.25);
-}
-
-/* Ensure no horizontal scrollbar across the target range */
-html, body {
-  overflow-x: hidden;
-}
-
-/* Additional visual hierarchy */
-h1.page-title {
-  font-size: 1.6rem;
-  color: #0a48a8;
-  margin-bottom: 0.5rem;
-}
-
-.lead {
-  color: #6b7280;
-  margin-bottom: 1rem;
-}
-
-/* Small visual improvement for submit */
-button.primary {
-  background: #0a48a8;
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-/* fallback hover; keep small */
-button.primary:hover {
-  opacity: 0.92;
-}
-
-/* Keep CSS small and efficient to remain under 500KB total page weight */
+/*# sourceMappingURL=styles.css.map */
