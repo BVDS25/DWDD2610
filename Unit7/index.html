@@ -22,12 +22,12 @@
                 <div class="site-title">State University</div>
             </div>
             <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-<nav class="primary" role="navigation" aria-label="Primary">
-    <a href="index.html" class="active">Home</a>
-    <a href="admissions.html">Admissions</a>
-    <a href="programs.html">Programs</a>
-    <a href="contact.html">Contact</a>
-</nav>
+            <nav class="primary" role="navigation" aria-label="Primary">
+                <a href="index.html" class="active">Home</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="programs.html">Programs</a>
+                <a href="contact.html">Contact</a>
+            </nav>
         </header>
 
         <main role="main">
@@ -48,7 +48,8 @@
                     </label>
 
                     <label class="field">Date of Birth
-                        <input type="date" name="bday" autocomplete="bday" required title="Your date of birth">
+                        <input type="date" name="bday" id="bday" autocomplete="birthdate" required
+                            title="Your date of birth">
                     </label>
 
                     <label class="label-select">Gender
@@ -81,120 +82,126 @@
                     <label class="field">City
                         <input type="text" name="city" autocomplete="address-level2">
                     </label>
-                    <label class="label-select">State</label>
-                    <select class="select-styling" name="state" autocomplete="address-level1">
-                        <option value="">-- Select --</option>
-                        <option value="Alabama">Alabama</option>
-                        <option value="Alaska">Alaska</option>
-                        <option value="Arizona">Arizona</option>
-                        <option value="Arkansas">Arkansas</option>
-                        <option value="California">California</option>
-                        <option value="Colorado">Colorado</option>
-                        <option value="Connecticut">Connecticut</option>
-                        <option value="Delaware">Delaware</option>
-                        <option value="Florida">Florida</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Hawaii">Hawaii</option>
-                        <option value="Idaho">Idaho</option>
-                        <option value="Illinois">Illinois</option>
-                        <option value="Indiana">Indiana</option>
-                        <option value="Iowa">Iowa</option>
-                        <option value="Kansas">Kansas</option>
-                        <option value="Kentucky">Kentucky</option>
-                        <option value="Louisiana">Louisiana</option>
-                        <option value="Maine">Maine</option>
-                        <option value="Maryland">Maryland</option>
-                        <option value="Massachusetts">Massachusetts</option>
-                        <option value="Michigan">Michigan</option>
-                        <option value="Minnesota">Minnesota</option>
-                        <option value="Mississippi">Mississippi</option>
-                        <option value="Missouri">Missouri</option>
-                        <option value="Montana">Montana</option>
-                        <option value="Nebraska">Nebraska</option>
-                        <option value="Nevada">Nevada</option>
-                        <option value="New Hampshire">New Hampshire</option>
-                        <option value="New Jersey">New Jersey</option>
-                        <option value="New Mexico">New Mexico</option>
-                        <option value="New York">New York</option>
-                        <option value="North Carolina">North Carolina</option>
-                        <option value="North Dakota">North Dakota</option>
-                        <option value="Ohio">Ohio</option>
-                        <option value="Oklahoma">Oklahoma</option>
-                        <option value="Oregon">Oregon</option>
-                        <option value="Pennsylvania">Pennsylvania</option>
-                        <option value="Rhode Island">Rhode Island</option>
-                        <option value="South Carolina">South Carolina</option>
-                        <option value="South Dakota">South Dakota</option>
-                        <option value="Tennessee">Tennessee</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Utah">Utah</option>
-                        <option value="Vermont">Vermont</option>
-                        <option value="Virginia">Virginia</option>
-                        <option value="Washington">Washington</option>
-                        <option value="West Virginia">West Virginia</option>
-                        <option value="Wisconsin">Wisconsin</option>
-                        <option value="Wyoming">Wyoming</option>
-                    </select>
-                    <label class="field">Zip
-                        <input type="text" name="zip" autocomplete="postal-code">
-                    </label>
 
 
-                    <!-- Communication preferences Radio Buttons -->
+                    <label class="label-select">State
+                        <select class="select-styling" name="state" autocomplete="address-level1">
+                            <option value="">-- Select --</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
+                        <label class="field">Zip
+                            <input type="text" name="zip" autocomplete="postal-code">
+                        </label>
 
-                    <h2>Preferred contact method:</h2>
-                    <label class="input-style"><input class="radio-input" type="radio" name="comm" value="email"
-                            checked> Email</label>
-                    <label class="input-style"><input class="radio-input" type="radio" name="comm" value="text">
-                        Text</label>
-                    <!-- </fieldset> -->
 
-                    <!-- Level of Education You are Hoping to Accomplish -->
-                    <h2> Which of these degrees have you completed?</h2>
-                    <fieldset>
-                        <label class="input-style"><input class="radio-input" type="checkbox" name="edu" value="aa">
-                            High School Diploma</label>
-                        <label class="input-style"><input class="radio-input" type="checkbox" name="edu" value="aa">
-                            Associate Degree</label>
-                        <label class="input-style"><input class="radio-input" type="checkbox" name="edu" value="ba">
-                            Bachelor Degree</label>
-                        <label class="input-style"><input class="radio-input" type="checkbox" name="edu" value="mba">
-                            Masters Degree</label>
-                        <label class="input-style"><input class="radio-input" type="checkbox" name="edu" value="mba">
-                            None of the above</label>
-                    </fieldset>
+                        <!-- Communication preferences Radio Buttons -->
 
-                    <!-- Education plan -->
-                    <h2>Which Level of Education Are You Planning to Pursue?</h2>
-                    <label class="label-select" for="education-level">Please select your intended level of study:</label>
-                    <select class="select-styling" id="education-level" name="program" required>
-                        <option value="">-- Select --</option>
-                        <option value="UnderGrad">Undergraduate</option>
-                        <option value="Grad">Graduate</option>
-                        <option value="PhD">PhD</option>
-                        <option value="Other">Other</option>
-                    </select>
+                        <h2>Preferred contact method:</h2>
+                        <label class="input-style"><input class="radio-input" type="radio" name="comm" value="email"
+                                checked> Email</label>
+                        <label class="input-style"><input class="radio-input" type="radio" name="comm" value="text">
+                            Text</label>
+                        <!-- </fieldset> -->
 
-                    <!-- start date -->
-                    <label class="field">Intended Start Date
-                        <input type="date" name="startDate">
-                    </label>
+                        <!-- Level of Education You are Hoping to Accomplish -->
+                        <h2> Which of these degrees have you completed?</h2>
+                        <fieldset>
+                            <label class="input-style"><input class="radio-input" type="checkbox" name="edu" value="aa">
+                                High School Diploma</label>
+                            <label class="input-style"><input class="radio-input" type="checkbox" name="edu" value="aa">
+                                Associate Degree</label>
+                            <label class="input-style"><input class="radio-input" type="checkbox" name="edu" value="ba">
+                                Bachelor Degree</label>
+                            <label class="input-style"><input class="radio-input" type="checkbox" name="edu"
+                                    value="mba">
+                                Masters Degree</label>
+                            <label class="input-style"><input class="radio-input" type="checkbox" name="edu"
+                                    value="mba">
+                                None of the above</label>
+                        </fieldset>
+
+                        <!-- Education plan -->
+                        <h2>Which Level of Education Are You Planning to Pursue?</h2>
+                        <label class="label-select" for="education-level">Please select your intended level of
+                            study:</label>
+                        <select class="select-styling" id="education-level" name="program" required>
+                            <option value="">-- Select --</option>
+                            <option value="UnderGrad">Undergraduate</option>
+                            <option value="Grad">Graduate</option>
+                            <option value="PhD">PhD</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <!-- start date -->
+                        <label class="field">Intended Start Date
+                            <input type="date" name="startDate">
+                        </label>
 
 
-                    <!-- Username pattern 5-10 upper or lowercase letters -->
-                    <label class="field">Username (6 or more characters)
-                        <input type="text" name="username" pattern="[A-Za-z]{5,10}" title="The User name should be 5 to 10 letters long"
-                            required>
-                    </label>
+                        <!-- Username pattern 5-10 upper or lowercase letters -->
+                        <label class="field">Username (6 or more characters)
+                            <input type="text" name="username" id="username" autocomplete="username"
+                                pattern="[A-Za-z]{5,10}" title="The username should be 5 to 10 letters long" required>
+                        </label>
 
-                    <!-- Password minlength 6 -->
-                    <label class="field">Password (5-9 letters or numbers only)
-                        <input type="password" name="password" minlength="6" required pattern="[A-Za-z0-9]{5,9}" title="Please make sure to use 5-9 letters or numbers only, thank you.">
-                    </label>
+                        <!-- Password minlength 6 -->
+                        <label class="field">Password (5-9 letters or numbers only)
+                            <input type="password" name="password" minlength="6" required pattern="[A-Za-z0-9]{5,9}"
+                                title="Please make sure to use 5-9 letters or numbers only, thank you.">
+                        </label>
 
-                    <p style="margin-top:.5rem">
-                        <button type="submit" class="primary">Send Application to State University</button>
-                    </p>
+                        <p style="margin-top:.5rem">
+                            <button type="submit" class="primary">Send Application to State University</button>
+                        </p>
                 </form>
             </section>
         </main>
@@ -203,7 +210,7 @@
             <p>&copy; <span id="year">2025</span> Bianca Delgado • State University </p>
         </footer>
     </div>
-<script src="js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
