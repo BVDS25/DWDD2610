@@ -80,7 +80,6 @@ nav.primary a.active {
 
 main {
   margin-top: 1rem;
-  background-color: purple;
 }
 
 .card {
@@ -102,8 +101,12 @@ form label {
   color: #6b7280;
 }
 
-form input,
-select,
+form label.input-style {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+form input, select,
 form button {
   width: 100%;
   padding: 0.5rem;
@@ -112,12 +115,27 @@ form button {
   border-radius: 6px;
 }
 
+input:required {
+  border-left: 4px solid #b63737;
+}
+
+input:required:valid {
+  border-left: 4px solid #1e8b05;
+}
+
+input:focus {
+  border-left: 4px solid #959595;
+}
+
+select.select-styling {
+  margin-bottom: 0.75rem;
+}
+
 form input.radio-input {
   width: auto;
   display: inline-block;
   margin-right: 0.25rem;
   margin-bottom: 0.5rem;
-  background-color: purple;
 }
 
 form .row {
@@ -131,9 +149,11 @@ form .row > * {
 
 footer.site-footer {
   text-align: center;
-  padding: 1rem 0;
+  padding: 0.2rem 0;
   color: #6b7280;
   margin-top: 1.5rem;
+  font-size: small;
+  color: rgb(180, 180, 180);
 }
 
 @media screen and (min-width: 768px) {
@@ -182,6 +202,63 @@ footer.site-footer {
   h1.page-title {
     font-size: 2rem;
   }
+  .card {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+.header-accent {
+  position: relative;
 }
 
-/*# sourceMappingURL=styles.css.map */
+.header-accent::after {
+  content: "";
+  position: absolute;
+  right: -12%;
+  top: 50%;
+  width: 60vw;
+  height: 18px;
+  background: #f5a623;
+  transform: rotate(-6deg);
+  opacity: 0.85;
+  z-index: 0;
+}
+
+/* Wayfinding: focus style on interactive elements */
+a:focus, button:focus, input:focus {
+  outline: 3px solid rgba(10, 72, 168, 0.25);
+}
+
+/* Ensure no horizontal scrollbar across the target range */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Additional visual hierarchy */
+h1.page-title {
+  font-size: 1.6rem;
+  color: #0a48a8;
+  margin-bottom: 0.5rem;
+}
+
+.lead {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+/* Small visual improvement for submit */
+button.primary {
+  background: #0a48a8;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* fallback hover; keep small */
+button.primary:hover {
+  opacity: 0.92;
+}
+
+/* Keep CSS small and efficient to remain under 500KB total page weight */

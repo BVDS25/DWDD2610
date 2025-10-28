@@ -54,8 +54,8 @@ nav.primary a.active {
 
 main {
     margin-top: 1rem;
-    background-color: purple;
-   
+    // background-color: red;
+
 }
 
 .card {
@@ -77,23 +77,47 @@ form label {
     color: $muted
 }
 
+// form label.label-select{
+//     // background-color: purple;
 
-form input,
-select, 
+// }
+
+form label.input-style {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+form input, select,
 form button {
     width: 100%;
     padding: .5rem;
     margin-top: .35rem;
     border: 1px solid #cbd5e1;
     border-radius: 6px;
-    
 }
+
+input:required {
+    border-left: 4px solid #b63737;
+}
+
+input:required:valid {
+    border-left: 4px solid #1e8b05;
+}
+
+input:focus{
+    border-left: 4px solid #959595;
+}
+
+select.select-styling{
+    margin-bottom: .75rem;
+    // margin-top: 0;
+}
+
 form input.radio-input {
   width: auto;
   display: inline-block;
   margin-right: 0.25rem;
   margin-bottom: 0.5rem;
-  background-color: purple;
 }
 
 form .row {
@@ -107,7 +131,9 @@ form .row>* {
 
 footer.site-footer {
     text-align: center;
-    padding: 1rem 0;
+    padding: .2rem 0;
     color: $muted;
-    margin-top: 1.5rem
+    margin-top: 1.5rem;
+    font-size: small;
+    color: rgb(180, 180, 180);
 }
