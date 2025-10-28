@@ -61,21 +61,65 @@ header.site-header {
   color: #0a48a8;
 }
 
-nav.primary {
-  margin-top: 0.5rem;
-}
-
-nav.primary a {
-  display: inline-block;
-  padding: 0.5rem 0.6rem;
+/* Hamburger button */
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
   color: #0a48a8;
-  text-decoration: none;
+  cursor: pointer;
+  z-index: 1001; /* above overlay */
+  padding: 0.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.menu-toggle:hover {
+  color: #f5a623;
+  transform: scale(1.1);
 }
 
-nav.primary a.active {
-  background: #f5a623;
-  color: #fff;
+/* Fullscreen menu overlay */
+nav.primary {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.98);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  z-index: 1000;
+}
+
+/* Links inside fullscreen menu */
+nav.primary a {
+  color: #0a48a8;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+nav.primary a:hover {
+  color: #f5a623;
+}
+
+/* When menu is active (open) */
+nav.primary.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.menu-toggle {
   border-radius: 6px;
+}
+.menu-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 main {
@@ -87,6 +131,7 @@ main {
   border: 1px solid #e6e9ee;
   padding: 1rem;
   border-radius: 8px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 /* Form styles - each input wrapped in label per requirement */
@@ -152,8 +197,8 @@ footer.site-footer {
   padding: 0.2rem 0;
   color: #6b7280;
   margin-top: 1.5rem;
-  font-size: small;
-  color: rgb(180, 180, 180);
+  font-size: x-small;
+  color: rgb(190, 190, 190);
 }
 
 @media screen and (min-width: 768px) {
@@ -164,10 +209,29 @@ footer.site-footer {
     max-width: 1200px;
     padding: 0 1rem;
   }
+  .menu-toggle {
+    display: none;
+  }
   nav.primary {
-    display: flex;
-    justify-content: space-evenly;
+    position: static;
+    transform: none;
+    opacity: 1;
+    background: transparent;
+    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
+    gap: 1rem;
+    height: auto;
+  }
+  nav.primary a {
+    font-size: 1rem;
+    border-bottom: 4px solid white;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  nav.primary a.active {
+    border-bottom: 4px solid #f5a623;
+    border-radius: 0.2rem;
   }
   .logo img {
     height: 56px;

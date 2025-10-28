@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/styles.css"> -->
     <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="manifest" href="site.webmanifest">
 </head>
 
 <body>
@@ -20,15 +21,13 @@
                     alt="University logo">
                 <div class="site-title">State University</div>
             </div>
-
-            <nav class="primary" role="navigation" aria-label="Primary">
-                <!-- Small: provide skip to footer link for tiny screens; CSS will control layout -->
-
-                <a href="index.html" class="active">Home</a>
-                <a href="admissions.html">Admissions</a>
-                <a href="programs.html">Programs</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+            <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+<nav class="primary" role="navigation" aria-label="Primary">
+    <a href="index.html" class="active">Home</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="programs.html">Programs</a>
+    <a href="contact.html">Contact</a>
+</nav>
         </header>
 
         <main role="main">
@@ -204,7 +203,7 @@
             <p>&copy; <span id="year">2025</span> Bianca Delgado • State University </p>
         </footer>
     </div>
-
+<script src="js/scripts.js"></script>
 </body>
 
 </html>
