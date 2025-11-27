@@ -27,24 +27,16 @@
     margin-right: $spacing-md;
   }
   
-  /* Hide Hamburger, Show Nav */
+  /* Keep hamburger visible on medium; nav stays hidden until opened */
   .nav-toggle {
-    display: none;
+    display: block;
   }
-  
+
   .nav {
-    display: flex !important;
-    flex-direction: row;
-    gap: $spacing-xs;
-    position: static;
-    background: transparent;
-    box-shadow: none;
-    padding: 0;
-    animation: none;
-    
+    display: none;
     a {
       padding: $spacing-sm $spacing-md;
-      
+
       &.active::after {
         bottom: 0;
         left: $spacing-md;

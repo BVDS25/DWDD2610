@@ -671,19 +671,12 @@ img {
     display: block;
     margin-right: 1.5rem;
   }
-  /* Hide Hamburger, Show Nav */
+  /* Keep hamburger visible on medium; nav stays hidden until opened */
   .nav-toggle {
-    display: none;
+    display: block;
   }
   .nav {
-    display: flex !important;
-    flex-direction: row;
-    gap: 0.5rem;
-    position: static;
-    background: transparent;
-    box-shadow: none;
-    padding: 0;
-    animation: none;
+    display: none;
   }
   .nav a {
     padding: 1rem 1.5rem;
@@ -840,6 +833,9 @@ img {
   .nav a {
     padding: 1rem 1.5rem;
     font-size: 0.95rem;
+  }
+  .nav-toggle {
+    display: none;
   }
   .submenu a {
     font-size: 0.9rem;

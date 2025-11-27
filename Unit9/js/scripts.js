@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (e) => {
     if (window.innerWidth < 800) {
       if (!e.target.closest('.site-header')) {
-        nav.classList.remove('open');
+        hamburgerBtn.classList.remove('open');
         hamburgerBtn.classList.remove('open');
         hamburgerBtn.setAttribute('aria-expanded', 'false');
         if (submenu) {

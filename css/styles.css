@@ -168,14 +168,6 @@ select { /* 1 */
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
-  appearance: button;
-}
-
 /**
  * Remove the inner border and padding in Firefox.
  */
@@ -256,8 +248,6 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  appearance: textfield;
   outline-offset: -2px; /* 2 */
 }
 
@@ -309,461 +299,441 @@ template {
   display: none;
 }
 
-/* Prevent adjustments of font size after orientation changes.  */
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
 html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-/*---- apply a natural box layout model to all elements -------*/
+/*  Apply a natural box layout model to all elements  */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+/* --------------------------- BODY --------------------------- */
 body {
-  height: 100%;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  color: #000000;
+  font-family: "Spline Sans", sans-serif;
+  font-weight: 300;
+  min-width: 320px;
+  background-color: #eeeeee;
 }
 
+/* --------------------------- HEADER --------------------------- */
 #headerWrapper {
-  background-color: white;
-  color: white;
+  border-bottom: 1px solid #eeeeee;
+  background-color: #e7e1ab;
 }
 
 header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 50px auto;
+  column-gap: 10px;
   align-items: center;
-  padding: 1rem 16px;
-  gap: 8px;
+  padding: 0.5rem 10px;
 }
-header h1 {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #A68A7B;
+header span {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: black;
 }
 
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 #navWrapper {
-  background-color: #A68A7B;
+  background: #fff;
+  border-bottom: 1px solid #eeeeee;
+  background-color: #c7721d;
+}
+
+nav {
+  position: relative;
+}
+
+/* Hamburger button */
+#hamburgerBtn {
+  display: block;
+  background: none;
+  border: none;
+  padding: 0.5rem 10px;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+
+#hamburgerBtn span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Hamburger animation when open */
+#hamburgerBtn.open span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+#hamburgerBtn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburgerBtn.open span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 nav ul {
   list-style: none;
   margin: 0;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+  /* stack on small */
+  gap: 0;
+}
+nav ul :hover {
+  background: #e7e1ab;
+  opacity: 0.9;
+  color: #000000;
+}
+
+/* Show menu when open */
+nav ul.open {
   display: flex;
 }
-nav ul li {
-  flex: 1;
-}
-nav li.active {
-  background-color: #717340;
-}
+
 nav a {
-  display: block;
-  padding: 1rem;
-  color: white;
-  text-align: center;
   text-decoration: none;
-}
-nav a:hover {
-  background-color: #bca69b;
-}
-
-#footerWrapper {
-  background-color: #A68A7B;
-  color: white;
-  text-align: center;
-  padding: 0.5rem 16px;
-  font-size: 0.8rem;
-}
-#footerWrapper p {
-  margin: 0;
-  font-weight: 300;
-  text-align: center;
-}
-
-@media only screen and (min-width: 35rem) {
-  header {
-    padding: 2rem 16px;
-  }
-  header h1 {
-    font-size: 2.5rem;
-    font-weight: 400;
-    margin: 0;
-  }
-}
-@media only screen and (min-width: 35rem) {
-  header, nav, main, footer {
-    max-width: 60rem;
-    margin: 0 auto;
-  }
-}mportant;
-  }
-  .nav a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    color: #45219c;
-    border-bottom: 3px solid transparent;
-    border-radius: 0;
-    transition: border-color 0.3s ease, color 0.2s ease;
-  }
-  .nav a:hover {
-    color: #ff6b35;
-    background: transparent !important;
-    border-bottom-color: rgba(255, 107, 53, 0.3);
-  }
-  .nav a.active {
-    color: #ff6b35;
-    border-bottom-color: #ff6b35;
-    font-weight: 600;
-    background: transparent !important;
-  }
-  /* Speaker grid - 3 columns on large screens */
-  .speaker-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-  }
-  .speakers-section {
-    padding: 3rem 1rem;
-  }
-  .speakers-section h2 {
-    font-size: 2rem;
-  }
-  .speaker-name {
-    font-size: 1.5rem;
-  }
-  .hero .overlay {
-    padding: 2rem;
-  }
-}
-/* Cross-cutting styles and design principles */
-/* Wayfinding: focus styles */
-a:focus, button:focus, input:focus {
-  outline: 3px solid rgba(255, 122, 24, 0.25);
-}
-
-/* Prevent horizontal scroll */
-html, body {
-  overflow-x: hidden;
-}
-
-/* Hamburger animation to X */
-.nav-toggle.open .bar {
-  background: transparent;
-}
-
-.nav-toggle.open .bar::before {
-  transform: rotate(45deg);
-  top: 0;
-}
-
-.nav-toggle.open .bar::after {
-  transform: rotate(-45deg);
-  bottom: 0;
-}
-
-/* Mobile nav reveal */
-.nav.open {
-  display: flex !important;
-  flex-direction: column;
-  position: absolute;
-  top: 70px;
-  right: 1rem;
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  min-width: 200px;
-  z-index: 1000;
-  animation: slideDown 0.3s ease;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}stimonial .testimonial-author .author-title {
+  color: #fff;
+  padding: 0.75rem 10px;
   display: block;
-  font-weight: 400;
-  font-size: 0.9rem;
-  color: #6b6b6b;
-  margin-top: 0.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Footer */
-footer {
-  background: #2d5016;
-  color: #ffffff;
+nav li.active a {
+  background: #fff;
+  color: #000000;
+}
+
+/* Cards - single column on small */
+.allcards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem 10px;
+}
+
+.allcards section {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 0.75rem;
   text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
-}
-footer p {
-  margin: 0;
-  font-size: 0.95rem;
+  border-radius: 10px;
 }
 
-/* Accessibility & Focus States */
-a:focus,
-button:focus,
-input:focus {
-  outline: 3px solid rgba(212, 175, 55, 0.5);
-  outline-offset: 2px;
-}
-
-/* Prevent Horizontal Scroll */
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
-}
-
-img {
+.allcards img {
   max-width: 100%;
   height: auto;
+  display: block;
+  border-radius: 8px;
+  margin: auto;
 }
 
-/* ===== MEDIUM SCREEN STYLES (600px+) ===== */
-@media screen and (min-width: 600px) {
-  /* Header Adjustments */
-  .site-header {
-    padding: 1.5rem 2rem;
-  }
-  .logo img {
-    height: 60px;
-  }
-  .site-title {
-    font-size: 1.75rem;
-  }
-  .slogan {
-    font-size: 0.85rem;
-  }
-  /* Show Phone Link */
-  .phone-link {
-    display: block;
-    margin-right: 1.5rem;
-  }
-  /* Hide Hamburger, Show Nav */
-  .nav-toggle {
+.allcards h2 {
+  margin: 0.5rem 0 0.25rem;
+  color: #630521;
+  font-weight: 500;
+}
+
+.allcards a {
+  display: inline-block;
+  color: #e7e1ab;
+}
+
+/* Button styles for links */
+.btn {
+  display: inline-block;
+  background: #c7721d;
+  color: #fff !important;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+}
+
+.btn:hover,
+.btn:focus {
+  background: rgb(163.3894736842, 93.6, 23.8105263158);
+}
+
+/* --------------------------- MAIN --------------------------- */
+main h1 {
+  padding: 1rem 10px 0.5rem 10px;
+  font-size: 1.5rem;
+  color: #630521;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+main p {
+  color: #333;
+  line-height: 150%;
+}
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+  padding-top: 2rem;
+  background-color: #e7e1ab;
+}
+
+.footer-upper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aligns columns at the top */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.footer-upper > div {
+  flex: 1; /* Equal column widths */
+  text-align: center;
+  min-width: 200px;
+}
+
+.footer-social {
+  gap: 0.5rem;
+  width: 10rem;
+}
+
+.footer-social ion-icon {
+  font-size: 2rem;
+  color: #c7721d;
+  margin-bottom: 2rem;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-form input[type=email] {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+}
+
+#signup-form {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+footer {
+  padding: 1rem 10px;
+  text-align: center;
+}
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 1rem;
+}
+
+.login-link {
+  text-decoration: underline;
+  margin-right: 0.5rem;
+}
+
+.footer-sitemap {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.sitemap-col h4 {
+  color: #630521;
+}
+
+.sitemap-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid #eeeeee;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+}
+
+/* utilities */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 35rem) {
+  /* NAVIGATION STUFF GOES HERE  */
+  /* Medium screens - horizontal nav and 2-column cards */
+}
+@media only screen and (min-width: 35rem) and (min-width: 600px) {
+  /* Hide hamburger on medium and large screens */
+  #hamburgerBtn {
     display: none;
   }
-  .nav {
-    display: flex !important;
+  nav ul {
+    display: flex !important; /* Always show on medium+ screens */
     flex-direction: row;
-    gap: 0.5rem;
-    position: static;
-    background: transparent;
-    box-shadow: none;
-    padding: 0;
-    animation: none;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
   }
-  .nav a {
-    padding: 1rem 1.5rem;
+  nav a {
+    padding: 0.5rem 1rem;
+    border-bottom: none;
+    border-radius: 10px;
   }
-  .nav a.active::after {
-    bottom: 0;
-    left: 1.5rem;
-    right: 1.5rem;
+  nav li.active a {
+    border-radius: 10px;
   }
-  /* Dropdown Navigation */
-  .nav-item {
-    position: relative;
+  nav ul :hover {
+    border-radius: 10px;
   }
-  .nav-item.has-submenu:hover .submenu {
-    display: block;
-  }
-  .nav-item.has-submenu > a::after {
-    content: " ▼";
-    font-size: 0.7em;
-  }
-  .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #ffffff;
-    min-width: 200px;
-    padding: 0.5rem 0;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    z-index: 100;
-  }
-  .submenu a {
-    display: block;
-    padding: 1rem 1.5rem;
-    white-space: nowrap;
-  }
-  .submenu a:hover {
-    background: #f8f9f5;
-  }
-  .submenu a.active::after {
-    display: none;
-  }
-  .submenu.open {
-    display: block;
-  }
-  /* Main Content */
-  main {
-    padding: 3rem 2rem;
-  }
-  .page-title {
-    font-size: 3rem;
-  }
-  /* Slider Adjustments */
-  .slide img {
-    height: 400px;
-  }
-  .slide-overlay {
-    padding: 3rem;
-  }
-  .slide-overlay h2 {
-    font-size: 2rem;
-  }
-  .slide-overlay p {
-    font-size: 1.1rem;
-  }
-  .slider-controls {
-    padding: 0 2rem;
-  }
-  .slider-controls button {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-  }
-  /* Cards Grid */
-  .cards-grid {
+  .allcards {
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    gap: 1rem;
+    padding: 1.5rem 10px;
   }
-  .card img {
-    height: 250px;
-  }
-  .card .card-content {
-    padding: 2rem;
-  }
-  .card-svg-edge {
-    padding-bottom: 50px;
-  }
-  .card-svg-edge svg {
-    height: 50px;
-  }
-  .card-png-edge {
-    padding-bottom: 40px;
-  }
-  .card-png-edge .png-edge {
-    height: 40px;
-  }
-  /* Testimonials */
-  .testimonials-section {
-    padding: 4rem 2rem;
-  }
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-  }
-  .testimonial {
-    padding: 3rem;
-    flex-direction: row;
+  .allcards section {
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .testimonial .testimonial-photo {
-    width: 100px;
-    height: 100px;
-    margin: 0;
-    flex-shrink: 0;
-  }
-  .testimonial .testimonial-content {
-    flex: 1;
-  }
-  .testimonial .testimonial-text {
-    text-align: left;
-  }
-  .testimonial .testimonial-author {
-    text-align: left;
-  }
-  /* Footer */
-  footer {
-    padding: 3rem;
+  .allcards img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
   }
 }
-/* ===== LARGE SCREEN STYLES (1024px+) ===== */
-@media screen and (min-width: 1024px) {
-  /* Header Refinements */
-  .site-header {
-    padding: 2rem 4rem;
+@media only screen and (min-width: 35rem) and (min-width: 600px) {
+  .footer-upper > div {
+    flex: 1; /* Makes all columns equal width */
+    text-align: center; /* Centers their content */
+    min-width: 0; /* Prevents overflow from long content */
   }
-  .logo img {
-    height: 70px;
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 1.5rem;
   }
-  .site-title {
-    font-size: 2rem;
+  .footer-brand {
+    align-items: flex-start;
   }
-  .slogan {
-    font-size: 0.9rem;
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
-  .phone-link {
-    font-size: 1.2rem;
-    margin-right: 2rem;
+  .footer-social {
+    grid-column: 2;
   }
-  /* Navigation - Smaller Anchors */
-  .nav {
+}
+@media only screen and (min-width: 35rem) {
+  .brand-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .brand-copy p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #666;
+  }
+  .footer-form {
+    order: 3;
+    align-self: center;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  header, nav, main {
+    max-width: 960px;
+    margin: auto;
+  }
+  /* NAVIGATION STUFF GOES HERE  */
+}
+@media only screen and (min-width: 64rem) and (min-width: 900px) {
+  nav ul {
+    justify-content: flex-start;
+    gap: 1.25rem;
+    padding-left: 0;
+  }
+  .allcards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+  .allcards section {
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  }
+}
+@media only screen and (min-width: 64rem) and (min-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: start;
+    gap: 2rem;
+  }
+  .footer-upper {
+    align-items: flex-start; /* Aligns columns at the top */
+  }
+  .footer-brand {
+    grid-column: 1;
+  }
+  .footer-sitemap {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
-  .nav a {
-    padding: 1rem 1.5rem;
-    font-size: 0.95rem;
+  .footer-social {
+    grid-column: 3;
+    align-self: start;
   }
-  .submenu a {
-    font-size: 0.9rem;
-    padding: 0.75rem 1.5rem;
+  .brand-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
   }
-  /* Main Content */
-  main {
-    padding: 4rem;
+  .brand-copy strong {
+    display: block;
   }
-  .page-title {
-    font-size: 3.5rem;
-    margin-bottom: 4rem;
+  .footer-form {
+    margin-left: auto;
   }
-  /* Slider */
-  .slider-container {
-    max-width: 1400px;
-    margin-bottom: 4rem;
-  }
-  .slide img {
-    height: 500px;
-  }
-  .slide-overlay {
-    padding: 4rem 3rem;
-  }
-  .slide-overlay h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  .slide-overlay p {
-    font-size: 1.2rem;
-  }
-  .slider-controls {
-    padding: 0 3rem;
-  }
-  .slider-controls button {
-    width: 60px;
-    height: 60px;
-    font-size: 1.75rem;
-  }
-  .slider-dots {
-    bottom: 2rem;
+}2rem;
   }
   .slider-dots button {
     width: 12px;
