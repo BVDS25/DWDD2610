@@ -4,8 +4,8 @@ package.json
 package-lock.json
 *.css.map
 
-# Media that may be large
-media/*
+# Media that may be large (commented out to allow video files)
+# media/*
 
 # Editor files
 .vscode/
