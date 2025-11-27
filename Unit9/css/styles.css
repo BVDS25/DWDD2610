@@ -333,6 +333,11 @@ p {
 .nav a:hover, .nav a.active {
   color: #4a7c2c;
 }
+.nav a.active {
+  font-weight: 700;
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: 8px;
+}
 .nav a.active::after {
   content: "";
   position: absolute;
@@ -401,6 +406,10 @@ main {
 .slide {
   min-width: 100%;
   position: relative;
+}
+.slide picture {
+  display: block;
+  width: 100%;
 }
 .slide img {
   width: 100%;
@@ -1034,5 +1043,3 @@ body {
 .testimonial-content > *:last-child {
   margin-bottom: 0;
 }
-
-/*# sourceMappingURL=styles.css.map */

@@ -159,7 +159,11 @@ p {
     &.active {
       color: $secondary-green;
     }
-    
+    &.active {
+      font-weight: 700;
+      background: rgba(212, 175, 55, 0.08);
+      border-radius: $radius-md;
+    }
     &.active::after {
       content: '';
       position: absolute;
