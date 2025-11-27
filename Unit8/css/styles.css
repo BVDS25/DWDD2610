@@ -117,8 +117,7 @@ header.site-header {
 /* Hero */
 .hero {
   position: relative;
-  margin-top: 1rem;
-  border-radius: 8px;
+  border-radius: 1px;
   overflow: hidden;
   background: #000;
 }
