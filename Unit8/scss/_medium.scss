@@ -25,6 +25,12 @@
   
   .hero h1{font-size:1.8rem}
   
+  /* Show hero description on medium screens and up */
+  .hero p{
+    display:block;
+    max-width:45ch
+  }
+  
   /* Speaker grid - 2 columns on medium screens */
   .speaker-grid{
     grid-template-columns:repeat(2, 1fr);

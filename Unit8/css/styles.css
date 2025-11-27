@@ -141,7 +141,7 @@ header.site-header {
 
 .hero video {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover;
   margin: 0;
@@ -164,6 +164,7 @@ header.site-header {
 }
 
 .hero p {
+  display: none;
   max-width: 38ch;
   color: white;
 }
@@ -319,6 +320,11 @@ footer.site-footer {
   }
   .hero h1 {
     font-size: 1.8rem;
+  }
+  /* Show hero description on medium screens and up */
+  .hero p {
+    display: block;
+    max-width: 45ch;
   }
   /* Speaker grid - 2 columns on medium screens */
   .speaker-grid {
