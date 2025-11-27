@@ -1,8 +1,12 @@
+/* Large screens - 1024px and up */
 @media (min-width:1024px){
   .container{max-width:$max-width}
   .logo img{height:72px}
   .site-title{font-size:1.8rem}
-  .nav{display:flex}
+  
+  /* Navigation stays left-justified */
+  .nav{display:flex!important;justify-content:flex-start}
+  
   .speakers{grid-template-columns:repeat(3,1fr)}
   .hero .overlay{padding:2rem}
 }

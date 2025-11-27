@@ -1,14 +1,22 @@
+// Main stylesheet - imports partials with media queries included
 @import 'variables';
 @import 'normalize';
 @import 'small';
 @import 'medium';
 @import 'large';
 
-/* Wayfinding and focus styles */
-a:focus,button:focus,input:focus{outline:3px solid rgba(255,122,24,0.25)}
+/* Cross-cutting styles and design principles */
 
-/* Visual tangent: diagonal accent under header */
-.site-header::after{content:'';position:absolute;height:14px;background:$accent;right:-8%;top:60px;transform:rotate(-5deg);opacity:.9}
+/* Wayfinding: focus styles */
+a:focus,button:focus,input:focus{outline:3px solid rgba(255,122,24,0.25)}
 
 /* Prevent horizontal scroll */
 html,body{overflow-x:hidden}
+
+/* Hamburger animation to X */
+.nav-toggle.open .bar{background:transparent}
+.nav-toggle.open .bar::before{transform:rotate(45deg);top:0}
+.nav-toggle.open .bar::after{transform:rotate(-45deg);bottom:0}
+
+/* Mobile nav reveal */
+.nav.open{display:block!important;position:absolute;top:80px;right:1rem;background:#fff;padding:1rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.15)}

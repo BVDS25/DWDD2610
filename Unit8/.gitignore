@@ -1,5 +1,7 @@
-# Node and build artifacts
+# Node and build artifacts (safe to delete package.json and package-lock.json)
 node_modules/
+package.json
+package-lock.json
 *.css.map
 
 # Media that may be large
