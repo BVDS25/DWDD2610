@@ -1,0 +1,280 @@
+/* Minimal normalize */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.4;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+/* Mobile-first styles */
+body {
+  background: #fff;
+  color: #111;
+}
+
+.container {
+  max-width: 100%;
+}
+
+header.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  height: 44px;
+  width: auto;
+}
+
+.site-title {
+  font-weight: 700;
+  color: #0b3d91;
+  font-size: 1.1rem;
+}
+
+.slogan {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Navigation */
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+}
+
+.nav-toggle .bar {
+  width: 22px;
+  height: 2px;
+  background: #0b3d91;
+  display: block;
+  position: relative;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle .bar::before, .nav-toggle .bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #0b3d91;
+  border-radius: 2px;
+}
+
+.nav-toggle .bar::before {
+  top: -6px;
+}
+
+.nav-toggle .bar::after {
+  bottom: -6px;
+}
+
+.nav {
+  display: none;
+}
+
+.nav a {
+  display: block;
+  padding: 0.5rem 0;
+  color: #0b3d91;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  border-radius: 1px;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  max-width: 38ch;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.read-more {
+  background: #ff7a18;
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.75rem;
+}
+
+/* Speakers cards container */
+.speakers {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.speaker {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 220px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.speaker-inner {
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.speaker-front, .speaker-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  padding: 1rem;
+}
+
+.speaker-front {
+  background: #fff;
+}
+
+.speaker-back {
+  background: #0b3d91;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.speaker:hover .speaker-inner {
+  transform: rotateY(180deg);
+}
+
+/* Footer */
+footer.site-footer {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 480px) {
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .logo img {
+    height: 56px;
+  }
+  .site-title {
+    font-size: 1.4rem;
+  }
+  .nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .nav a {
+    display: inline-block;
+    padding: 0.5rem;
+    color: #0b3d91;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .speakers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1100px;
+  }
+  .logo img {
+    height: 72px;
+  }
+  .site-title {
+    font-size: 1.8rem;
+  }
+  .nav {
+    display: flex;
+  }
+  .speakers {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hero .overlay {
+    padding: 2rem;
+  }
+}
+/* Wayfinding and focus styles */
+a:focus, button:focus, input:focus {
+  outline: 3px solid rgba(255, 122, 24, 0.25);
+}
+
+/* Visual tangent: diagonal accent under header */
+.site-header::after {
+  content: "";
+  position: absolute;
+  height: 14px;
+  background: #ff7a18;
+  right: -8%;
+  top: 60px;
+  transform: rotate(-5deg);
+  opacity: 0.9;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}

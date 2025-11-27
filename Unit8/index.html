@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DevCon — One Page Conference</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header" role="banner">
+      <div class="logo">
+        <img src="images/logo1x.png" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x" alt="DevCon logo">
+        <div>
+          <div class="site-title">DevCon</div>
+          <div class="slogan">Building the future, together</div>
+        </div>
+      </div>
+
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="nav" role="navigation" aria-label="Primary">
+        <a href="#hero">Home</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#tickets">Tickets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </header>
+
+<div id="mainwrapper">
+    <main>
+      <section id="hero" class="hero" aria-labelledby="hero-heading">
+        <!-- Replace media/hero.mp4 with your compressed local video (keep under 400KB for initial page size) -->
+        <video width="800" height="300" autoplay muted loop playsinline class="hero">
+            <source src="media/herovideo.webm" type="video/webm">
+            <source src="media/herovideo.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+          <h1 id="hero-heading">DevCon 2026 — Code, Collaborate, Create</h1>
+          <p>Join top engineers and builders for two days of talks, hands-on workshops, and networking.</p>
+          <a href="#" class="read-more">Read more</a>
+          <p class="more" style="display:none;max-width:45ch;margin-top:.75rem;color:rgba(255,255,255,.95);">DevCon brings together developers across specialties to share knowledge, ship projects, and meet collaborators. Expect practical talks, lightning demos, and deep-dive workshops.</p>
+        </div>
+      </section>
+      </main>
+</div>
+
+      <section id="speakers" class="speakers" aria-labelledby="speakers-heading">
+        <h2 id="speakers-heading">Featured Speakers</h2>
+        <article class="speaker" tabindex="0">
+          <div class="speaker-inner">
+            <div class="speaker-front">
+              <h3>Alex Rivera</h3>
+              <p>Frontend Engineer</p>
+            </div>
+            <div class="speaker-back">
+              <h3>About Alex</h3>
+              <p>Alex builds performant UI and is focused on accessibility and web standards.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="speaker" tabindex="0">
+          <div class="speaker-inner">
+            <div class="speaker-front">
+              <h3>Priya Shah</h3>
+              <p>Platform Engineer</p>
+            </div>
+            <div class="speaker-back">
+              <h3>About Priya</h3>
+              <p>Priya specializes in reliable distributed systems and developer experience.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="speaker" tabindex="0">
+          <div class="speaker-inner">
+            <div class="speaker-front">
+              <h3>Jordan Lee</h3>
+              <p>Data Scientist</p>
+            </div>
+            <div class="speaker-back">
+              <h3>About Jordan</h3>
+              <p>Jordan applies machine learning to real-world product problems and mentors teams.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="tickets" style="margin-top:1.25rem">
+        <h2>Tickets</h2>
+        <p>Early bird tickets available. <a href="#contact">Contact us</a> to reserve.</p>
+      </section>
+    
+
+    <footer id="contact" class="site-footer" role="contentinfo">
+      <p>&copy; 2026 &#8226; Bianca (Student)</p>
+    </footer>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

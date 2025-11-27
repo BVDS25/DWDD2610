@@ -1,0 +1,10 @@
+# Node and build artifacts
+node_modules/
+*.css.map
+
+# Media that may be large
+media/*
+
+# Editor files
+.vscode/
+.DS_Store

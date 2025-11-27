@@ -1,0 +1,37 @@
+/* Mobile-first styles */
+body{padding:1rem;background:#fff;color:#111}
+.container{max-width:100%;margin:0 auto}
+header.site-header{display:flex;align-items:center;justify-content:space-between;gap:.75rem}
+.logo{display:flex;align-items:center;gap:.5rem}
+.logo img{height:44px;width:auto}
+.site-title{font-weight:700;color:$brand;font-size:1.1rem}
+.slogan{font-size:.85rem;color:$muted}
+
+/* Navigation */
+.nav-toggle{display:flex;align-items:center;border:none;background:transparent}
+.nav-toggle .bar{width:22px;height:2px;background:$brand;display:block;position:relative;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+.nav-toggle .bar::before,.nav-toggle .bar::after{content:'';position:absolute;left:0;right:0;height:2px;background:$brand;border-radius:2px}
+.nav-toggle .bar::before{top:-6px}
+.nav-toggle .bar::after{bottom:-6px}
+.nav{display:none}
+.nav a{display:block;padding:.5rem 0;color:$brand;text-decoration:none}
+
+/* Hero */
+.hero{position:relative;margin-top:1rem;border-radius:$radius;overflow:hidden;background:#000}
+.hero video{width:100%;height:auto;display:block;object-fit:cover}
+.hero .overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:1rem;color:#fff}
+.hero h1{font-size:1.4rem;margin-bottom:.5rem}
+.hero p{max-width:38ch;color:rgba(255,255,255,.9)}
+.read-more{background:$accent;color:#fff;padding:.5rem .8rem;border-radius:6px;text-decoration:none;display:inline-block;margin-top:.75rem}
+
+/* Speakers cards container */
+.speakers{display:grid;gap:1rem;margin-top:1rem}
+.speaker{background:$card-bg;border-radius:10px;overflow:hidden;min-height:220px;position:relative;perspective:1000px}
+.speaker-inner{position:relative;transition:transform .6s;transform-style:preserve-3d}
+.speaker-front,.speaker-back{position:absolute;inset:0;backface-visibility:hidden;padding:1rem}
+.speaker-front{background:#fff}
+.speaker-back{background:#0b3d91;color:#fff;transform:rotateY(180deg)}
+.speaker:hover .speaker-inner{transform:rotateY(180deg)}
+
+/* Footer */
+footer.site-footer{text-align:center;padding:1rem 0;color:$muted;margin-top:1.5rem}

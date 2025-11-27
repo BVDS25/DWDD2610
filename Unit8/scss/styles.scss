@@ -1,0 +1,14 @@
+@import 'variables';
+@import 'normalize';
+@import 'small';
+@import 'medium';
+@import 'large';
+
+/* Wayfinding and focus styles */
+a:focus,button:focus,input:focus{outline:3px solid rgba(255,122,24,0.25)}
+
+/* Visual tangent: diagonal accent under header */
+.site-header::after{content:'';position:absolute;height:14px;background:$accent;right:-8%;top:60px;transform:rotate(-5deg);opacity:.9}
+
+/* Prevent horizontal scroll */
+html,body{overflow-x:hidden}

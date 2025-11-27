@@ -1,0 +1,8 @@
+@media (min-width:1024px){
+  .container{max-width:$max-width}
+  .logo img{height:72px}
+  .site-title{font-size:1.8rem}
+  .nav{display:flex}
+  .speakers{grid-template-columns:repeat(3,1fr)}
+  .hero .overlay{padding:2rem}
+}
