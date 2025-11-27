@@ -1,291 +1,331 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
-body {
+/* Minimal normalize to reset margins and set box-sizing */
+/* Keeps file small; you can replace with a fuller normalize if desired */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
-}
-
-/**
- * Render the `main` element consistently in IE.
- */
-main {
-  display: block;
-}
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
-a {
-  background-color: transparent;
-}
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- */
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10.
- */
-img {
-  border-style: none;
-}
-
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-button,
-input { /* 1 */
-  overflow: visible;
-}
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-button,
-select { /* 1 */
-  text-transform: none;
-}
-
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-/**
- * Remove the inner border and padding in Firefox.
- */
-button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
-  border-style: none;
   padding: 0;
+  border: 0;
 }
 
-/**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+* {
+  box-sizing: border-box;
 }
 
-/**
- * Correct the padding in Firefox.
- */
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
+html, body {
+  height: 100%;
 }
 
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+body {
+  line-height: 1.4;
+  font-family: Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #fff;
+  color: #111;
 }
 
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-progress {
-  vertical-align: baseline;
+/* Mobile-first styles (320px - small devices) */
+body {
+  padding: 1rem;
 }
 
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-textarea {
-  overflow: auto;
+.container {
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+header.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-  height: auto;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-[type=search] {
-  outline-offset: -2px; /* 2 */
+.logo img {
+  height: 44px;
+  width: auto;
 }
 
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0a48a8;
 }
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
-
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-details {
+/* Hamburger button */
+.menu-toggle {
   display: block;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  color: #0a48a8;
+  cursor: pointer;
+  z-index: 1001; /* above overlay */
+  padding: 0.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.menu-toggle:hover {
+  color: #f5a623;
+  transform: scale(1.1);
 }
 
-/*
- * Add the correct display in all browsers.
- */
-summary {
-  display: list-item;
+/* Fullscreen menu overlay */
+nav.primary {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.98);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  z-index: 1000;
 }
 
-/* Misc
-   ========================================================================== */
-/**
+/* Links inside fullscreen menu */
+nav.primary a {
+  color: #0a48a8;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+nav.primary a:hover {
+  color: #f5a623;
+}
+
+/* When menu is active (open) */
+nav.primary.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.menu-toggle {
+  border-radius: 6px;
+}
+.menu-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+main {
+  margin-top: 1rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e6e9ee;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles - each input wrapped in label per requirement */
+form .field {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+form label {
+  display: block;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+form label.input-style {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+form input, select,
+form button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.35rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+input:required {
+  border-left: 4px solid #b63737;
+}
+
+input:required:valid {
+  border-left: 4px solid #1e8b05;
+}
+
+input:focus {
+  border-left: 4px solid #959595;
+}
+
+select.select-styling {
+  margin-bottom: 0.75rem;
+}
+
+form input.radio-input {
+  width: auto;
+  display: inline-block;
+  margin-right: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+form .row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+form .row > * {
+  flex: 1;
+}
+
+footer.site-footer {
+  text-align: center;
+  padding: 0.2rem 0;
+  color: #6b7280;
+  margin-top: 1.5rem;
+  font-size: x-small;
+  color: rgb(190, 190, 190);
+}
+
+@media screen and (min-width: 768px) {
+  /* Medium screens - spread navigation evenly */
+}
+@media screen and (min-width: 768px) and (min-width: 480px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 1rem;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  nav.primary {
+    position: static;
+    transform: none;
+    opacity: 1;
+    background: transparent;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    height: auto;
+  }
+  nav.primary a {
+    font-size: 1rem;
+    border-bottom: 4px solid white;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  nav.primary a.active {
+    border-bottom: 4px solid #f5a623;
+    border-radius: 0.2rem;
+  }
+  .logo img {
+    height: 56px;
+  }
+  .site-title {
+    font-size: 1.5rem;
+  }
+  form .row {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* Large screens - justify right using flex to meet requirement */
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  header.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav.primary {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  .container {
+    max-width: 1200px;
+  }
+  .logo img {
+    height: 72px;
+  }
+  h1.page-title {
+    font-size: 2rem;
+  }
+  .card {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+.header-accent {
+  position: relative;
+}
+
+.header-accent::after {
+  content: "";
+  position: absolute;
+  right: -12%;
+  top: 50%;
+  width: 60vw;
+  height: 18px;
+  background: #f5a623;
+  transform: rotate(-6deg);
+  opacity: 0.85;
+  z-index: 0;
+}
+
+/* Wayfinding: focus style on interactive elements */
+a:focus, button:focus, input:focus {
+  outline: 3px solid rgba(10, 72, 168, 0.25);
+}
+
+/* Ensure no horizontal scrollbar across the target range */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Additional visual hierarchy */
+h1.page-title {
+  font-size: 1.6rem;
+  color: #0a48a8;
+  margin-bottom: 0.5rem;
+}
+
+.lead {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+/* Small visual improvement for submit */
+button.primary {
+  background: #0a48a8;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* fallback hover; keep small */
+button.primary:hover {
+  opacity: 0.92;
+}
+
+/* Keep CSS small and efficient to remain under 500KB total page weight */*
  * Add the correct display in IE 10+.
  */
 template {
@@ -317,13 +357,11 @@ body {
   font-family: "Spline Sans", sans-serif;
   font-weight: 300;
   min-width: 320px;
-  background-color: #eeeeee;
 }
 
 /* --------------------------- HEADER --------------------------- */
 #headerWrapper {
-  border-bottom: 1px solid #eeeeee;
-  background-color: #e7e1ab;
+  border-bottom: 1px solid #ccc;
 }
 
 header {
@@ -336,290 +374,141 @@ header {
 header span {
   font-size: 1.6rem;
   font-weight: 300;
-  color: black;
+  color: #3A2310;
 }
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 #navWrapper {
-  background: #fff;
-  border-bottom: 1px solid #eeeeee;
-  background-color: #c7721d;
+  background-color: #3A2310;
 }
 
 nav ul {
+  padding: 0;
+  margin: 0 10px;
+}
+nav li {
   list-style: none;
-  margin: 0;
-  padding: 0.5rem 10px;
-  display: flex;
-  flex-direction: column;
-  /* stack on small */
-  gap: 10px;
 }
-nav ul :hover {
-  background: #e7e1ab;
-  opacity: 0.9;
-  color: #000000;
-  border-radius: 10px;
-}
-
-nav a {
+nav ul li a {
+  color: #ccc;
   text-decoration: none;
-  color: #fff;
-  padding: 0.5rem;
   display: block;
+  padding: 0.8rem 10px;
 }
-
-nav li.active a {
-  background: #fff;
-  color: #000000;
+nav ul li.active a {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #3A2310;
   border-radius: 10px;
-}
-
-/* Cards - single column on small */
-.allcards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1rem 10px;
-}
-
-.allcards section {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 0.75rem;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.allcards img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-  margin: auto;
-}
-
-.allcards h2 {
-  margin: 0.5rem 0 0.25rem;
-  color: #630521;
-  font-weight: 500;
-}
-
-.allcards a {
-  display: inline-block;
-  color: #e7e1ab;
-}
-
-/* Button styles for links */
-.btn {
-  display: inline-block;
-  background: #c7721d;
-  color: #fff !important;
-  width: 100%;
-  padding: 0.5rem 2rem;
-  border-radius: 10px;
-  text-decoration: none;
-  text-align: center;
-  font-weight: 500;
-}
-
-.btn:hover,
-.btn:focus {
-  background: rgb(163.3894736842, 93.6, 23.8105263158);
 }
 
 /* --------------------------- MAIN --------------------------- */
+main {
+  /* general paragraphs inside main (body copy) */
+  /* gallery tiles: each direct child div */
+  /* image inside a tile keeps its aspect ratio on small screens */
+  /* caption inside a tile */
+}
 main h1 {
   padding: 1rem 10px 0.5rem 10px;
   font-size: 1.5rem;
-  color: #630521;
+  color: #4D3728;
   font-weight: 300;
-  margin-bottom: 0;
 }
 main p {
+  padding: 0.5rem 10px;
   color: #333;
   line-height: 150%;
+}
+main > div {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+main > div img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: 2px solid #3A2310;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+main > div p {
+  margin-top: 0;
+  flex: 0 0 auto;
+  padding: 0.5rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: #3A2310;
+  color: white;
 }
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-  padding-top: 2rem;
-  background-color: #e7e1ab;
-}
-
-.footer-upper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Aligns columns at the top */
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.footer-upper > div {
-  flex: 1; /* Equal column widths */
-  text-align: center;
-  min-width: 200px;
-}
-
-.footer-social {
-  gap: 0.5rem;
-  width: 10rem;
-}
-
-.footer-social ion-icon {
-  font-size: 2rem;
-  color: #c7721d;
-  margin-bottom: 2rem;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.footer-form input[type=email] {
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  width: 100%;
-}
-
-#signup-form {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  background-color: #3A2310;
 }
 
 footer {
+  font-size: 0.85rem;
   padding: 1rem 10px;
+  color: #ccc;
   text-align: center;
+  align-items: center;
+  line-height: 150%;
 }
 footer a {
-  color: black;
-  text-decoration: none;
-}
-
-.footer-inner {
-  display: grid;
-  gap: 1rem;
-}
-
-.login-link {
-  text-decoration: underline;
-  margin-right: 0.5rem;
-}
-
-.footer-sitemap {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-.sitemap-col h4 {
-  color: #630521;
-}
-
-.sitemap-col ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footer-bottom {
-  border-top: 1px solid #eeeeee;
-  padding-top: 1rem;
-  font-size: 0.85rem;
-}
-
-/* utilities */
-.visually-hidden {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
+  color: #ccc;
 }
 
 @media only screen and (min-width: 35rem) {
   /* NAVIGATION STUFF GOES HERE  */
-  /* Medium screens - horizontal nav and 2-column cards */
-}
-@media only screen and (min-width: 35rem) and (min-width: 600px) {
   nav ul {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.5rem 1rem;
-  }
-  nav a {
-    padding: 0.5rem 1rem;
-  }
-  .allcards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 1.5rem 10px;
-  }
-  .allcards section {
-    text-align: left;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: flex-start;
+    column-gap: 10px;
   }
-  .allcards img {
+  nav ul li a {
+    margin: 10px 0;
+  }
+  nav ul li a:hover {
+    text-decoration: underline 2px #E3E1DF;
+  }
+  #navWrapper nav ul {
+    display: flex; /* enable flexbox */
+    align-items: center; /* vertical alignment */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    gap: 10px;
+  }
+  #navWrapper nav ul li {
+    margin-right: 1rem; /* spacing between items */
+  }
+  #navWrapper nav ul li:last-child {
+    margin-left: auto;
+  }
+  /* Medium screens: two-column gallery */
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: start;
+  }
+  main > div {
+    padding: 0.5rem;
+  }
+  main h1 {
+    grid-column: 1/-1;
+  }
+  main img {
     width: 100%;
     height: auto;
-    margin-bottom: 0.5rem;
-  }
-}
-@media only screen and (min-width: 35rem) and (min-width: 600px) {
-  .footer-upper > div {
-    flex: 1; /* Makes all columns equal width */
-    text-align: center; /* Centers their content */
-    min-width: 0; /* Prevents overflow from long content */
-  }
-  .footer-inner {
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-    gap: 1.5rem;
-  }
-  .footer-brand {
-    align-items: flex-start;
-  }
-  .footer-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .footer-social {
-    grid-column: 2;
-  }
-}
-@media only screen and (min-width: 35rem) {
-  .brand-text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .brand-copy p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: #666;
-  }
-  .footer-form {
-    order: 3;
-    align-self: center;
+    display: block;
+    max-width: 100%;
   }
 }
 @media only screen and (min-width: 64rem) {
@@ -627,58 +516,201 @@ footer a {
     max-width: 960px;
     margin: auto;
   }
-  /* NAVIGATION STUFF GOES HERE  */
-}
-@media only screen and (min-width: 64rem) and (min-width: 900px) {
-  nav ul {
-    justify-content: flex-start;
-    gap: 1.25rem;
-    padding-left: 0;
+  nav ul li a {
+    padding: 0.5rem 10px;
+    font-size: 0.9rem;
   }
-  .allcards {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    padding: 2rem 0;
-  }
-  .allcards section {
-    padding: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-  }
-}
-@media only screen and (min-width: 64rem) and (min-width: 900px) {
-  .footer-inner {
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: start;
-    gap: 2rem;
-  }
-  .footer-upper {
-    align-items: flex-start; /* Aligns columns at the top */
-  }
-  .footer-brand {
-    grid-column: 1;
-  }
-  .footer-sitemap {
-    grid-column: 2;
+  main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 10px;
+    align-items: start;
   }
-  .footer-social {
-    grid-column: 3;
-    align-self: start;
+  main h1 {
+    grid-column: 1/-1;
   }
-  .brand-info {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+  main > div {
+    padding: 0.5rem;
   }
-  .brand-copy strong {
+  main img {
+    width: 100%;
     display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 3px solid #3A2310;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-color: black;
   }
-  .footer-form {
-    margin-left: auto;
+  main p {
+    margin-top: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: #3A2310;
+    color: white;
   }
-}gin-bottom: 2rem;
+}e;
+}
+
+section:hover .wrap svg,
+section:hover .wrap img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* --------------------------- MAIN --------------------------- */
+main h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
+}
+main p {
+  color: #333;
+  line-height: 150%;
+}
+
+/* --------------------------- REVIEWS --------------------------- */
+.reviews-section {
+  padding: 0;
+  color: #222;
+}
+.reviews-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  padding-bottom: 3rem;
+}
+.reviews-section .reviews-intro {
+  margin-bottom: 1.25rem;
+  color: #444;
+}
+.reviews-section .reviews-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+/* Review Card */
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(15, 20, 25, 0.06);
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.review-card:hover, .review-card:focus-within {
+  transform: translateY(-4px);
+}
+
+/* Avatar */
+.review-avatar {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e67e22 0%, #f3a65a 100%);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+.review-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Content */
+.review-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.review-meta {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.reviewer-name {
+  font-weight: 700;
+}
+
+.reviewer-location {
+  color: #666;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.review-quote {
+  margin: 0.35rem 0 0;
+  color: #333;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.stars {
+  display: inline-flex;
+  margin-left: auto;
+}
+.stars .star {
+  width: 16px;
+  height: 16px;
+  fill: #f1c40f;
+}
+
+#loadMoreReviews {
+  margin-top: 1.25rem;
+}
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+  padding-top: 2rem;
+  background-color: #000000;
+  color: #fff;
+}
+
+.footer-upper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eeeeee;
+}
+.footer-upper > div {
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
+}
+
+.footer-social {
+  width: 10rem;
+  margin-bottom: 2rem;
+}
+.footer-social ion-icon {
+  font-size: 2rem;
+  color: white;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
   margin-right: 0.5rem;
 }
 

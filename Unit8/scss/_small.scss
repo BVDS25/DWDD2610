@@ -261,6 +261,43 @@ header.site-header {
     }
 }
 
+/* Tickets Section */
+.tickets-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: $brand
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+        color: $muted
+    }
+}
+
+.btn-tickets {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background: $accent;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+
+    &:hover {
+        background: #e65a1f;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(255, 107, 53, 0.4)
+    }
+}
+
 /* Footer */
 footer.site-footer {
     text-align: center;
