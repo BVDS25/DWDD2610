@@ -387,6 +387,28 @@ main {
   font-size: 2.5rem;
 }
 
+/* Phone number in main */
+.phone-main {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.phone-main .phone-link {
+  display: inline-block;
+  color: #2d5016;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.phone-main .phone-link:hover {
+  color: #4a7c2c;
+  background: rgba(212, 175, 55, 0.18);
+}
+
 /* Image Slider */
 .slider-container {
   position: relative;
