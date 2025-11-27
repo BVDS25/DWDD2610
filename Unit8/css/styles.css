@@ -135,17 +135,33 @@ header.site-header {
   justify-content: center;
   align-items: flex-start;
   padding: 1rem;
-  color: #000000;
 }
 
 .hero h1 {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
+  color: white;
 }
 
 .hero p {
   max-width: 38ch;
   color: white;
+}
+
+.read-more {
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  background: #ff6b35;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.read-more:hover {
+  background: #e65a1f;
+  transform: translateY(-2px);
 }
 
 /* Speakers Section */
