@@ -1,7 +1,7 @@
 /* Large screens - 1024px and up */
 @media (min-width:1024px){
   .container{max-width:$max-width}
-  .logo img{height:72px}
+  .logo img{width:100px}
   .site-title{font-size:1.8rem}
   
   /* Navigation stays left-justified */
