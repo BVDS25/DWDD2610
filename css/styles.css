@@ -1,60 +1,110 @@
-@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
 html {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
 body {
   margin: 0;
 }
 
+/**
+ * Render the `main` element consistently in IE.
+ */
 main {
   display: block;
 }
 
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
 hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
 a {
   background-color: transparent;
 }
 
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
 abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
 b,
 strong {
   font-weight: bolder;
 }
 
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
+/**
+ * Add the correct font size in all browsers.
+ */
 small {
   font-size: 80%;
 }
 
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
 sub,
 sup {
   font-size: 75%;
@@ -71,38 +121,64 @@ sup {
   top: -0.5em;
 }
 
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
 img {
   border-style: none;
 }
 
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
 button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
 button,
-input {
+input { /* 1 */
   overflow: visible;
 }
 
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
 button,
-select {
+select { /* 1 */
   text-transform: none;
 }
 
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
 button,
 [type=button],
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
+  appearance: button;
 }
 
+/**
+ * Remove the inner border and padding in Firefox.
+ */
 button::-moz-focus-inner,
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
@@ -111,6 +187,9 @@ button::-moz-focus-inner,
   padding: 0;
 }
 
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
 button:-moz-focusring,
 [type=button]:-moz-focusring,
 [type=reset]:-moz-focusring,
@@ -118,508 +197,304 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 
+/**
+ * Correct the padding in Firefox.
+ */
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
 
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
 legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
 progress {
   vertical-align: baseline;
 }
 
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
 textarea {
   overflow: auto;
 }
 
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  padding: 0;
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
 [type=number]::-webkit-inner-spin-button,
 [type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
 [type=search] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
+  -webkit-appearance: textfield; /* 1 */
+  appearance: textfield;
+  outline-offset: -2px; /* 2 */
 }
 
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
 [type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
 details {
   display: block;
 }
 
+/*
+ * Add the correct display in all browsers.
+ */
 summary {
   display: list-item;
 }
 
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
 template {
   display: none;
 }
 
+/**
+ * Add the correct display in IE 10.
+ */
 [hidden] {
   display: none;
 }
 
-/* ===== SMALL SCREEN STYLES (320px+) ===== */
-/* Box Sizing */
-*, *::before, *::after {
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* Body and Typography */
 body {
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #1a1a1a;
-  background-color: #ffffff;
-  margin: 0;
-  padding: 0;
+  height: 100%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: #000000;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", serif;
-  line-height: 1.2;
-  margin-top: 0;
+#headerWrapper {
+  background-color: white;
+  color: white;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-h2 {
-  font-size: 1.75rem;
-  margin-bottom: 1.5rem;
-  color: #2d5016;
-}
-
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-/* Container */
-.container {
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-/* Header */
-.site-header {
-  background-color: #ffffff;
-  padding: 1rem;
+header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: sticky;
+  padding: 1rem 16px;
+  gap: 8px;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #A68A7B;
+}
+
+#navWrapper {
+  background-color: #A68A7B;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+nav ul li {
+  flex: 1;
+}
+nav li.active {
+  background-color: #717340;
+}
+nav a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: #bca69b;
+}
+
+#footerWrapper {
+  background-color: #A68A7B;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 16px;
+  font-size: 0.8rem;
+}
+#footerWrapper p {
+  margin: 0;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media only screen and (min-width: 35rem) {
+  header {
+    padding: 2rem 16px;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 35rem) {
+  header, nav, main, footer {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+}mportant;
+  }
+  .nav a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #45219c;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    transition: border-color 0.3s ease, color 0.2s ease;
+  }
+  .nav a:hover {
+    color: #ff6b35;
+    background: transparent !important;
+    border-bottom-color: rgba(255, 107, 53, 0.3);
+  }
+  .nav a.active {
+    color: #ff6b35;
+    border-bottom-color: #ff6b35;
+    font-weight: 600;
+    background: transparent !important;
+  }
+  /* Speaker grid - 3 columns on large screens */
+  .speaker-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+  }
+  .speakers-section {
+    padding: 3rem 1rem;
+  }
+  .speakers-section h2 {
+    font-size: 2rem;
+  }
+  .speaker-name {
+    font-size: 1.5rem;
+  }
+  .hero .overlay {
+    padding: 2rem;
+  }
+}
+/* Cross-cutting styles and design principles */
+/* Wayfinding: focus styles */
+a:focus, button:focus, input:focus {
+  outline: 3px solid rgba(255, 122, 24, 0.25);
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Hamburger animation to X */
+.nav-toggle.open .bar {
+  background: transparent;
+}
+
+.nav-toggle.open .bar::before {
+  transform: rotate(45deg);
   top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-.logo img {
-  height: 50px;
-  width: auto;
-}
-
-.site-title {
-  font-family: "Playfair Display", serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #2d5016;
-  line-height: 1;
-}
-
-.slogan {
-  font-size: 0.75rem;
-  color: #6b6b6b;
-  margin-top: 2px;
-}
-
-/* Phone Link */
-.phone-link {
-  display: none;
-  color: #2d5016;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: color 0.2s ease;
-}
-.phone-link:hover {
-  color: #4a7c2c;
-}
-
-/* Navigation Toggle (Hamburger) */
-.nav-toggle {
-  display: block;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 1001;
-}
-
-.bar {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: #2d5016;
-  position: relative;
-  transition: background 0.3s ease;
-}
-.bar::before, .bar::after {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: #2d5016;
-  position: absolute;
-  left: 0;
-  transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
-}
-.bar::before {
-  top: -8px;
-}
-.bar::after {
-  bottom: -8px;
-}
-
-/* Primary Navigation */
-.nav {
-  display: none;
-}
-.nav a {
-  display: block;
-  padding: 1rem;
-  color: #1a1a1a;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-  position: relative;
-}
-.nav a:hover, .nav a.active {
-  color: #4a7c2c;
-}
-.nav a.active {
-  font-weight: 700;
-  background: rgba(212, 175, 55, 0.08);
-  border-radius: 8px;
-}
-.nav a.active::after {
-  content: "";
-  position: absolute;
-  bottom: 0.5rem;
-  left: 1rem;
-  right: 1rem;
-  height: 2px;
-  background: #d4af37;
-}
-
-/* Submenu Styles for Small Screens */
-.nav-item {
-  position: relative;
-}
-.nav-item.has-submenu > a::after {
-  content: " ▼";
-  font-size: 0.7em;
-  margin-left: 0.25rem;
-}
-
-.submenu {
-  display: none;
-  padding-left: 1.5rem;
-}
-.submenu a {
-  padding: 0.75rem 1rem;
-  font-size: 0.95rem;
-}
-.submenu.open {
-  display: block;
-}
-
-/* Main Content Wrapper */
-#mainwrapper {
-  min-height: calc(100vh - 200px);
-}
-
-main {
-  padding: 1.5rem 1rem;
-}
-
-/* Page Title */
-.page-title {
-  text-align: center;
-  color: #2d5016;
-  margin-bottom: 3rem;
-  font-size: 2.5rem;
-}
-
-/* Phone number in main */
-.phone-main {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.phone-main .phone-link {
-  display: inline-block;
-  color: #2d5016;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.2rem;
-  padding: 0.5rem 1.25rem;
-  border-radius: 8px;
-  transition: color 0.2s ease, background 0.2s ease;
-}
-
-.phone-main .phone-link:hover {
-  color: #4a7c2c;
-  background: rgba(212, 175, 55, 0.18);
-}
-
-/* Image Slider */
-.slider-container {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto 3rem;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.slider {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.slide {
-  min-width: 100%;
-  position: relative;
-}
-.slide picture {
-  display: block;
-  width: 100%;
-}
-.slide img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-}
-
-.slide-overlay {
-  position: absolute;
+.nav-toggle.open .bar::after {
+  transform: rotate(-45deg);
   bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  color: #ffffff;
-  padding: 2rem 1.5rem;
-}
-.slide-overlay h2 {
-  color: #ffffff;
-  margin: 0 0 0.5rem;
-  font-size: 1.5rem;
-}
-.slide-overlay p {
-  margin: 0;
-  font-size: 0.95rem;
 }
 
-.slider-controls {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1rem;
-  pointer-events: none;
-}
-.slider-controls button {
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.2rem;
-  color: #2d5016;
-  pointer-events: all;
-  transition: background 0.2s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-.slider-controls button:hover {
-  background: #ffffff;
-}
-
-.slider-dots {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.5rem;
-}
-.slider-dots button {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
-  background: transparent;
-  cursor: pointer;
-  padding: 0;
-  transition: background 0.2s ease;
-}
-.slider-dots button.active {
-  background: #ffffff;
-}
-
-/* Cards Section */
-.cards-section {
-  margin-bottom: 3rem;
-}
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.card {
-  background: #ffffff;
-  border-radius: 12px 12px 0 0;
-  overflow: visible;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  position: relative;
-}
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-}
-.card .card-content {
-  padding: 1.5rem;
-}
-.card .card-content h3 {
-  color: #2d5016;
-  margin-bottom: 1rem;
-}
-.card .card-content p {
-  color: #6b6b6b;
-  line-height: 1.6;
-}
-
-/* SVG Bottom Edge */
-.card-svg-edge {
-  position: relative;
-  padding-bottom: 40px;
-}
-.card-svg-edge svg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40px;
-}
-
-/* PNG Bottom Edge */
-.card-png-edge {
-  position: relative;
-  padding-bottom: 30px;
-}
-.card-png-edge .png-edge {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 30px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
-/* Testimonials */
-.testimonials-section {
-  background: #f8f9f5;
-  padding: 3rem 1rem;
-  margin: 3rem 0;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 2rem auto 0;
-}
-
-.testimonial {
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
+/* Mobile nav reveal */
+.nav.open {
+  display: flex !important;
   flex-direction: column;
-  gap: 1.5rem;
+  position: absolute;
+  top: 70px;
+  right: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  z-index: 1000;
+  animation: slideDown 0.3s ease;
 }
-.testimonial .testimonial-photo {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-}
-.testimonial .testimonial-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
-.testimonial .testimonial-text {
-  font-style: italic;
-  color: #6b6b6b;
-  line-height: 1.7;
-  text-align: center;
-}
-.testimonial .testimonial-author {
-  font-weight: 600;
-  color: #2d5016;
-  text-align: center;
-}
-.testimonial .testimonial-author .author-title {
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}stimonial .testimonial-author .author-title {
   display: block;
   font-weight: 400;
   font-size: 0.9rem;
@@ -1005,18 +880,33 @@ body {
 .nav.open {
   display: flex !important;
   flex-direction: column;
-  position: absolute;
-  top: 70px;
-  right: 1rem;
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  min-width: 200px;
-  z-index: 1000;
-  animation: slideDown 0.3s ease;
+  position: static;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+  min-width: 0;
+  z-index: auto;
+  animation: none;
 }
 
+@media screen and (min-width: 1024px) {
+  .nav {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    min-width: 0;
+    z-index: auto;
+    animation: none;
+  }
+  .nav.open {
+    flex-direction: row;
+  }
+}
 @keyframes slideDown {
   from {
     opacity: 0;

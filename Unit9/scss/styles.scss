@@ -40,16 +40,32 @@ body {
 .nav.open {
   display: flex !important;
   flex-direction: column;
-  position: absolute;
-  top: 70px;
-  right: 1rem;
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  min-width: 200px;
-  z-index: 1000;
-  animation: slideDown 0.3s ease;
+  position: static;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+  min-width: 0;
+  z-index: auto;
+  animation: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    min-width: 0;
+    z-index: auto;
+    animation: none;
+  }
+  .nav.open {
+    flex-direction: row;
+  }
 }
 
 @keyframes slideDown {

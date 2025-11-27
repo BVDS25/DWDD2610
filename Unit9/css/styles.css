@@ -233,7 +233,6 @@ p {
 .site-header {
   background-color: #ffffff;
   padding: 1rem;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
@@ -286,10 +285,11 @@ p {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   position: relative;
   z-index: 1001;
+  margin: 1rem;
 }
 
 .bar {
@@ -344,29 +344,21 @@ p {
   bottom: 0.5rem;
   left: 1rem;
   right: 1rem;
-  height: 2px;
-  background: #d4af37;
+  display: block;
+  background: transparent;
 }
-
-/* Submenu Styles for Small Screens */
-.nav-item {
-  position: relative;
+.nav {
+  /* Add caret for items with submenu */
 }
-.nav-item.has-submenu > a::after {
+.nav .has-submenu > a::after {
   content: " ▼";
   font-size: 0.7em;
   margin-left: 0.25rem;
 }
-
-.submenu {
-  display: none;
-  padding-left: 1.5rem;
+.nav {
+  /* When navigation is open (e.g. mobile) */
 }
-.submenu a {
-  padding: 0.75rem 1rem;
-  font-size: 0.95rem;
-}
-.submenu.open {
+.nav.open {
   display: block;
 }
 
@@ -1005,18 +997,33 @@ body {
 .nav.open {
   display: flex !important;
   flex-direction: column;
-  position: absolute;
-  top: 70px;
-  right: 1rem;
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  min-width: 200px;
-  z-index: 1000;
-  animation: slideDown 0.3s ease;
+  position: static;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+  min-width: 0;
+  z-index: auto;
+  animation: none;
 }
 
+@media screen and (min-width: 1024px) {
+  .nav {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    min-width: 0;
+    z-index: auto;
+    animation: none;
+  }
+  .nav.open {
+    flex-direction: row;
+  }
+}
 @keyframes slideDown {
   from {
     opacity: 0;

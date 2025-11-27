@@ -52,7 +52,7 @@ p {
 .site-header {
   background-color: $white;
   padding: $spacing-sm;
-  display: flex;
+//   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
@@ -111,6 +111,8 @@ p {
   height: 100%;
   position: relative;
   z-index: 1001;
+  margin: 1rem;
+
 }
 
 .bar {
@@ -145,7 +147,7 @@ p {
 /* Primary Navigation */
 .nav {
   display: none;
-  
+
   a {
     display: block;
     padding: $spacing-sm;
@@ -154,48 +156,37 @@ p {
     font-weight: 500;
     transition: color $transition-fast;
     position: relative;
-    
+
     &:hover,
     &.active {
       color: $secondary-green;
     }
+
     &.active {
       font-weight: 700;
       background: rgba(212, 175, 55, 0.08);
       border-radius: $radius-md;
     }
+
     &.active::after {
       content: '';
       position: absolute;
       bottom: 0.5rem;
       left: $spacing-sm;
       right: $spacing-sm;
-      height: 2px;
-      background: $accent-gold;
+      display: block;
+      background: transparent;
     }
   }
-}
 
-/* Submenu Styles for Small Screens */
-.nav-item {
-  position: relative;
-  
-  &.has-submenu > a::after {
+  /* Add caret for items with submenu */
+  .has-submenu > a::after {
     content: ' ▼';
     font-size: 0.7em;
     margin-left: 0.25rem;
   }
-}
 
-.submenu {
-  display: none;
-  padding-left: $spacing-md;
-  
-  a {
-    padding: 0.75rem $spacing-sm;
-    font-size: 0.95rem;
-  }
-  
+  /* When navigation is open (e.g. mobile) */
   &.open {
     display: block;
   }
