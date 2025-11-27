@@ -34,6 +34,8 @@
 
   .nav {
     display: none;
+    display: flex;
+    flex-direction: row;
     a {
       padding: $spacing-sm $spacing-md;
 
@@ -168,8 +170,8 @@
   }
   
   .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: $spacing-xl;
+    grid-template-columns: 1fr;
+  gap: $spacing-lg;
   }
   
   .testimonial {

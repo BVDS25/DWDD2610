@@ -1,110 +1,60 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
 
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
 body {
   margin: 0;
 }
 
-/**
- * Render the `main` element consistently in IE.
- */
 main {
   display: block;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  font-size: 1em;
 }
 
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
 a {
   background-color: transparent;
 }
 
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
 b,
 strong {
   font-weight: bolder;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  font-size: 1em;
 }
 
-/**
- * Add the correct font size in all browsers.
- */
 small {
   font-size: 80%;
 }
 
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
 sub,
 sup {
   font-size: 75%;
@@ -121,56 +71,38 @@ sup {
   top: -0.5em;
 }
 
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10.
- */
 img {
   border-style: none;
 }
 
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
 button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
 }
 
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
 button,
-input { /* 1 */
+input {
   overflow: visible;
 }
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
 button,
-select { /* 1 */
+select {
   text-transform: none;
 }
 
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-/**
- * Remove the inner border and padding in Firefox.
- */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
 button::-moz-focus-inner,
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
@@ -179,9 +111,6 @@ button::-moz-focus-inner,
   padding: 0;
 }
 
-/**
- * Restore the focus styles unset by the previous rule.
- */
 button:-moz-focusring,
 [type=button]:-moz-focusring,
 [type=reset]:-moz-focusring,
@@ -189,551 +118,763 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 
-/**
- * Correct the padding in Firefox.
- */
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
 
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
 }
 
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
 progress {
   vertical-align: baseline;
 }
 
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
 textarea {
   overflow: auto;
 }
 
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+  box-sizing: border-box;
+  padding: 0;
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
 [type=number]::-webkit-inner-spin-button,
 [type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
 [type=search] {
-  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
 }
 
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
 [type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button;
+  font: inherit;
 }
 
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
 details {
   display: block;
 }
 
-/*
- * Add the correct display in all browsers.
- */
 summary {
   display: list-item;
 }
 
-/* Misc
-   ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
 template {
   display: none;
 }
 
-/**
- * Add the correct display in IE 10.
- */
 [hidden] {
   display: none;
 }
 
-/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
-html {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-/*  Apply a natural box layout model to all elements  */
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+/* ===== SMALL SCREEN STYLES (320px+) ===== */
+/* Box Sizing */
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* --------------------------- BODY --------------------------- */
+/* Body and Typography */
 body {
-  font-family: "Spline Sans", sans-serif;
-  font-weight: 300;
-  min-width: 320px;
-  background-color: #eeeeee;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
-/* --------------------------- HEADER --------------------------- */
-#headerWrapper {
-  border-bottom: 1px solid #eeeeee;
-  background-color: #e7e1ab;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+  line-height: 1.2;
+  margin-top: 0;
 }
 
-header {
-  display: grid;
-  grid-template-columns: 50px auto;
-  column-gap: 10px;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #2d5016;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Container */
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background-color: #ffffff;
+  padding: 1rem;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 10px;
-}
-header span {
-  font-size: 1.6rem;
-  font-weight: 300;
-  color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
-#navWrapper {
-  background: #fff;
-  border-bottom: 1px solid #eeeeee;
-  background-color: #c7721d;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.logo img {
+  height: 50px;
+  width: auto;
 }
 
-nav {
+.site-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d5016;
+  line-height: 1;
+}
+
+.slogan {
+  font-size: 0.75rem;
+  color: #6b6b6b;
+  margin-top: 2px;
+}
+
+/* Phone Link */
+.phone-link {
+  display: none;
+  color: #2d5016;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+.phone-link:hover {
+  color: #4a7c2c;
+}
+
+/* Navigation Toggle (Hamburger) */
+.nav-toggle {
+  display: block;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1001;
+  margin: 1rem;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #2d5016;
+  position: relative;
+  transition: background 0.3s ease;
+}
+.bar::before, .bar::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #2d5016;
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
+}
+.bar::before {
+  top: -8px;
+}
+.bar::after {
+  bottom: -8px;
+}
+
+/* Primary Navigation */
+.nav {
+  display: none;
+  /* Add caret for items with submenu */
+  /* When navigation is open (e.g. mobile) */
+}
+.nav a {
+  display: block;
+  padding: 1rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
   position: relative;
 }
-
-/* Hamburger button */
-#hamburgerBtn {
+.nav a:hover, .nav a.active {
+  color: #4a7c2c;
+}
+.nav a.active {
+  font-weight: 700;
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: 8px;
+}
+.nav a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1rem;
+  right: 1rem;
   display: block;
-  background: none;
-  border: none;
-  padding: 0.5rem 10px;
-  cursor: pointer;
-  width: 44px;
-  height: 44px;
+  background: transparent;
 }
-
-#hamburgerBtn span {
+.nav .has-submenu > a::after {
+  content: " ▼";
+  font-size: 0.7em;
+  margin-left: 0.25rem;
+}
+.nav.open {
   display: block;
-  width: 28px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px 0;
-  transition: 0.3s;
-  border-radius: 2px;
 }
 
-/* Hamburger animation when open */
-#hamburgerBtn.open span:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
+/* Main Content Wrapper */
+#mainwrapper {
+  min-height: calc(100vh - 200px);
 }
 
-#hamburgerBtn.open span:nth-child(2) {
-  opacity: 0;
+main {
+  padding: 1.5rem 1rem;
 }
 
-#hamburgerBtn.open span:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
+/* Page Title */
+.page-title {
+  text-align: center;
+  color: #2d5016;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: none;
-  flex-direction: column;
-  /* stack on small */
-  gap: 0;
-}
-nav ul :hover {
-  background: #e7e1ab;
-  opacity: 0.9;
-  color: #000000;
+/* Phone number in main */
+.phone-main {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-/* Show menu when open */
-nav ul.open {
-  display: flex;
-}
-
-nav a {
+.phone-main .phone-link {
+  display: inline-block;
+  color: #2d5016;
   text-decoration: none;
-  color: #fff;
-  padding: 0.75rem 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.phone-main .phone-link:hover {
+  color: #4a7c2c;
+  background: rgba(212, 175, 55, 0.18);
+}
+
+/* Image Slider */
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 3rem;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+.slide picture {
   display: block;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+.slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
 }
 
-nav li.active a {
-  background: #fff;
-  color: #000000;
+.slide-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #ffffff;
+  padding: 2rem 1.5rem;
+}
+.slide-overlay h2 {
+  color: #ffffff;
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+.slide-overlay p {
+  margin: 0;
+  font-size: 0.95rem;
 }
 
-/* Cards - single column on small */
-.allcards {
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  pointer-events: none;
+}
+.slider-controls button {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #2d5016;
+  pointer-events: all;
+  transition: background 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.slider-controls button:hover {
+  background: #ffffff;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+.slider-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease;
+}
+.slider-dots button.active {
+  background: #ffffff;
+}
+
+/* Cards Section */
+.cards-section {
+  margin-bottom: 3rem;
+}
+
+.cards-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1rem 10px;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.allcards section {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 0.75rem;
+.card {
+  background: #ffffff;
+  border-radius: 12px 12px 0 0;
+  overflow: visible;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.card .card-content {
+  padding: 1.5rem;
+}
+.card .card-content h3 {
+  color: #2d5016;
+  margin-bottom: 1rem;
+}
+.card .card-content p {
+  color: #6b6b6b;
+  line-height: 1.6;
+}
+
+/* SVG Bottom Edge */
+.card-svg-edge {
+  position: relative;
+  padding-bottom: 40px;
+}
+.card-svg-edge svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+/* PNG Bottom Edge */
+.card-png-edge {
+  position: relative;
+  padding-bottom: 30px;
+}
+.card-png-edge .png-edge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Testimonials */
+.testimonials-section {
+  background: #f8f9f5;
+  padding: 3rem 1rem;
+  margin: 3rem 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+}
+
+.testimonial {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.testimonial .testimonial-photo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.testimonial .testimonial-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.testimonial .testimonial-text {
+  font-style: italic;
+  color: #6b6b6b;
+  line-height: 1.7;
   text-align: center;
-  border-radius: 10px;
+}
+.testimonial .testimonial-author {
+  font-weight: 600;
+  color: #2d5016;
+  text-align: center;
+}
+.testimonial .testimonial-author .author-title {
+  display: block;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #6b6b6b;
+  margin-top: 0.25rem;
 }
 
-.allcards img {
+/* Footer */
+footer {
+  background: #2d5016;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Accessibility & Focus States */
+a:focus,
+button:focus,
+input:focus {
+  outline: 3px solid rgba(212, 175, 55, 0.5);
+  outline-offset: 2px;
+}
+
+/* Prevent Horizontal Scroll */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+img {
   max-width: 100%;
   height: auto;
-  display: block;
-  border-radius: 8px;
-  margin: auto;
 }
 
-.allcards h2 {
-  margin: 0.5rem 0 0.25rem;
-  color: #630521;
-  font-weight: 500;
-}
-
-.allcards a {
-  display: inline-block;
-  color: #e7e1ab;
-}
-
-/* Button styles for links */
-.btn {
-  display: inline-block;
-  background: #c7721d;
-  color: #fff !important;
-  width: 100%;
-  padding: 0.5rem 2rem;
-  border-radius: 10px;
-  text-decoration: none;
-  text-align: center;
-  font-weight: 500;
-}
-
-.btn:hover,
-.btn:focus {
-  background: rgb(163.3894736842, 93.6, 23.8105263158);
-}
-
-/* --------------------------- MAIN --------------------------- */
-main h1 {
-  padding: 1rem 10px 0.5rem 10px;
-  font-size: 1.5rem;
-  color: #630521;
-  font-weight: 300;
-  margin-bottom: 0;
-}
-main p {
-  color: #333;
-  line-height: 150%;
-}
-
-/* --------------------------- FOOTER --------------------------- */
-#footerWrapper {
-  padding-top: 2rem;
-  background-color: #e7e1ab;
-}
-
-.footer-upper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Aligns columns at the top */
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.footer-upper > div {
-  flex: 1; /* Equal column widths */
-  text-align: center;
-  min-width: 200px;
-}
-
-.footer-social {
-  gap: 0.5rem;
-  width: 10rem;
-}
-
-.footer-social ion-icon {
-  font-size: 2rem;
-  color: #c7721d;
-  margin-bottom: 2rem;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.footer-form input[type=email] {
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  width: 100%;
-}
-
-#signup-form {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-footer {
-  padding: 1rem 10px;
-  text-align: center;
-}
-footer a {
-  color: black;
-  text-decoration: none;
-}
-
-.footer-inner {
-  display: grid;
-  gap: 1rem;
-}
-
-.login-link {
-  text-decoration: underline;
-  margin-right: 0.5rem;
-}
-
-.footer-sitemap {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-.sitemap-col h4 {
-  color: #630521;
-}
-
-.sitemap-col ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footer-bottom {
-  border-top: 1px solid #eeeeee;
-  padding-top: 1rem;
-  font-size: 0.85rem;
-}
-
-/* utilities */
-.visually-hidden {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
-}
-
-@media only screen and (min-width: 35rem) {
-  /* NAVIGATION STUFF GOES HERE  */
-  /* Medium screens - horizontal nav and 2-column cards */
-}
-@media only screen and (min-width: 35rem) and (min-width: 600px) {
-  /* Hide hamburger on medium and large screens */
-  #hamburgerBtn {
-    display: none;
+/* ===== MEDIUM SCREEN STYLES (600px+) ===== */
+@media screen and (min-width: 600px) {
+  /* Header Adjustments */
+  .site-header {
+    padding: 1.5rem 2rem;
   }
-  nav ul {
-    display: flex !important; /* Always show on medium+ screens */
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.5rem 1rem;
+  .logo img {
+    height: 60px;
   }
-  nav a {
-    padding: 0.5rem 1rem;
-    border-bottom: none;
-    border-radius: 10px;
+  .site-title {
+    font-size: 1.75rem;
   }
-  nav li.active a {
-    border-radius: 10px;
+  .slogan {
+    font-size: 0.85rem;
   }
-  nav ul :hover {
-    border-radius: 10px;
+  /* Show Phone Link */
+  .phone-link {
+    display: block;
+    margin-right: 1.5rem;
   }
-  .allcards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 1.5rem 10px;
-  }
-  .allcards section {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .allcards img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem;
-  }
-}
-@media only screen and (min-width: 35rem) and (min-width: 600px) {
-  .footer-upper > div {
-    flex: 1; /* Makes all columns equal width */
-    text-align: center; /* Centers their content */
-    min-width: 0; /* Prevents overflow from long content */
-  }
-  .footer-inner {
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-    gap: 1.5rem;
-  }
-  .footer-brand {
-    align-items: flex-start;
-  }
-  .footer-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .footer-social {
-    grid-column: 2;
-  }
-}
-@media only screen and (min-width: 35rem) {
-  .brand-text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .brand-copy p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: #666;
-  }
-  .footer-form {
-    order: 3;
-    align-self: center;
-  }
-}
-@media only screen and (min-width: 64rem) {
-  header, nav, main {
-    max-width: 960px;
-    margin: auto;
-  }
-  /* NAVIGATION STUFF GOES HERE  */
-}
-@media only screen and (min-width: 64rem) and (min-width: 900px) {
-  nav ul {
-    justify-content: flex-start;
-    gap: 1.25rem;
-    padding-left: 0;
-  }
-  .allcards {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    padding: 2rem 0;
-  }
-  .allcards section {
-    padding: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-  }
-}
-@media only screen and (min-width: 64rem) and (min-width: 900px) {
-  .footer-inner {
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: start;
-    gap: 2rem;
-  }
-  .footer-upper {
-    align-items: flex-start; /* Aligns columns at the top */
-  }
-  .footer-brand {
-    grid-column: 1;
-  }
-  .footer-sitemap {
-    grid-column: 2;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-  .footer-social {
-    grid-column: 3;
-    align-self: start;
-  }
-  .brand-info {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-  .brand-copy strong {
+  /* Keep hamburger visible on medium; nav stays hidden until opened */
+  .nav-toggle {
     display: block;
   }
-  .footer-form {
-    margin-left: auto;
+  .nav {
+    display: none;
+    display: flex;
+    flex-direction: row;
   }
-}2rem;
+  .nav a {
+    padding: 1rem 1.5rem;
+  }
+  .nav a.active::after {
+    bottom: 0;
+    left: 1.5rem;
+    right: 1.5rem;
+  }
+  /* Dropdown Navigation */
+  .nav-item {
+    position: relative;
+  }
+  .nav-item.has-submenu:hover .submenu {
+    display: block;
+  }
+  .nav-item.has-submenu > a::after {
+    content: " ▼";
+    font-size: 0.7em;
+  }
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    min-width: 200px;
+    padding: 0.5rem 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 100;
+  }
+  .submenu a {
+    display: block;
+    padding: 1rem 1.5rem;
+    white-space: nowrap;
+  }
+  .submenu a:hover {
+    background: #f8f9f5;
+  }
+  .submenu a.active::after {
+    display: none;
+  }
+  .submenu.open {
+    display: block;
+  }
+  /* Main Content */
+  main {
+    padding: 3rem 2rem;
+  }
+  .page-title {
+    font-size: 3rem;
+  }
+  /* Slider Adjustments */
+  .slide img {
+    height: 400px;
+  }
+  .slide-overlay {
+    padding: 3rem;
+  }
+  .slide-overlay h2 {
+    font-size: 2rem;
+  }
+  .slide-overlay p {
+    font-size: 1.1rem;
+  }
+  .slider-controls {
+    padding: 0 2rem;
+  }
+  .slider-controls button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  /* Cards Grid */
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .card img {
+    height: 250px;
+  }
+  .card .card-content {
+    padding: 2rem;
+  }
+  .card-svg-edge {
+    padding-bottom: 50px;
+  }
+  .card-svg-edge svg {
+    height: 50px;
+  }
+  .card-png-edge {
+    padding-bottom: 40px;
+  }
+  .card-png-edge .png-edge {
+    height: 40px;
+  }
+  /* Testimonials */
+  .testimonials-section {
+    padding: 4rem 2rem;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .testimonial {
+    padding: 3rem;
+    flex-direction: row;
+    text-align: left;
+  }
+  .testimonial .testimonial-photo {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+  .testimonial .testimonial-content {
+    flex: 1;
+  }
+  .testimonial .testimonial-text {
+    text-align: left;
+  }
+  .testimonial .testimonial-author {
+    text-align: left;
+  }
+  /* Footer */
+  footer {
+    padding: 3rem;
+  }
+}
+/* ===== LARGE SCREEN STYLES (1024px+) ===== */
+@media screen and (min-width: 1024px) {
+  /* Header Refinements */
+  .site-header {
+    padding: 2rem 4rem;
+  }
+  .logo img {
+    height: 70px;
+  }
+  .site-title {
+    font-size: 2rem;
+  }
+  .slogan {
+    font-size: 0.9rem;
+  }
+  .phone-link {
+    font-size: 1.2rem;
+    margin-right: 2rem;
+  }
+  /* Navigation - Smaller Anchors */
+  .nav {
+    gap: 1rem;
+  }
+  .nav a {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .submenu a {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+  }
+  /* Main Content */
+  main {
+    padding: 4rem;
+  }
+  .page-title {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+  }
+  /* Slider */
+  .slider-container {
+    max-width: 1400px;
+    margin-bottom: 4rem;
+  }
+  .slide img {
+    height: 500px;
+  }
+  .slide-overlay {
+    padding: 4rem 3rem;
+  }
+  .slide-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .slide-overlay p {
+    font-size: 1.2rem;
+  }
+  .slider-controls {
+    padding: 0 3rem;
+  }
+  .slider-controls button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.75rem;
+  }
+  .slider-dots {
+    bottom: 2rem;
   }
   .slider-dots button {
     width: 12px;
