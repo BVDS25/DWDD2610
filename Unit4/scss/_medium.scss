@@ -2,7 +2,13 @@
 
 /* Medium screens - horizontal nav and 2-column cards */
 @media (min-width: 600px) {
+	/* Hide hamburger on medium and large screens */
+	#hamburgerBtn {
+		display: none;
+	}
+
 	nav ul {
+		display: flex !important; /* Always show on medium+ screens */
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
@@ -12,6 +18,16 @@
 
 	nav a {
 		padding: .5rem 1rem;
+		border-bottom: none;
+		border-radius: 10px;
+	}
+
+	nav li.active a {
+		border-radius: 10px;
+	}
+
+	nav ul :hover {
+		border-radius: 10px;
 	}
 
 	.allcards {

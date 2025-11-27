@@ -346,33 +346,75 @@ header span {
   background-color: #c7721d;
 }
 
+nav {
+  position: relative;
+}
+
+/* Hamburger button */
+#hamburgerBtn {
+  display: block;
+  background: none;
+  border: none;
+  padding: 0.5rem 10px;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+
+#hamburgerBtn span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Hamburger animation when open */
+#hamburgerBtn.open span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+#hamburgerBtn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburgerBtn.open span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
 nav ul {
   list-style: none;
   margin: 0;
-  padding: 0.5rem 10px;
-  display: flex;
+  padding: 0;
+  display: none;
   flex-direction: column;
   /* stack on small */
-  gap: 10px;
+  gap: 0;
 }
 nav ul :hover {
   background: #e7e1ab;
   opacity: 0.9;
   color: #000000;
-  border-radius: 10px;
+}
+
+/* Show menu when open */
+nav ul.open {
+  display: flex;
 }
 
 nav a {
   text-decoration: none;
   color: #fff;
-  padding: 0.5rem;
+  padding: 0.75rem 10px;
   display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 nav li.active a {
   background: #fff;
   color: #000000;
-  border-radius: 10px;
 }
 
 /* Cards - single column on small */
@@ -554,7 +596,12 @@ footer a {
   /* Medium screens - horizontal nav and 2-column cards */
 }
 @media only screen and (min-width: 35rem) and (min-width: 600px) {
+  /* Hide hamburger on medium and large screens */
+  #hamburgerBtn {
+    display: none;
+  }
   nav ul {
+    display: flex !important; /* Always show on medium+ screens */
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -563,6 +610,14 @@ footer a {
   }
   nav a {
     padding: 0.5rem 1rem;
+    border-bottom: none;
+    border-radius: 10px;
+  }
+  nav li.active a {
+    border-radius: 10px;
+  }
+  nav ul :hover {
+    border-radius: 10px;
   }
   .allcards {
     grid-template-columns: repeat(2, 1fr);
@@ -679,3 +734,5 @@ footer a {
     margin-left: auto;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
