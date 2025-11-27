@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 
-  // Make flip cards accessible on tap (touch devices)
-  document.querySelectorAll('.speaker').forEach(function(card){
+  // Make flip cards work on click (especially for touch devices)
+  document.querySelectorAll('.speaker-card').forEach(function(card){
     card.addEventListener('click', function(){
-      this.querySelector('.speaker-inner').classList.toggle('flipped');
+      this.classList.toggle('flipped');
     });
   });
 });

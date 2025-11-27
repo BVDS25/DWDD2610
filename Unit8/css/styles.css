@@ -209,17 +209,45 @@ header.site-header {
 .speaker-card {
   position: relative;
   aspect-ratio: 1/1;
-  overflow: hidden;
   border-radius: 8px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.speaker-card:hover .speaker-inner, .speaker-card.flipped .speaker-inner {
+  transform: rotateY(180deg);
+}
+
+.speaker-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.speaker-front,
+.speaker-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.speaker-front {
+  background: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.speaker-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-.speaker-card:hover .speaker-overlay {
-  opacity: 1;
+
+.speaker-back {
+  background: linear-gradient(135deg, rgba(69, 33, 156, 0.95), rgba(255, 107, 53, 0.95));
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .speaker-image {
@@ -229,55 +257,55 @@ header.site-header {
   display: block;
 }
 
-.speaker-overlay {
+.speaker-name-overlay {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75));
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.5rem;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 1rem;
   color: #fff;
+}
+.speaker-name-overlay h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .speaker-content {
-  flex: 1;
+  text-align: center;
+  color: #fff;
 }
 
 .speaker-name {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   color: #fff;
 }
 
 .speaker-bio {
   font-size: 0.9rem;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 1.25rem 0;
 }
 
 .speaker-btn {
   display: inline-block;
   padding: 0.65rem 1.25rem;
-  background: #ff6b35;
-  color: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  color: #45219c;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
   text-align: center;
-  transition: background 0.3s ease;
-  align-self: flex-start;
+  transition: all 0.3s ease;
 }
 .speaker-btn:hover {
-  background: #e65a1f;
-  color: #fff;
+  background: #fff;
+  color: #ff6b35;
+  transform: scale(1.05);
 }
 
 /* Tickets Section */
