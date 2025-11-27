@@ -1,0 +1,40 @@
+// Color Variables
+$primary-green: #2d5016;
+$secondary-green: #4a7c2c;
+$accent-gold: #d4af37;
+$light-bg: #f8f9f5;
+$dark-text: #1a1a1a;
+$white: #ffffff;
+$gray-light: #e0e0e0;
+$gray-medium: #6b6b6b;
+
+// Typography
+$font-main: 'Poppins', sans-serif;
+$font-heading: 'Playfair Display', serif;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-xxl: 4rem;
+
+// Border Radius
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+
+// Breakpoints
+$breakpoint-medium: 600px;
+$breakpoint-large: 1024px;
+
+// Shadows
+$shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+$shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+$shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;

@@ -1,0 +1,199 @@
+/* ===== LARGE SCREEN STYLES (1024px+) ===== */
+
+@media screen and (min-width: $breakpoint-large) {
+  
+  /* Header Refinements */
+  .site-header {
+    padding: $spacing-lg $spacing-xxl;
+  }
+  
+  .logo {
+    img {
+      height: 70px;
+    }
+  }
+  
+  .site-title {
+    font-size: 2rem;
+  }
+  
+  .slogan {
+    font-size: 0.9rem;
+  }
+  
+  .phone-link {
+    font-size: 1.2rem;
+    margin-right: $spacing-lg;
+  }
+  
+  /* Navigation - Smaller Anchors */
+  .nav {
+    gap: $spacing-sm;
+    
+    a {
+      padding: $spacing-sm $spacing-md;
+      font-size: 0.95rem;
+    }
+  }
+  
+  .submenu {
+    a {
+      font-size: 0.9rem;
+      padding: 0.75rem $spacing-md;
+    }
+  }
+  
+  /* Main Content */
+  main {
+    padding: $spacing-xxl;
+  }
+  
+  .page-title {
+    font-size: 3.5rem;
+    margin-bottom: $spacing-xxl;
+  }
+  
+  /* Slider */
+  .slider-container {
+    max-width: 1400px;
+    margin-bottom: $spacing-xxl;
+  }
+  
+  .slide {
+    img {
+      height: 500px;
+    }
+  }
+  
+  .slide-overlay {
+    padding: $spacing-xxl $spacing-xl;
+    
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: $spacing-sm;
+    }
+    
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .slider-controls {
+    padding: 0 $spacing-xl;
+    
+    button {
+      width: 60px;
+      height: 60px;
+      font-size: 1.75rem;
+    }
+  }
+  
+  .slider-dots {
+    bottom: $spacing-lg;
+    
+    button {
+      width: 12px;
+      height: 12px;
+    }
+  }
+  
+  /* Cards Grid - 4 columns */
+  .cards-section {
+    margin-bottom: $spacing-xxl;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-xl;
+  }
+  
+  .card {
+    img {
+      height: 220px;
+    }
+    
+    .card-content {
+      padding: $spacing-md;
+      
+      h3 {
+        font-size: 1.3rem;
+      }
+      
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+  
+  .card-svg-edge {
+    padding-bottom: 50px;
+    
+    svg {
+      height: 50px;
+    }
+  }
+  
+  .card-png-edge {
+    padding-bottom: 40px;
+    
+    .png-edge {
+      height: 40px;
+    }
+  }
+  
+  /* Testimonials */
+  .testimonials-section {
+    padding: $spacing-xxl;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-xxl;
+    max-width: 1200px;
+  }
+  
+  .testimonial {
+    padding: $spacing-xxl;
+    
+    .testimonial-photo {
+      width: 120px;
+      height: 120px;
+    }
+    
+    .testimonial-text {
+      font-size: 1.05rem;
+    }
+    
+    .testimonial-author {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Footer */
+  footer {
+    padding: $spacing-xxl;
+    
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Enhanced Hover Effects */
+  .card {
+    transition: transform $transition-normal, box-shadow $transition-normal;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    }
+  }
+  
+  .testimonial {
+    transition: transform $transition-normal, box-shadow $transition-normal;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $shadow-md;
+    }
+  }
+}

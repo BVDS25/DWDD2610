@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="GreenScape Landscape & Lighting - Professional landscaping services for your home and business">
+  <title>GreenScape Landscape & Lighting</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header" role="banner">
+      <div class="logo">
+        <img src="images/logo1x.png" 
+             srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x" 
+             alt="GreenScape logo"
+             loading="eager">
+        <div>
+          <div class="site-title">GreenScape</div>
+          <div class="slogan">Landscape &amp; Lighting</div>
+        </div>
+      </div>
+
+      <a href="tel:+18015551234" class="phone-link" aria-label="Call us at 801-555-1234">(801) 555-1234</a>
+
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="nav" role="navigation" aria-label="Primary">
+        <a href="#home" class="active">Home</a>
+        <div class="nav-item has-submenu">
+          <a href="#services" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="submenu" role="menu">
+            <a href="#lawn-care" role="menuitem">Lawn Care</a>
+            <a href="#landscape-design" role="menuitem">Landscape Design</a>
+            <a href="#outdoor-lighting" role="menuitem">Outdoor Lighting</a>
+          </div>
+        </div>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div id="mainwrapper">
+      <main>
+        <h1 class="page-title">Transform Your Outdoor Space</h1>
+
+        <!-- Image Slider Section -->
+        <section class="slider-section" aria-label="Featured projects">
+          <div class="slider-container">
+            <div class="slider">
+              <div class="slide">
+                <img src="images/slider1.png
+                " alt="Beautiful landscaped garden with colorful flowers" loading="eager">
+                <div class="slide-overlay">
+                  <h2>Professional Landscape Design</h2>
+                  <p>Create stunning outdoor spaces tailored to your vision and lifestyle</p>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="images/slider2.png
+                " alt="Elegant outdoor lighting illuminating a pathway" loading="lazy">
+                <div class="slide-overlay">
+                  <h2>Outdoor Lighting Solutions</h2>
+                  <p>Enhance safety and ambiance with expertly designed landscape lighting</p>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="images/slider3.png
+                " alt="Perfectly manicured lawn and garden beds" loading="lazy">
+                <div class="slide-overlay">
+                  <h2>Complete Lawn Care Services</h2>
+                  <p>Keep your lawn healthy and vibrant year-round with our maintenance plans</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider-controls" aria-label="Slider controls">
+              <button class="slider-prev" aria-label="Previous slide">&lt;</button>
+              <button class="slider-next" aria-label="Next slide">&gt;</button>
+            </div>
+            <div class="slider-dots" aria-label="Slide indicators">
+              <button class="active" aria-label="Go to slide 1"></button>
+              <button aria-label="Go to slide 2"></button>
+              <button aria-label="Go to slide 3"></button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services Cards Section -->
+        <section class="cards-section" id="services" aria-labelledby="services-heading">
+          <h2 id="services-heading" class="text-center">Our Services</h2>
+          
+          <div class="cards-grid">
+            <!-- SVG Edge Card 1 -->
+            <article class="card card-svg-edge">
+              <img src="images/service-lawn.png" alt="Professional lawn mowing service" loading="lazy">
+              <div class="card-content">
+                <h3>Lawn Maintenance</h3>
+                <p>Regular mowing, edging, and trimming to keep your lawn looking pristine. Our expert team ensures consistent quality and attention to detail.</p>
+              </div>
+              <svg viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,0 Q300,40 600,20 T1200,0 L1200,40 L0,40 Z" fill="#4a7c2c"/>
+              </svg>
+            </article>
+
+            <!-- SVG Edge Card 2 -->
+            <article class="card card-svg-edge">
+              <img src="images/service-design.png" alt="Landscape design consultation" loading="lazy">
+              <div class="card-content">
+                <h3>Landscape Design</h3>
+                <p>Custom landscape plans that blend beauty and functionality. We create outdoor spaces that reflect your style and enhance property value.</p>
+              </div>
+              <svg viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z" fill="#2d5016"/>
+              </svg>
+            </article>
+
+            <!-- PNG Edge Card 1 -->
+            <article class="card card-png-edge">
+              <img src="images/service-lighting.png" alt="Outdoor lighting installation" loading="lazy">
+              <div class="card-content">
+                <h3>Outdoor Lighting</h3>
+                <p>Transform your landscape with professional lighting design. Highlight architectural features and create safe, inviting pathways.</p>
+              </div>
+              <div class="png-edge" style="background-image: url('images/edge-wave1.png');" role="presentation"></div>
+            </article>
+
+            <!-- PNG Edge Card 2 -->
+            <article class="card card-png-edge">
+              <img src="images/service-irrigation.png" alt="Irrigation system maintenance" loading="lazy">
+              <div class="card-content">
+                <h3>Irrigation Systems</h3>
+                <p>Efficient watering solutions that conserve water while keeping your landscape healthy. Smart systems designed for optimal coverage.</p>
+              </div>
+              <div class="png-edge" style="background-image: url('images/edge-wave2.png');" role="presentation"></div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
+          <h2 id="testimonials-heading" class="text-center">What Our Clients Say</h2>
+          
+          <div class="testimonials-grid">
+            <article class="testimonial">
+              <div class="testimonial-photo">
+                <img src="images/client1.png
+                " alt="Sarah Johnson portrait" loading="lazy">
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-text">"GreenScape transformed our backyard into an absolute paradise! Their attention to detail and creative design exceeded all expectations. We now spend every evening enjoying our beautiful outdoor space."</p>
+                <div class="testimonial-author">
+                  Sarah Johnson
+                  <span class="author-title">Homeowner, Draper</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial">
+              <div class="testimonial-photo">
+                <img src="images/client2.png
+                " alt="Michael Chen portrait" loading="lazy">
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-text">"The outdoor lighting they installed is absolutely stunning. It's not only beautiful but has made our property so much safer. The team was professional, timely, and a pleasure to work with."</p>
+                <div class="testimonial-author">
+                  Michael Chen
+                  <span class="author-title">Business Owner, Sandy</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer role="contentinfo">
+      <p>&copy; 2025 GreenScape Landscape &amp; Lighting &bull; Bianca Torres</p>
+    </footer>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <rect width="180" height="180" fill="#2d5016"/>
+  <circle cx="90" cy="70" r="20" fill="#4a7c2c"/>
+  <path d="M90,80 L75,105 L105,105 Z" fill="#4a7c2c"/>
+  <text x="90" y="140" font-family="serif" font-size="24" font-weight="bold" fill="#d4af37" text-anchor="middle">GS</text>
+</svg>

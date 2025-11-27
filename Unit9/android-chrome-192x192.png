@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <rect width="192" height="192" fill="#2d5016"/>
+  <circle cx="96" cy="75" r="22" fill="#4a7c2c"/>
+  <path d="M96,85 L80,112 L112,112 Z" fill="#4a7c2c"/>
+  <text x="96" y="150" font-family="serif" font-size="26" font-weight="bold" fill="#d4af37" text-anchor="middle">GreenScape</text>
+</svg>

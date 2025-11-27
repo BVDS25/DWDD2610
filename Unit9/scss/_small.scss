@@ -1,0 +1,480 @@
+/* ===== SMALL SCREEN STYLES (320px+) ===== */
+
+/* Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Body and Typography */
+body {
+  font-family: $font-main;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $dark-text;
+  background-color: $white;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: $spacing-md;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: $spacing-md;
+  color: $primary-green;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: $spacing-sm;
+}
+
+p {
+  margin-bottom: $spacing-sm;
+}
+
+/* Container */
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background-color: $white;
+  padding: $spacing-sm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: $shadow-sm;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  
+  img {
+    height: 50px;
+    width: auto;
+  }
+}
+
+.site-title {
+  font-family: $font-heading;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $primary-green;
+  line-height: 1;
+}
+
+.slogan {
+  font-size: 0.75rem;
+  color: $gray-medium;
+  margin-top: 2px;
+}
+
+/* Phone Link */
+.phone-link {
+  display: none;
+  color: $primary-green;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: $secondary-green;
+  }
+}
+
+/* Navigation Toggle (Hamburger) */
+.nav-toggle {
+  display: block;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 1001;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: $primary-green;
+  position: relative;
+  transition: background $transition-normal;
+  
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: $primary-green;
+    position: absolute;
+    left: 0;
+    transition: transform $transition-normal, top $transition-normal, bottom $transition-normal;
+  }
+  
+  &::before {
+    top: -8px;
+  }
+  
+  &::after {
+    bottom: -8px;
+  }
+}
+
+/* Primary Navigation */
+.nav {
+  display: none;
+  
+  a {
+    display: block;
+    padding: $spacing-sm;
+    color: $dark-text;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color $transition-fast;
+    position: relative;
+    
+    &:hover,
+    &.active {
+      color: $secondary-green;
+    }
+    
+    &.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0.5rem;
+      left: $spacing-sm;
+      right: $spacing-sm;
+      height: 2px;
+      background: $accent-gold;
+    }
+  }
+}
+
+/* Submenu Styles for Small Screens */
+.nav-item {
+  position: relative;
+  
+  &.has-submenu > a::after {
+    content: ' ▼';
+    font-size: 0.7em;
+    margin-left: 0.25rem;
+  }
+}
+
+.submenu {
+  display: none;
+  padding-left: $spacing-md;
+  
+  a {
+    padding: 0.75rem $spacing-sm;
+    font-size: 0.95rem;
+  }
+  
+  &.open {
+    display: block;
+  }
+}
+
+/* Main Content Wrapper */
+#mainwrapper {
+  min-height: calc(100vh - 200px);
+}
+
+main {
+  padding: $spacing-md $spacing-sm;
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  color: $primary-green;
+  margin-bottom: $spacing-xl;
+  font-size: 2.5rem;
+}
+
+/* Image Slider */
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto $spacing-xl;
+  overflow: hidden;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+}
+
+.slider {
+  display: flex;
+  transition: transform $transition-slow;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+  
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.slide-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: $white;
+  padding: $spacing-lg $spacing-md;
+  
+  h2 {
+    color: $white;
+    margin: 0 0 $spacing-xs;
+    font-size: 1.5rem;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 $spacing-sm;
+  pointer-events: none;
+  
+  button {
+    background: rgba(255,255,255,0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: $primary-green;
+    pointer-events: all;
+    transition: background $transition-fast;
+    box-shadow: $shadow-md;
+    
+    &:hover {
+      background: $white;
+    }
+  }
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: $spacing-md;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: $spacing-xs;
+  
+  button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid $white;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background $transition-fast;
+    
+    &.active {
+      background: $white;
+    }
+  }
+}
+
+/* Cards Section */
+.cards-section {
+  margin-bottom: $spacing-xl;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-lg;
+  margin-top: $spacing-lg;
+}
+
+.card {
+  background: $white;
+  border-radius: $radius-lg $radius-lg 0 0;
+  overflow: visible;
+  box-shadow: $shadow-md;
+  position: relative;
+  
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .card-content {
+    padding: $spacing-md;
+    
+    h3 {
+      color: $primary-green;
+      margin-bottom: $spacing-sm;
+    }
+    
+    p {
+      color: $gray-medium;
+      line-height: 1.6;
+    }
+  }
+}
+
+/* SVG Bottom Edge */
+.card-svg-edge {
+  position: relative;
+  padding-bottom: 40px;
+  
+  svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+  }
+}
+
+/* PNG Bottom Edge */
+.card-png-edge {
+  position: relative;
+  padding-bottom: 30px;
+  
+  .png-edge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Testimonials */
+.testimonials-section {
+  background: $light-bg;
+  padding: $spacing-xl $spacing-sm;
+  margin: $spacing-xl 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-lg;
+  max-width: 1200px;
+  margin: $spacing-lg auto 0;
+}
+
+.testimonial {
+  background: $white;
+  padding: $spacing-lg;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  
+  .testimonial-photo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+    color: $gray-medium;
+    line-height: 1.7;
+    text-align: center;
+  }
+  
+  .testimonial-author {
+    font-weight: 600;
+    color: $primary-green;
+    text-align: center;
+    
+    .author-title {
+      display: block;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: $gray-medium;
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+/* Footer */
+footer {
+  background: $primary-green;
+  color: $white;
+  text-align: center;
+  padding: $spacing-lg $spacing-sm;
+  margin-top: $spacing-xl;
+  
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+}
+
+/* Accessibility & Focus States */
+a:focus,
+button:focus,
+input:focus {
+  outline: 3px solid rgba(212, 175, 55, 0.5);
+  outline-offset: 2px;
+}
+
+/* Prevent Horizontal Scroll */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
