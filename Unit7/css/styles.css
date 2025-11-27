@@ -307,7 +307,6 @@ h1.page-title {
 
 .lead {
   color: #6b7280;
-  margin-bottom: 1rem;
 }
 
 /* Small visual improvement for submit */
@@ -325,4 +324,22 @@ button.primary:hover {
   opacity: 0.92;
 }
 
+/* Skip to bottom button */
+.skip-button {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  background: #0a48a8;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skip-button:hover {
+  opacity: 0.92;
+}
+
 /* Keep CSS small and efficient to remain under 500KB total page weight */
+
+/*# sourceMappingURL=styles.css.map */
