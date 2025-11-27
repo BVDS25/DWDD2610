@@ -10,5 +10,27 @@
   .nav a{display:inline-block;padding:.5rem;color:$brand}
   
   .hero h1{font-size:1.8rem}
-//   .speakers{grid-template-columns:repeat(2,1fr)}
+  
+  /* Speaker grid - 2 columns on medium screens */
+  .speaker-grid{
+    grid-template-columns:repeat(2, 1fr);
+    gap:2rem;
+    max-width:800px
+  }
+  
+  .speakers-section{
+    padding:3rem 1rem
+  }
+  
+  .speakers-section h2{
+    font-size:1.8rem
+  }
+  
+  .speaker-name{
+    font-size:1.4rem
+  }
+  
+  .speaker-bio{
+    font-size:0.95rem
+  }
 }

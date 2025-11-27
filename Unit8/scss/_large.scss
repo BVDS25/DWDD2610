@@ -7,6 +7,24 @@
   /* Navigation stays left-justified */
   .nav{display:flex!important;justify-content:flex-start}
   
-//   .speakers{grid-template-columns:repeat(3,1fr)}
+  /* Speaker grid - 3 columns on large screens */
+  .speaker-grid{
+    grid-template-columns:repeat(3, 1fr);
+    gap:2rem;
+    max-width:1200px
+  }
+  
+  .speakers-section{
+    padding:3rem 1rem
+  }
+  
+  .speakers-section h2{
+    font-size:2rem
+  }
+  
+  .speaker-name{
+    font-size:1.5rem
+  }
+  
   .hero .overlay{padding:2rem}
 }
