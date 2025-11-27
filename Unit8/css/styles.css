@@ -66,18 +66,26 @@ header.site-header {
 .nav-toggle {
   display: flex;
   align-items: center;
+  justify-content: center;
   border: none;
   background: transparent;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+  transition: transform 0.2s ease;
+}
+.nav-toggle:hover {
+  transform: scale(1.1);
 }
 
 .nav-toggle .bar {
-  width: 22px;
-  height: 2px;
+  width: 24px;
+  height: 3px;
   background: #45219c;
   display: block;
   position: relative;
-  border-radius: 2px;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
 .nav-toggle .bar::before,
@@ -86,9 +94,10 @@ header.site-header {
   position: absolute;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   background: #45219c;
-  border-radius: 2px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
 .nav-toggle .bar::before {
@@ -105,17 +114,20 @@ header.site-header {
 
 .nav a {
   display: block;
-  padding: 0.5rem 0;
+  padding: 0.75rem 1rem;
   color: #45219c;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 4px;
 }
 .nav a:hover {
   color: #ff6b35;
+  background: rgba(255, 107, 53, 0.1);
 }
 .nav a.active {
   color: #ff6b35;
   font-weight: 600;
+  background: rgba(255, 107, 53, 0.15);
 }
 
 /* Hero */
@@ -288,31 +300,22 @@ footer.site-footer {
   .site-title {
     font-size: 1.4rem;
   }
-  /* Show navigation horizontally, hide hamburger */
+  /* Keep hamburger menu on medium screens */
   .nav-toggle {
+    display: flex;
+  }
+  /* Mobile nav menu for medium screens */
+  .nav {
     display: none;
   }
-  .nav {
+  .nav.open {
     display: flex !important;
-    gap: 1.5rem;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
   }
   .nav a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    color: #45219c;
-    border-bottom: 3px solid transparent;
-    transition: border-color 0.3s ease, color 0.2s ease;
-  }
-  .nav a:hover {
-    color: #ff6b35;
-    border-bottom-color: rgba(255, 107, 53, 0.3);
-  }
-  .nav a.active {
-    color: #ff6b35;
-    border-bottom-color: #ff6b35;
-    font-weight: 600;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
   }
   .hero h1 {
     font-size: 1.8rem;
@@ -347,10 +350,40 @@ footer.site-footer {
   .site-title {
     font-size: 1.8rem;
   }
-  /* Navigation stays left-justified */
+  /* Hide hamburger, show horizontal nav on large screens */
+  .nav-toggle {
+    display: none !important;
+  }
   .nav {
     display: flex !important;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
     justify-content: flex-start;
+    position: static !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    min-width: auto !important;
+  }
+  .nav a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #45219c;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    transition: border-color 0.3s ease, color 0.2s ease;
+  }
+  .nav a:hover {
+    color: #ff6b35;
+    background: transparent !important;
+    border-bottom-color: rgba(255, 107, 53, 0.3);
+  }
+  .nav a.active {
+    color: #ff6b35;
+    border-bottom-color: #ff6b35;
+    font-weight: 600;
+    background: transparent !important;
   }
   /* Speaker grid - 3 columns on large screens */
   .speaker-grid {
@@ -399,14 +432,29 @@ html, body {
 
 /* Mobile nav reveal */
 .nav.open {
-  display: block !important;
+  display: flex !important;
+  flex-direction: column;
   position: absolute;
-  top: 80px;
+  top: 70px;
   right: 1rem;
   background: #fff;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  z-index: 1000;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

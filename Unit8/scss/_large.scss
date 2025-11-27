@@ -4,8 +4,43 @@
   .logo img{width:80px}
   .site-title{font-size:1.8rem}
   
-  /* Navigation stays left-justified */
-  .nav{display:flex!important;justify-content:flex-start}
+  /* Hide hamburger, show horizontal nav on large screens */
+  .nav-toggle{display:none!important}
+  
+  .nav{
+    display:flex!important;
+    flex-direction:row;
+    gap:1.5rem;
+    align-items:center;
+    justify-content:flex-start;
+    position:static!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    padding:0!important;
+    min-width:auto!important
+  }
+  
+  .nav a{
+    display:inline-block;
+    padding:.5rem 1rem;
+    color:$brand;
+    border-bottom:3px solid transparent;
+    border-radius:0;
+    transition:border-color 0.3s ease, color 0.2s ease;
+
+    &:hover{
+      color:$accent;
+      background:transparent!important;
+      border-bottom-color:rgba(255, 107, 53, 0.3)
+    }
+
+    &.active{
+      color:$accent;
+      border-bottom-color:$accent;
+      font-weight:600;
+      background:transparent!important
+    }
+  }
   
   /* Speaker grid - 3 columns on large screens */
   .speaker-grid{
