@@ -1,8 +1,10 @@
 // Hamburger menu toggle
-const hamburgerBtn = document.getElementById('hamburgerBtn');
-const navMenu = document.querySelector('nav ul');
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.querySelector('nav ul');
 
-hamburgerBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-    hamburgerBtn.classList.toggle('open');
+    hamburgerBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        hamburgerBtn.classList.toggle('open');
+    });
 });
