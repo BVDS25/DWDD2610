@@ -80,7 +80,17 @@ header.site-header {
     display: block;
     padding: .5rem 0;
     color: $brand;
-    text-decoration: none
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: $accent
+    }
+
+    &.active {
+        color: $accent;
+        font-weight: 600
+    }
 }
 
 /* Hero */

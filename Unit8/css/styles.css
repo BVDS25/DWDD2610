@@ -108,6 +108,14 @@ header.site-header {
   padding: 0.5rem 0;
   color: #45219c;
   text-decoration: none;
+  transition: color 0.2s ease;
+}
+.nav a:hover {
+  color: #ff6b35;
+}
+.nav a.active {
+  color: #ff6b35;
+  font-weight: 600;
 }
 
 /* Hero */
@@ -286,14 +294,25 @@ footer.site-footer {
   }
   .nav {
     display: flex !important;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
     justify-content: flex-start;
   }
   .nav a {
     display: inline-block;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     color: #45219c;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s ease, color 0.2s ease;
+  }
+  .nav a:hover {
+    color: #ff6b35;
+    border-bottom-color: rgba(255, 107, 53, 0.3);
+  }
+  .nav a.active {
+    color: #ff6b35;
+    border-bottom-color: #ff6b35;
+    font-weight: 600;
   }
   .hero h1 {
     font-size: 1.8rem;

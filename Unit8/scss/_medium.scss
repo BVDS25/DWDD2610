@@ -6,8 +6,25 @@
   
   /* Show navigation horizontally, hide hamburger */
   .nav-toggle{display:none}
-  .nav{display:flex!important;gap:1rem;align-items:center;justify-content:flex-start}
-  .nav a{display:inline-block;padding:.5rem;color:$brand}
+  .nav{display:flex!important;gap:1.5rem;align-items:center;justify-content:flex-start}
+  .nav a{
+    display:inline-block;
+    padding:.5rem 1rem;
+    color:$brand;
+    border-bottom:3px solid transparent;
+    transition:border-color 0.3s ease, color 0.2s ease;
+
+    &:hover{
+      color:$accent;
+      border-bottom-color:rgba(255, 107, 53, 0.3)
+    }
+
+    &.active{
+      color:$accent;
+      border-bottom-color:$accent;
+      font-weight:600
+    }
+  }
   
   .hero h1{font-size:1.8rem}
   
