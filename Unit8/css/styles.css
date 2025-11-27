@@ -46,7 +46,7 @@ header.site-header {
 }
 
 .logo img {
-  width: 50px;
+  width: 40px;
   height: auto;
   max-width: 100%;
 }
@@ -275,7 +275,7 @@ footer.site-footer {
     margin: 0 auto;
   }
   .logo img {
-    width: 70px;
+    width: 60px;
   }
   .site-title {
     font-size: 1.4rem;
@@ -323,7 +323,7 @@ footer.site-footer {
     max-width: 1100px;
   }
   .logo img {
-    width: 100px;
+    width: 80px;
   }
   .site-title {
     font-size: 1.8rem;

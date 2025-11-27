@@ -46,7 +46,7 @@ header.site-header {
 }
 
 .logo img {
-  width: 50px;
+  width: 40px;
   height: auto;
   max-width: 100%;
 }
@@ -275,7 +275,7 @@ footer.site-footer {
     margin: 0 auto;
   }
   .logo img {
-    width: 70px;
+    width: 60px;
   }
   .site-title {
     font-size: 1.4rem;
@@ -323,7 +323,7 @@ footer.site-footer {
     max-width: 1100px;
   }
   .logo img {
-    width: 100px;
+    width: 80px;
   }
   .site-title {
     font-size: 1.8rem;
@@ -388,322 +388,129 @@ html, body {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}s: center;
+}-template-columns: 50px auto;
+  column-gap: 10px;
+  align-items: center;
   padding: 0.5rem 10px;
 }
 header span {
   font-size: 1.6rem;
   font-weight: 300;
-  color: #3A2310;
+  color: black;
 }
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 #navWrapper {
-  background-color: #3A2310;
+  background: #fff;
+  border-bottom: 1px solid #eeeeee;
+  background-color: #c7721d;
 }
 
 nav ul {
-  padding: 0;
-  margin: 0 10px;
-}
-nav li {
   list-style: none;
+  margin: 0;
+  padding: 0.5rem 10px;
+  display: flex;
+  flex-direction: column;
+  /* stack on small */
+  gap: 10px;
 }
-nav ul li a {
-  color: #ccc;
-  text-decoration: none;
-  display: block;
-  padding: 0.8rem 10px;
-}
-nav ul li.active a {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #3A2310;
+nav ul :hover {
+  background: #e7e1ab;
+  opacity: 0.9;
+  color: #000000;
   border-radius: 10px;
 }
 
-/* --------------------------- MAIN --------------------------- */
-main {
-  /* general paragraphs inside main (body copy) */
-  /* gallery tiles: each direct child div */
-  /* image inside a tile keeps its aspect ratio on small screens */
-  /* caption inside a tile */
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem;
+  display: block;
 }
+
+nav li.active a {
+  background: #fff;
+  color: #000000;
+  border-radius: 10px;
+}
+
+/* Cards - single column on small */
+.allcards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem 10px;
+}
+
+.allcards section {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.allcards img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.allcards h2 {
+  margin: 0.5rem 0 0.25rem;
+  color: #630521;
+  font-weight: 500;
+}
+
+.allcards a {
+  display: inline-block;
+  color: #e7e1ab;
+}
+
+/* Button styles for links */
+.btn {
+  display: inline-block;
+  background: #c7721d;
+  color: #fff !important;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+}
+
+.btn:hover,
+.btn:focus {
+  background: rgb(163.3894736842, 93.6, 23.8105263158);
+}
+
+/* --------------------------- MAIN --------------------------- */
 main h1 {
   padding: 1rem 10px 0.5rem 10px;
   font-size: 1.5rem;
-  color: #4D3728;
+  color: #630521;
   font-weight: 300;
-}
-main p {
-  padding: 0.5rem 10px;
-  color: #333;
-  line-height: 150%;
-}
-main > div {
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-main > div img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border: 2px solid #3A2310;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-}
-main > div p {
-  margin-top: 0;
-  flex: 0 0 auto;
-  padding: 0.5rem;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  text-align: center;
-  font-size: 0.9rem;
-  background-color: #3A2310;
-  color: white;
-}
-
-/* --------------------------- FOOTER --------------------------- */
-#footerWrapper {
-  background-color: #3A2310;
-}
-
-footer {
-  font-size: 0.85rem;
-  padding: 1rem 10px;
-  color: #ccc;
-  text-align: center;
-  align-items: center;
-  line-height: 150%;
-}
-footer a {
-  color: #ccc;
-}
-
-@media only screen and (min-width: 35rem) {
-  /* NAVIGATION STUFF GOES HERE  */
-  nav ul {
-    display: flex;
-    justify-content: flex-start;
-    column-gap: 10px;
-  }
-  nav ul li a {
-    margin: 10px 0;
-  }
-  nav ul li a:hover {
-    text-decoration: underline 2px #E3E1DF;
-  }
-  #navWrapper nav ul {
-    display: flex; /* enable flexbox */
-    align-items: center; /* vertical alignment */
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    width: 100%;
-    gap: 10px;
-  }
-  #navWrapper nav ul li {
-    margin-right: 1rem; /* spacing between items */
-  }
-  #navWrapper nav ul li:last-child {
-    margin-left: auto;
-  }
-  /* Medium screens: two-column gallery */
-  main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    align-items: start;
-  }
-  main > div {
-    padding: 0.5rem;
-  }
-  main h1 {
-    grid-column: 1/-1;
-  }
-  main img {
-    width: 100%;
-    height: auto;
-    display: block;
-    max-width: 100%;
-  }
-}
-@media only screen and (min-width: 64rem) {
-  header, nav, main {
-    max-width: 960px;
-    margin: auto;
-  }
-  nav ul li a {
-    padding: 0.5rem 10px;
-    font-size: 0.9rem;
-  }
-  main {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    align-items: start;
-  }
-  main h1 {
-    grid-column: 1/-1;
-  }
-  main > div {
-    padding: 0.5rem;
-  }
-  main img {
-    width: 100%;
-    display: block;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border: 3px solid #3A2310;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    border-color: black;
-  }
-  main p {
-    margin-top: 0;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    text-align: center;
-    font-size: 0.9rem;
-    background-color: #3A2310;
-    color: white;
-  }
-}e;
-}
-
-section:hover .wrap svg,
-section:hover .wrap img {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-
-/* --------------------------- MAIN --------------------------- */
-main h1 {
-  font-size: 1.6rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0;
 }
 main p {
   color: #333;
   line-height: 150%;
-}
-
-/* --------------------------- REVIEWS --------------------------- */
-.reviews-section {
-  padding: 0;
-  color: #222;
-}
-.reviews-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0.5rem;
-  padding-bottom: 3rem;
-}
-.reviews-section .reviews-intro {
-  margin-bottom: 1.25rem;
-  color: #444;
-}
-.reviews-section .reviews-grid {
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: 1fr;
-}
-
-/* Review Card */
-.review-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 6px 18px rgba(15, 20, 25, 0.06);
-  display: flex;
-  gap: 0.85rem;
-  align-items: flex-start;
-  transition: transform 200ms ease, box-shadow 200ms ease;
-}
-.review-card:hover, .review-card:focus-within {
-  transform: translateY(-4px);
-}
-
-/* Avatar */
-.review-avatar {
-  flex: 0 0 56px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #e67e22 0%, #f3a65a 100%);
-  color: white;
-  display: grid;
-  place-items: center;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-}
-.review-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-}
-
-/* Content */
-.review-body {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.review-meta {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  margin-bottom: 0.35rem;
-  font-size: 0.9rem;
-  color: #222;
-}
-
-.reviewer-name {
-  font-weight: 700;
-}
-
-.reviewer-location {
-  color: #666;
-  font-weight: 500;
-  font-size: 0.85rem;
-}
-
-.review-quote {
-  margin: 0.35rem 0 0;
-  color: #333;
-  line-height: 1.4;
-  font-size: 0.95rem;
-}
-
-.stars {
-  display: inline-flex;
-  margin-left: auto;
-}
-.stars .star {
-  width: 16px;
-  height: 16px;
-  fill: #f1c40f;
-}
-
-#loadMoreReviews {
-  margin-top: 1.25rem;
 }
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
   padding-top: 2rem;
-  background-color: #000000;
-  color: #fff;
+  background-color: #e7e1ab;
 }
 
 .footer-upper {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-start; /* Aligns columns at the top */
   gap: 20px;
   width: 100%;
   max-width: 1200px;
@@ -711,26 +518,227 @@ main p {
   flex-wrap: wrap;
   border-bottom: 1px solid #eeeeee;
 }
+
 .footer-upper > div {
-  flex: 1;
+  flex: 1; /* Equal column widths */
   text-align: center;
   min-width: 200px;
 }
 
 .footer-social {
+  gap: 0.5rem;
   width: 10rem;
-  margin-bottom: 2rem;
 }
+
 .footer-social ion-icon {
   font-size: 2rem;
-  color: white;
+  color: #c7721d;
+  margin-bottom: 2rem;
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+
+.footer-form input[type=email] {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+}
+
+#signup-form {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+footer {
+  padding: 1rem 10px;
+  text-align: center;
+}
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 1rem;
+}
+
+.login-link {
+  text-decoration: underline;
+  margin-right: 0.5rem;
+}
+
+.footer-sitemap {
+  margin-top: 2rem;
   margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.sitemap-col h4 {
+  color: #630521;
+}
+
+.sitemap-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid #eeeeee;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+}
+
+/* utilities */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 35rem) {
+  /* NAVIGATION STUFF GOES HERE  */
+  /* Medium screens - horizontal nav and 2-column cards */
+}
+@media only screen and (min-width: 35rem) and (min-width: 600px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  nav a {
+    padding: 0.5rem 1rem;
+  }
+  .allcards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1.5rem 10px;
+  }
+  .allcards section {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .allcards img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+}
+@media only screen and (min-width: 35rem) and (min-width: 600px) {
+  .footer-upper > div {
+    flex: 1; /* Makes all columns equal width */
+    text-align: center; /* Centers their content */
+    min-width: 0; /* Prevents overflow from long content */
+  }
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 1.5rem;
+  }
+  .footer-brand {
+    align-items: flex-start;
+  }
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .footer-social {
+    grid-column: 2;
+  }
+}
+@media only screen and (min-width: 35rem) {
+  .brand-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .brand-copy p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #666;
+  }
+  .footer-form {
+    order: 3;
+    align-self: center;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  header, nav, main {
+    max-width: 960px;
+    margin: auto;
+  }
+  /* NAVIGATION STUFF GOES HERE  */
+}
+@media only screen and (min-width: 64rem) and (min-width: 900px) {
+  nav ul {
+    justify-content: flex-start;
+    gap: 1.25rem;
+    padding-left: 0;
+  }
+  .allcards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+  .allcards section {
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  }
+}
+@media only screen and (min-width: 64rem) and (min-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: start;
+    gap: 2rem;
+  }
+  .footer-upper {
+    align-items: flex-start; /* Aligns columns at the top */
+  }
+  .footer-brand {
+    grid-column: 1;
+  }
+  .footer-sitemap {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .footer-social {
+    grid-column: 3;
+    align-self: start;
+  }
+  .brand-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .brand-copy strong {
+    display: block;
+  }
+  .footer-form {
+    margin-left: auto;
+  }
+}gin-bottom: 2rem;
   margin-right: 0.5rem;
 }
 
