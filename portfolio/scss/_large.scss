@@ -1,0 +1,68 @@
+/* Large Screen Styles - Desktop */
+
+@media screen and (min-width: $breakpoint-large) {
+    
+    /* Navigation - Large Screens (Left Sidebar Navigation) */
+    nav {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: auto;
+        width: $nav-width-percent;
+        max-width: $nav-width-max;
+        height: auto;
+        background: $primary-color;
+
+        ul {
+            flex-direction: column;
+            padding: 2rem 0;
+            height: auto;
+        }
+
+        li a {
+            padding: 1.25rem 1.5rem;
+            border-radius: 0;
+            background: transparent;
+
+            img {
+                display: block;
+                width: 28px;
+                height: 28px;
+                margin-right: 0.5rem;
+                margin-bottom: 0;
+            }
+
+            span {
+                display: inline;
+            }
+        }
+    }
+
+    main {
+        margin-top: 0;
+        margin-left: $nav-width-percent;
+        max-width: calc(100% - #{$nav-width-percent});
+    }
+
+    /* Cards Grid - 3 Columns */
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.75rem;
+    }
+
+    /* Extra Large Screens */
+    @media screen and (min-width: $breakpoint-xlarge) {
+        main {
+            margin-left: $nav-width-max;
+            max-width: calc(100% - #{$nav-width-max});
+        }
+    }
+}
