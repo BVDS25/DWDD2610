@@ -80,14 +80,78 @@ section {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-
-    &:nth-child(even) {
-        background: $bg-light;
-    }
-
+    
     &.visible {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Section Background Colors - Pastel Palette */
+#about {
+    background: #e8d5f2;
+    color: $text-dark;
+
+    h1 {
+        color: $primary-color;
+    }
+
+    .placeholder {
+        background: rgba(255, 255, 255, 0.5);
+        color: $text-dark;
+    }
+}
+
+#education {
+    background: #f5e6ff;
+    color: $text-dark;
+
+    h1, h2 {
+        color: $primary-color;
+    }
+}
+
+#goals {
+    background: #ffd9b3;
+    color: $text-dark;
+
+    h1 {
+        color: $primary-color;
+    }
+}
+
+#stack {
+    background: #d4e5ff;
+    color: $text-dark;
+
+    h1 {
+        color: $primary-color;
+    }
+}
+
+#work {
+    background: #ffe4f0;
+    color: $text-dark;
+
+    h1 {
+        color: $primary-color;
+    }
+}
+
+#contact {
+    background: #e0f5e8;
+    color: $text-dark;
+
+    h1 {
+        color: $primary-color;
+    }
+
+    p {
+        color: $text-dark;
+    }
+
+    label {
+        color: $text-dark;
     }
 }
 

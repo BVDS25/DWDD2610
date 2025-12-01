@@ -255,12 +255,68 @@ section {
   transform: translateY(50px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
-section:nth-child(even) {
-  background: #f5f3fb;
-}
 section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Section Background Colors - Pastel Palette */
+#about {
+  background: #e8d5f2;
+  color: #1a1a1a;
+}
+#about h1 {
+  color: #312682;
+}
+#about .placeholder {
+  background: rgba(255, 255, 255, 0.5);
+  color: #1a1a1a;
+}
+
+#education {
+  background: #f5e6ff;
+  color: #1a1a1a;
+}
+#education h1, #education h2 {
+  color: #312682;
+}
+
+#goals {
+  background: #ffd9b3;
+  color: #1a1a1a;
+}
+#goals h1 {
+  color: #312682;
+}
+
+#stack {
+  background: #d4e5ff;
+  color: #1a1a1a;
+}
+#stack h1 {
+  color: #312682;
+}
+
+#work {
+  background: #ffe4f0;
+  color: #1a1a1a;
+}
+#work h1 {
+  color: #312682;
+}
+
+#contact {
+  background: #e0f5e8;
+  color: #1a1a1a;
+}
+#contact h1 {
+  color: #312682;
+}
+#contact p {
+  color: #1a1a1a;
+}
+#contact label {
+  color: #1a1a1a;
 }
 
 /* Animation Variations */
@@ -435,6 +491,9 @@ h2 {
 
 img.card-cap {
   width: 5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Buttons */
