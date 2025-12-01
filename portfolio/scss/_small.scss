@@ -58,6 +58,7 @@ nav {
             height: 24px;
             margin-right: 0;
             margin-bottom: 0.25rem;
+            filter: brightness(0) invert(1);
         }
 
         span {
@@ -225,6 +226,14 @@ h2 {
         transform: translateY(-5px);
         box-shadow: $shadow-lg;
     }
+}
+
+.card-icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 auto 1.5rem;
+    display: block;
+    filter: invert(19%) sepia(61%) saturate(2686%) hue-rotate(242deg) brightness(94%) contrast(95%);
 }
 
 .card-content {

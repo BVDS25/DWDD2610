@@ -235,6 +235,7 @@ nav li a img {
   height: 24px;
   margin-right: 0;
   margin-bottom: 0.25rem;
+  filter: brightness(0) invert(1);
 }
 nav li a span {
   display: none;
@@ -387,6 +388,14 @@ h2 {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto 1.5rem;
+  display: block;
+  filter: invert(19%) sepia(61%) saturate(2686%) hue-rotate(242deg) brightness(94%) contrast(95%);
 }
 
 .card-content {
@@ -562,6 +571,7 @@ footer a:hover {
   }
   nav li a img {
     display: none;
+    filter: brightness(0) invert(1);
   }
   nav li a span {
     display: inline;
@@ -625,6 +635,7 @@ footer a:hover {
     height: 28px;
     margin-right: 0.5rem;
     margin-bottom: 0;
+    filter: brightness(0) invert(1);
   }
   nav li a span {
     display: inline;
