@@ -134,11 +134,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           block: 'start'
         });
         
-        // Close mobile menu after clicking link
+        // Close mobile menu after clicking link (safely reference elements)
         if (window.innerWidth < 600) {
-          nav.classList.remove('open');
-          navToggle.classList.remove('open');
-          navToggle.setAttribute('aria-expanded', 'false');
+          const nav = document.getElementById('primary-nav');
+          const navToggle = document.getElementById('hamburgerBtn');
+          if (nav) nav.classList.remove('open');
+          if (navToggle) {
+            navToggle.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
         }
       }
     }
