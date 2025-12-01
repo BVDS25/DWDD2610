@@ -5,6 +5,56 @@
   box-sizing: border-box;
 }
 
+/* Optional curved-edge treatment for service cards.
+   Add the `card--curve` class to a `.card` to enable this.
+   Uses `curve.png` (place in `Unit9/images/curve.png`) as a decorative overlay
+   and attempts a CSS mask where supported for a cleaner cut. */
+.card.card--curve {
+  position: relative;
+  overflow: visible;
+
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 0;
+
+    /* Optional: mask if the browser supports it (will crop the image). */
+    -webkit-mask-image: url('../images/curve.png');
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-position: bottom;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url('../images/curve.png');
+    // mask-size: 100% 100%;
+    mask-position: top;
+    mask-repeat: no-repeat;
+
+    /* fallback decorative clip-path */
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 83% 92%, 60% 82%, 37% 92%, 17% 82%, 0 92%);
+  }
+
+  /* Overlay curve image to create the shape visually if mask not applied. */
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    background-image: url('../images/curve.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    pointer-events: none;
+    z-index: 1;
+    transform: translateY(25%);
+    height: 50%;
+  }
+}
+
 /* Body and Typography */
 body {
   font-family: $font-main;
@@ -358,7 +408,7 @@ main {
   
   img {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     display: block;
   }
@@ -375,6 +425,33 @@ main {
       color: $gray-medium;
       line-height: 1.6;
     }
+  }
+}
+
+/* Remove the opt-in mask approach: use a simple curve overlay image instead.
+   The overlay image should be the last img inside the .card (e.g. curve.png)
+   and will be positioned absolute at the bottom to create the curved edge.
+*/
+.image-wrap {
+  position: relative;
+  overflow: visible;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  img.curve {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    z-index: 2;
+    transform: translateY(25%);
   }
 }
 
