@@ -1,28 +1,40 @@
-// Navigation active state on scroll
+// Navigation active state on scroll using Intersection Observer
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('nav a');
 
-    function updateActiveNav() {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (window.pageYOffset >= sectionTop - 100) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
+    // Intersection Observer setup
+    let observerOptions = {
+        root: null, // viewport
+        rootMargin: '0px 0px -50% 0px', // trigger when section is in upper half
+        threshold: 0
     }
 
-    window.addEventListener('scroll', updateActiveNav);
+    const myObserver = new IntersectionObserver(allItems => {
+        allItems.forEach(singleItem => {
+            if (singleItem.isIntersecting) {
+                hiliteNav(singleItem.target);
+            }
+        })
+    }, observerOptions);
+
+    // Function to highlight the current navigation item
+    function hiliteNav(x) {
+        const activeLink = document.querySelector('nav a.active');
+        if (activeLink) {
+            activeLink.classList.remove('active');
+        }
+        let theid = x.getAttribute('id');
+        let newActiveLink = document.querySelector(`nav a[href="#${theid}"]`);
+        if (newActiveLink) {
+            newActiveLink.classList.add('active');
+        }
+    }
+
+    // Observe each section
+    sections.forEach(item => {
+        myObserver.observe(item);
+    });
 
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
