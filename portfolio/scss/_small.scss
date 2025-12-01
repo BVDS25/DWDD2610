@@ -6,8 +6,12 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: $text-dark;
     background-color: $white;
@@ -71,6 +75,7 @@ main {
 section {
     padding: 3rem 1rem;
     scroll-margin-top: 80px;
+    min-height: 100vh;
 
     &:nth-child(even) {
         background: $bg-light;
@@ -277,6 +282,27 @@ footer {
 
         &:hover {
             text-decoration: underline;
+        }
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+
+    a {
+        color: $accent-color;
+        transition: transform 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px) scale(1.1);
+            color: $white;
+        }
+
+        svg {
+            display: block;
         }
     }
 }

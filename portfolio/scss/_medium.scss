@@ -1,68 +1,65 @@
 /* Medium Screen Styles - Tablet */
 
-@media screen and (min-width: $breakpoint-medium) {
-    
-    /* Navigation - Medium Screens (Top Button Navigation) */
-    nav {
-        height: $nav-height-medium;
+/* Navigation - Medium Screens (Top Button Navigation) */
+nav {
+    height: $nav-height-medium;
 
-        ul {
-            justify-content: center;
-            gap: 1rem;
-            padding: 0 1rem;
+    ul {
+        justify-content: center;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    li a {
+        flex-direction: row;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        font-size: 1rem;
+
+        img {
+            display: none;
         }
 
-        li a {
-            flex-direction: row;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            font-size: 1rem;
-
-            img {
-                display: none;
-            }
-
-            span {
-                display: inline;
-            }
+        span {
+            display: inline;
         }
     }
+}
 
-    main {
-        margin-top: $nav-height-medium;
-    }
+main {
+    margin-top: $nav-height-medium;
+}
 
-    /* Cards Grid - 2 Columns */
-    .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* Cards Grid - 2 Columns */
+.cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
 
-    /* Section Padding */
-    section {
-        padding: 4rem 2rem;
-    }
+/* Section Padding */
+section {
+    padding: 4rem 2rem;
+}
 
-    /* Typography */
-    h1 {
-        font-size: 2.5rem;
-    }
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+}
 
-    h2 {
-        font-size: 2rem;
-    }
+h2 {
+    font-size: 2rem;
+}
 
-    /* Hero */
-    .hero h1 {
-        font-size: 3rem;
-    }
+/* Hero */
+.hero h1 {
+    font-size: 3rem;
+}
 
-    .hero h2 {
-        font-size: 1.5rem;
-    }
+.hero h2 {
+    font-size: 1.5rem;
+}
 
-    /* Card Content */
-    .card-content {
-        padding: 2rem;
-    }
+/* Card Content */
+.card-content {
+    padding: 2rem;
 }

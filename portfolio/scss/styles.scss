@@ -1,5 +1,13 @@
 @import 'variables';
 @import 'normalize';
 @import 'small';
-@import 'medium';
-@import 'large';
+
+// Medium Screen Media Query
+@media screen and (min-width: $breakpoint-medium) {
+    @import 'medium';
+}
+
+// Large Screen Media Query
+@media screen and (min-width: $breakpoint-large) {
+    @import 'large';
+}
