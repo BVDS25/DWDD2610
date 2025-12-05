@@ -7,7 +7,6 @@ html {
 
 /*  Apply a natural box layout model to all elements  */
 * {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -44,6 +43,7 @@ body {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
+  -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
 }
 
@@ -70,8 +70,11 @@ select {
   *,
   *::before,
   *::after {
+    -webkit-animation-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -93,26 +96,37 @@ body {
 /* HEADER STYLES */
 #headerWrapper {
   background: linear-gradient(135deg, #0A4D68 0%, #088395 100%);
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 1rem;
   max-width: 1600px;
   margin: 0 auto;
 }
+
 header img {
   height: 50px;
   width: auto;
 }
+
 header span {
   font-family: "Playfair Display", serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: #FFFFFF;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 1rem;
 }
@@ -128,6 +142,7 @@ header span {
   color: #FFFFFF;
   cursor: pointer;
 }
+
 #hamburgerBtn::before {
   content: "☰";
 }
@@ -140,16 +155,23 @@ nav {
   top: 0;
   bottom: 0;
   right: 0;
+  -webkit-transform: translateX(100%);
   transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
 }
+
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   padding-top: 60px;
 }
+
 nav ul li a {
   display: block;
   padding: 0.9rem 0.5rem;
@@ -158,12 +180,15 @@ nav ul li a {
   text-decoration: none;
   color: #0A4D68;
   font-weight: 500;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
+
 nav ul li a:hover {
   background-color: #05BFDB;
   color: #FFFFFF;
 }
+
 nav ul li.active a {
   background-color: #088395;
   color: #FFFFFF;
@@ -175,8 +200,12 @@ nav ul li.active a {
 }
 
 .moveOver > .content {
+  -webkit-transform: translateX(-180px);
   transform: translateX(-180px);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 /* MAIN CONTENT */
@@ -185,6 +214,7 @@ main {
   max-width: 1600px;
   margin: 0 auto;
 }
+
 main h1 {
   font-family: "Playfair Display", serif;
   font-size: 2rem;
@@ -192,6 +222,7 @@ main h1 {
   margin-bottom: 1rem;
   text-align: center;
 }
+
 main .tagline {
   text-align: center;
   font-size: 1.1rem;
@@ -205,27 +236,38 @@ main .tagline {
   display: grid;
   gap: 2rem;
 }
+
 #cards section {
   background-color: #FFFFFF;
   border-radius: 8px;
   overflow: hidden;
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
   /* CSS Grid for card layout - SMALL (stacked) */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "image" "name" "address" "phone";
 }
+
 #cards section:hover {
+  -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
+  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
+
 #cards section img {
   grid-area: image;
   width: 100%;
-  height: 250px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
   object-fit: cover;
 }
+
 #cards section h2 {
   grid-area: name;
   font-family: "Playfair Display", serif;
@@ -234,6 +276,7 @@ main .tagline {
   padding: 1rem 1.5rem;
   padding-bottom: 0.5rem;
 }
+
 #cards section address {
   grid-area: address;
   font-style: normal;
@@ -242,6 +285,7 @@ main .tagline {
   color: #333333;
   line-height: 1.6;
 }
+
 #cards section a {
   grid-area: phone;
   display: inline-block;
@@ -254,10 +298,13 @@ main .tagline {
   border-radius: 8px;
   font-weight: 600;
   text-align: center;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
+
 #cards section a:hover {
   background-color: #05BFDB;
+  -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 
@@ -267,6 +314,7 @@ footer {
   color: #FFFFFF;
   padding: 1.5rem;
 }
+
 footer p {
   text-align: center;
   font-size: 0.9rem;
@@ -304,16 +352,19 @@ footer p {
   }
   #cards section img {
     height: 100%;
-    min-height: 250px;
+    aspect-ratio: 1/1;
   }
   #cards section h2 {
+    -ms-flex-item-align: end;
     align-self: end;
     padding-bottom: 0;
   }
   #cards section address {
+    -ms-flex-item-align: center;
     align-self: center;
   }
   #cards section a {
+    -ms-flex-item-align: start;
     align-self: start;
     margin-top: 0;
     justify-self: start;
@@ -327,16 +378,21 @@ footer p {
     display: none;
   }
   .moveOver > .content {
+    -webkit-transform: translateX(0px);
     transform: translateX(0px);
   }
   nav {
     background-color: transparent;
     position: static;
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     width: auto;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-top: 0;
     gap: 0.5rem;
@@ -379,7 +435,7 @@ footer p {
     grid-template-areas: "image name" "image address" "image phone";
   }
   #cards section img {
-    min-height: 200px;
+    aspect-ratio: 1/1;
   }
   footer {
     padding: 2rem;
