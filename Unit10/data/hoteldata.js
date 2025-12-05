@@ -1,6 +1,6 @@
 export const hotels = [
     {
-        photo: "ocean-reef-resort.jpg",
+        photo: "hotel-1.webp",
         name: "Ocean Reef Resort & Aquarium",
         address: [
             "1500 Coral Drive",
@@ -9,7 +9,7 @@ export const hotels = [
         phone: "305-555-0101"
     },
     {
-        photo: "aqua-dome-hotel.jpg",
+        photo: "hotel-2.webp",
         name: "Aqua Dome Hotel Dubai",
         address: [
             "The Palm Jumeirah",
@@ -18,7 +18,7 @@ export const hotels = [
         phone: "+971-4-555-0202"
     },
     {
-        photo: "blue-horizon-resort.jpg",
+        photo: "hotel-3.webp",
         name: "Blue Horizon Resort",
         address: [
             "88 Ocean Boulevard",
@@ -27,7 +27,7 @@ export const hotels = [
         phone: "808-555-0303"
     },
     {
-        photo: "crystal-waters-hotel.jpg",
+        photo: "hotel-4.webp",
         name: "Crystal Waters Hotel & Spa",
         address: [
             "2200 Seaside Avenue",
@@ -36,7 +36,7 @@ export const hotels = [
         phone: "+960-555-0404"
     },
     {
-        photo: "deep-blue-suites.jpg",
+        photo: "hotel-5.webp",
         name: "Deep Blue Suites",
         address: [
             "456 Marine Parade",
@@ -45,7 +45,7 @@ export const hotels = [
         phone: "+61-2-555-0505"
     },
     {
-        photo: "neptune-palace.jpg",
+        photo: "hotel-6.webp",
         name: "Neptune's Palace",
         address: [
             "777 Aquarium Way",
@@ -54,7 +54,7 @@ export const hotels = [
         phone: "242-555-0606"
     },
     {
-        photo: "seafloor-sanctuary.jpg",
+        photo: "hotel-7.webp",
         name: "Seafloor Sanctuary Resort",
         address: [
             "3300 Underwater Lane",
@@ -63,7 +63,7 @@ export const hotels = [
         phone: "+52-998-555-0707"
     },
     {
-        photo: "tidal-wave-tower.jpg",
+        photo: "hotel-8.webp",
         name: "Tidal Wave Tower Hotel",
         address: [
             "999 Beachfront Street",
@@ -72,7 +72,7 @@ export const hotels = [
         phone: "619-555-0808"
     },
     {
-        photo: "coral-kingdom-resort.jpg",
+        photo: "hotel-9.webp",
         name: "Coral Kingdom Resort",
         address: [
             "1234 Reef Road",
@@ -81,7 +81,7 @@ export const hotels = [
         phone: "+81-98-555-0909"
     },
     {
-        photo: "azure-depths-hotel.jpg",
+        photo: "hotel-10.webp",
         name: "Azure Depths Hotel",
         address: [
             "5500 Marina Circle",
