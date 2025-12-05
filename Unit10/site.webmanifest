@@ -1,0 +1,21 @@
+{
+    "name": "AquaStay Hotels",
+    "short_name": "AquaStay",
+    "description": "Luxury underwater-themed hotels with spectacular aquariums and ocean views",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0A4D68",
+    "theme_color": "#088395",
+    "icons": [
+        {
+            "src": "images/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

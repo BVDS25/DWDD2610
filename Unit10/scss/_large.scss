@@ -1,0 +1,87 @@
+/* LARGE SCREEN STYLES (Desktop - 1000px+) */
+
+/* NAVIGATION STUFF */
+#hamburgerBtn {
+    display: none;
+}
+
+.moveOver > .content {
+    transform: translateX(0px);
+}
+
+nav {
+    background-color: transparent;
+    position: static;
+    transform: translateX(0);
+    width: auto;
+    box-shadow: none;
+    
+    ul {
+        display: flex;
+        padding-top: 0;
+        gap: $spacing-xs;
+    }
+    
+    ul li a {
+        padding: 0.6rem 1.5rem;
+        border: none;
+        border-radius: $borderRadius;
+        text-align: center;
+        color: $lightTextColor;
+        
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: $lightTextColor;
+        }
+    }
+    
+    ul li.active a {
+        background-color: rgba(255, 255, 255, 0.3);
+        color: $lightTextColor;
+    }
+}
+
+header {
+    span {
+        font-size: 1.8rem;
+    }
+    
+    img {
+        height: 70px;
+    }
+}
+
+main {
+    padding: $spacing-xl;
+    
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+/* HOTEL CARDS - LARGE SCREEN (Two columns) */
+#cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-xl;
+    
+    section {
+        /* CSS Grid for card layout - LARGE (same as medium, but in 2 columns) */
+        grid-template-columns: 280px 1fr;
+        grid-template-areas: 
+            "image name"
+            "image address"
+            "image phone";
+        
+        img {
+            min-height: 200px;
+        }
+    }
+}
+
+footer {
+    padding: $spacing-lg;
+    
+    p {
+        font-size: 1rem;
+    }
+}

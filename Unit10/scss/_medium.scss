@@ -1,0 +1,60 @@
+/* MEDIUM SCREEN STYLES (Tablets - 600px+) */
+
+header {
+    padding: $spacing-md $spacing-lg;
+    
+    img {
+        height: 60px;
+    }
+    
+    span {
+        font-size: 1.5rem;
+    }
+}
+
+main {
+    padding: $spacing-xl $spacing-lg;
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* HOTEL CARDS - MEDIUM SCREEN (Image left, content right) */
+#cards {
+    section {
+        /* CSS Grid for card layout - MEDIUM (image left, content stacked right) */
+        grid-template-columns: 300px 1fr;
+        grid-template-areas: 
+            "image name"
+            "image address"
+            "image phone";
+        
+        img {
+            height: 100%;
+            min-height: 250px;
+        }
+        
+        h2 {
+            align-self: end;
+            padding-bottom: 0;
+        }
+        
+        address {
+            align-self: center;
+        }
+        
+        a {
+            align-self: start;
+            margin-top: 0;
+            justify-self: start;
+        }
+    }
+}
