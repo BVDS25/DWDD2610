@@ -66,15 +66,16 @@ main {
     
     section {
         /* CSS Grid for card layout - LARGE (same as medium, but in 2 columns) */
-        grid-template-columns: 280px 1fr;
+        grid-template-columns: 11rem 1fr;
         grid-template-areas: 
             "image name"
             "image address"
             "image phone";
         
         img {
-            width: 280px;
-            aspect-ratio: 1 / 1;
+            height: 100%;
+            width: 15rem;
+           
         }
     }
 }

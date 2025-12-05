@@ -31,15 +31,15 @@ main {
 #cards {
     section {
         /* CSS Grid for card layout - MEDIUM (image left, content stacked right) */
-        grid-template-columns: 300px 1fr;
+        grid-template-columns: 200px 1fr;
         grid-template-areas: 
             "image name"
             "image address"
             "image phone";
         
         img {
-            width: 300px;
-            aspect-ratio: 1 / 1;
+            width: 100%;
+            height: 100%;
         }
         
         h2 {

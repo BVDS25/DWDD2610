@@ -28,7 +28,7 @@ header {
     margin: 0 auto;
     
     img {
-        height: 50px;
+        height: 20px;
         width: auto;
     }
     
@@ -161,7 +161,7 @@ main {
         img {
             grid-area: image;
             width: 100%;
-            aspect-ratio: 1 / 1;
+            height: 15rem;
             object-fit: cover;
         }
         
