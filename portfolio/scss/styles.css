@@ -193,6 +193,7 @@ template {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -200,6 +201,7 @@ body {
   line-height: 1.6;
   color: #1a1a1a;
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 /* Navigation - Small Screens (Top Icon Navigation) */
@@ -213,7 +215,6 @@ nav {
   z-index: 1000;
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  width: 100%;
 }
 nav ul {
   list-style: none;
@@ -712,7 +713,6 @@ footer a:hover {
   nav {
     height: auto;
     padding: 1rem;
-    width: 100%;
   }
   nav ul {
     -webkit-box-pack: center;
@@ -786,6 +786,7 @@ footer a:hover {
     max-width: 250px;
     height: auto;
     background: #312682;
+    width: none;
   }
   nav ul {
     -webkit-box-orient: vertical;
@@ -794,11 +795,13 @@ footer a:hover {
             flex-direction: column;
     padding: 2rem 0;
     height: auto;
+    width: auto;
   }
   nav li a {
     padding: 1.25rem 1.5rem;
     border-radius: 0;
     background: transparent;
+    width: 100%;
   }
   nav li a img {
     display: block;

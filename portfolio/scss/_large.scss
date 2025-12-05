@@ -10,17 +10,20 @@ nav {
     max-width: $nav-width-max;
     height: auto;
     background: $primary-color;
+    width: none;
 
     ul {
         flex-direction: column;
         padding: 2rem 0;
         height: auto;
+        width: auto;
     }
 
     li a {
         padding: 1.25rem 1.5rem;
         border-radius: 0;
         background: transparent;
+        width: 100%;
 
         img {
             display: block;

@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
     line-height: 1.6;
     color: $text-dark;
     background-color: $white;
+    overflow-x: hidden;
 }
 
 /* Navigation - Small Screens (Top Icon Navigation) */
@@ -27,7 +29,6 @@ nav {
     background: $primary-color;
     z-index: 1000;
     box-shadow: $shadow-md;
-    width: 100%;
 
     ul {
         list-style: none;
