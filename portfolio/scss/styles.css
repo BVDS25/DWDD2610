@@ -213,6 +213,7 @@ nav {
   z-index: 1000;
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  width: 100%;
 }
 nav ul {
   list-style: none;
@@ -709,7 +710,9 @@ footer a:hover {
   /* Medium Screen Styles - Tablet */
   /* Navigation - Medium Screens (Top Button Navigation) */
   nav {
-    height: 70px;
+    height: auto;
+    padding: 1rem;
+    width: 100%;
   }
   nav ul {
     -webkit-box-pack: center;
@@ -717,6 +720,11 @@ footer a:hover {
             justify-content: center;
     gap: 1rem;
     padding: 0 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   nav li a {
     -webkit-box-orient: horizontal;

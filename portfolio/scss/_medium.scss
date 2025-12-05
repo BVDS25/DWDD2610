@@ -2,12 +2,17 @@
 
 /* Navigation - Medium Screens (Top Button Navigation) */
 nav {
-    height: $nav-height-medium;
+    height: auto;
+    padding: 1rem;
+    width: 100%;
 
     ul {
         justify-content: center;
         gap: 1rem;
         padding: 0 1rem;
+        display: flex;
+    flex-wrap: wrap;
+    
     }
 
     li a {
