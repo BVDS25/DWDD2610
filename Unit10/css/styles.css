@@ -133,8 +133,8 @@ header span {
 
 /* HAMBURGER BUTTON */
 #hamburgerBtn {
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   margin: 0;
   background: none;
   border: none;
@@ -382,13 +382,18 @@ footer p {
     transform: translateX(0px);
   }
   nav {
-    background-color: transparent;
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, #0A4D68 0%, #088395 100%);
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: static;
     -webkit-transform: translateX(0);
     transform: translateX(0);
     width: auto;
     -webkit-box-shadow: none;
     box-shadow: none;
+    display: block;
   }
   nav ul {
     display: -webkit-box;
