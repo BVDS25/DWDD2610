@@ -1,0 +1,152 @@
+/* LARGE SCREEN STYLES (Desktop - 1000px+) */
+
+/* NAVIGATION - Hide hamburger, show horizontal nav */
+#hamburgerBtn {
+    display: none;
+}
+
+.moveOver > .content {
+    transform: translateX(0px);
+}
+
+nav {
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, $primaryColor 0%, $secondaryColor 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: static;
+    transform: translateX(0);
+    width: auto;
+    box-shadow: none;
+    display: block;
+    
+    ul {
+        display: flex;
+        justify-content: center;
+        padding-top: 0;
+        gap: $spacing-xs;
+    }
+    
+    ul li a {
+        padding: 0.7rem 2rem;
+        border: none;
+        border-radius: $borderRadius;
+        text-align: center;
+        color: $lightTextColor;
+        
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: $lightTextColor;
+        }
+    }
+    
+    ul li.active a {
+        background-color: $accentColor;
+        color: $lightTextColor;
+    }
+}
+
+header {
+    padding: $spacing-lg $spacing-xl;
+    
+    img {
+        height: 60px;
+    }
+    
+    span {
+        font-size: 1.8rem;
+    }
+}
+
+/* HERO VIDEO SECTION */
+#heroSection {
+    height: 70vh;
+    min-height: 500px;
+    
+    .heroOverlay {
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: $spacing-xxl;
+        top: auto;
+        max-width: 600px;
+        padding: $spacing-xxl;
+        
+        h1 {
+            font-size: 3rem;
+        }
+        
+        .heroTagline {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+/* SERVICES SECTION */
+#servicesSection {
+    padding: $spacing-xxl;
+    
+    h2 {
+        font-size: 3rem;
+        margin-bottom: $spacing-xxl;
+    }
+}
+
+/* SERVICE CARDS - 4 columns */
+#serviceCards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-lg;
+    
+    .serviceCard {
+        img {
+            height: 180px;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+        }
+        
+        ul li {
+            font-size: 0.95rem;
+        }
+    }
+}
+
+/* CLIENTS SECTION */
+#clientsSection {
+    padding: $spacing-xxl;
+    
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+#clientLogos {
+    grid-template-columns: repeat(6, 1fr);
+    gap: $spacing-xl;
+    padding: 0 $spacing-lg;
+}
+
+/* FOOTER */
+footer {
+    padding: $spacing-xxl;
+    
+    .contactInfo {
+        margin-bottom: $spacing-xl;
+        
+        .phoneNumber a {
+            font-size: 1.4rem;
+        }
+    }
+    
+    #locations {
+        margin-bottom: $spacing-xl;
+        
+        .locationCard {
+            padding: $spacing-lg;
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

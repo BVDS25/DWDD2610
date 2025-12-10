@@ -1,0 +1,92 @@
+/* MEDIUM SCREEN STYLES (Tablets - 600px+) */
+
+header {
+    padding: $spacing-md $spacing-lg;
+    
+    img {
+        height: 50px;
+    }
+    
+    span {
+        font-size: 1.5rem;
+    }
+}
+
+/* NAVIGATION - Keep hamburger but reduce width */
+nav {
+    width: 280px;
+}
+
+.moveOver > .content {
+    transform: translateX(-280px);
+}
+
+/* HERO VIDEO SECTION */
+#heroSection {
+    height: 65vh;
+    min-height: 450px;
+    
+    .heroOverlay {
+        left: $spacing-xl;
+        right: auto;
+        max-width: 400px;
+        padding: $spacing-xl;
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        .heroTagline {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+/* SERVICES SECTION */
+#servicesSection {
+    padding: $spacing-xxl $spacing-xl;
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* SERVICE CARDS - 2 columns */
+#serviceCards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-xl;
+    
+    .serviceCard {
+        img {
+            height: 220px;
+        }
+        
+        h3 {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+/* CLIENTS SECTION */
+#clientsSection {
+    padding: $spacing-xxl $spacing-xl;
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+#clientLogos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-xl;
+}
+
+/* FOOTER */
+footer {
+    padding: $spacing-xxl $spacing-xl;
+    
+    #locations {
+        grid-template-columns: repeat(3, 1fr);
+        gap: $spacing-xl;
+    }
+}

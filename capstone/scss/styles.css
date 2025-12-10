@@ -1,0 +1,565 @@
+@charset "UTF-8";
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+figure,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul, ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* SMALL SCREEN STYLES (Mobile First - 320px+) */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #2C3E50;
+  background-color: #FFFFFF;
+  line-height: 1.6;
+}
+
+#pageWrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* HEADER STYLES */
+#headerWrapper {
+  background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+header img {
+  height: 40px;
+  width: auto;
+}
+header span {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+
+/* HAMBURGER BUTTON */
+#hamburgerBtn {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+#hamburgerBtn::before {
+  content: "☰";
+}
+
+/* NAVIGATION */
+nav {
+  background-color: #ECF0F1;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 80px;
+}
+nav ul li a {
+  display: block;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+  text-decoration: none;
+  color: #2C3E50;
+  font-weight: 500;
+  transition: 0.3s ease;
+  font-size: 1.1rem;
+}
+nav ul li a:hover {
+  background-color: #E74C3C;
+  color: #FFFFFF;
+}
+nav ul li.active a {
+  background-color: #34495E;
+  color: #FFFFFF;
+}
+
+/* MOVE OVER CLASS - Activated by JavaScript */
+.moveOver #hamburgerBtn::before {
+  content: "✕";
+}
+
+.moveOver > .content {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+/* HERO VIDEO SECTION */
+#heroSection {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  overflow: hidden;
+}
+#heroSection video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#heroSection .heroOverlay {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+#heroSection .heroOverlay h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #2C3E50;
+  margin-bottom: 0.5rem;
+}
+#heroSection .heroOverlay .heroTagline {
+  font-size: 0.95rem;
+  color: #34495E;
+  line-height: 1.4;
+}
+
+/* SERVICES SECTION */
+#servicesSection {
+  padding: 3rem 1.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+#servicesSection h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #2C3E50;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* SERVICE CARDS */
+#serviceCards {
+  display: grid;
+  gap: 2rem;
+}
+#serviceCards .serviceCard {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#serviceCards .serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+#serviceCards .serviceCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+#serviceCards .serviceCard h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #2C3E50;
+  padding: 1.5rem 1.5rem 1rem;
+}
+#serviceCards .serviceCard ul {
+  padding: 0 1.5rem 1.5rem;
+  list-style-type: none;
+}
+#serviceCards .serviceCard ul li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #2C3E50;
+}
+#serviceCards .serviceCard ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #E74C3C;
+  font-weight: bold;
+}
+
+/* CLIENTS SECTION */
+#clientsSection {
+  padding: 3rem 1.5rem;
+  background-color: #ECF0F1;
+}
+#clientsSection h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #2C3E50;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#clientLogos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+#clientLogos img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+#clientLogos img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+  color: #FFFFFF;
+  padding: 3rem 1.5rem;
+}
+footer #footerContent {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+footer .contactInfo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+footer .contactInfo .phoneNumber a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+footer .contactInfo .phoneNumber a:hover {
+  color: #E74C3C;
+}
+footer #locations {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+footer #locations .locationCard {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+}
+footer #locations .locationCard h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+footer #locations .locationCard address {
+  font-style: normal;
+  line-height: 1.6;
+  padding-left: 1.5rem;
+}
+footer .copyright {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1.5rem;
+}
+
+/* MEDIUM MEDIA QUERY (600px+) */
+@media only screen and (min-width: 600px) {
+  /* MEDIUM SCREEN STYLES (Tablets - 600px+) */
+  header {
+    padding: 1.5rem 2rem;
+  }
+  header img {
+    height: 50px;
+  }
+  header span {
+    font-size: 1.5rem;
+  }
+  /* NAVIGATION - Keep hamburger but reduce width */
+  nav {
+    width: 280px;
+  }
+  .moveOver > .content {
+    transform: translateX(-280px);
+  }
+  /* HERO VIDEO SECTION */
+  #heroSection {
+    height: 65vh;
+    min-height: 450px;
+  }
+  #heroSection .heroOverlay {
+    left: 3rem;
+    right: auto;
+    max-width: 400px;
+    padding: 3rem;
+  }
+  #heroSection .heroOverlay h1 {
+    font-size: 2.5rem;
+  }
+  #heroSection .heroOverlay .heroTagline {
+    font-size: 1.1rem;
+  }
+  /* SERVICES SECTION */
+  #servicesSection {
+    padding: 4rem 3rem;
+  }
+  #servicesSection h2 {
+    font-size: 2.5rem;
+  }
+  /* SERVICE CARDS - 2 columns */
+  #serviceCards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  #serviceCards .serviceCard img {
+    height: 220px;
+  }
+  #serviceCards .serviceCard h3 {
+    font-size: 1.6rem;
+  }
+  /* CLIENTS SECTION */
+  #clientsSection {
+    padding: 4rem 3rem;
+  }
+  #clientsSection h2 {
+    font-size: 2.5rem;
+  }
+  #clientLogos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+  /* FOOTER */
+  footer {
+    padding: 4rem 3rem;
+  }
+  footer #locations {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+/* LARGE MEDIA QUERY (1000px+) */
+@media only screen and (min-width: 1000px) {
+  /* LARGE SCREEN STYLES (Desktop - 1000px+) */
+  /* NAVIGATION - Hide hamburger, show horizontal nav */
+  #hamburgerBtn {
+    display: none;
+  }
+  .moveOver > .content {
+    transform: translateX(0px);
+  }
+  nav {
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: static;
+    transform: translateX(0);
+    width: auto;
+    box-shadow: none;
+    display: block;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+    gap: 0.5rem;
+  }
+  nav ul li a {
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+  }
+  nav ul li.active a {
+    background-color: #E74C3C;
+    color: #FFFFFF;
+  }
+  header {
+    padding: 2rem 3rem;
+  }
+  header img {
+    height: 60px;
+  }
+  header span {
+    font-size: 1.8rem;
+  }
+  /* HERO VIDEO SECTION */
+  #heroSection {
+    height: 70vh;
+    min-height: 500px;
+  }
+  #heroSection .heroOverlay {
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 4rem;
+    top: auto;
+    max-width: 600px;
+    padding: 4rem;
+  }
+  #heroSection .heroOverlay h1 {
+    font-size: 3rem;
+  }
+  #heroSection .heroOverlay .heroTagline {
+    font-size: 1.2rem;
+  }
+  /* SERVICES SECTION */
+  #servicesSection {
+    padding: 4rem;
+  }
+  #servicesSection h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+  /* SERVICE CARDS - 4 columns */
+  #serviceCards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  #serviceCards .serviceCard img {
+    height: 180px;
+  }
+  #serviceCards .serviceCard h3 {
+    font-size: 1.4rem;
+  }
+  #serviceCards .serviceCard ul li {
+    font-size: 0.95rem;
+  }
+  /* CLIENTS SECTION */
+  #clientsSection {
+    padding: 4rem;
+  }
+  #clientsSection h2 {
+    font-size: 3rem;
+  }
+  #clientLogos {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3rem;
+    padding: 0 2rem;
+  }
+  /* FOOTER */
+  footer {
+    padding: 4rem;
+  }
+  footer .contactInfo {
+    margin-bottom: 3rem;
+  }
+  footer .contactInfo .phoneNumber a {
+    font-size: 1.4rem;
+  }
+  footer #locations {
+    margin-bottom: 3rem;
+  }
+  footer #locations .locationCard {
+    padding: 2rem;
+  }
+  footer #locations .locationCard h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

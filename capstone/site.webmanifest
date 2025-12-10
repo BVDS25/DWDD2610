@@ -1,0 +1,16 @@
+{
+    "name": "Floor Designs",
+    "short_name": "Floor Designs",
+    "description": "Professional design, branding, development, and marketing services",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#2C3E50",
+    "icons": [
+        {
+            "src": "images/logo1x.webp",
+            "sizes": "192x192",
+            "type": "image/webp"
+        }
+    ]
+}
