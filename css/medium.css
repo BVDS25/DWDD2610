@@ -1,0 +1,57 @@
+/* MEDIUM SCREEN STYLES (Tablets - 600px+) */
+
+@media only screen and (min-width: 600px) {
+    header {
+        padding: 3rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        flex: 1;
+        min-width: 250px;
+        margin-bottom: 0;
+    }
+
+    header img {
+        width: 70px;
+        height: 70px;
+    }
+
+    main h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .assignments {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .assignments a {
+        padding: 2rem;
+        font-size: 1.15rem;
+        flex-direction: column;
+        text-align: center;
+        min-height: 140px;
+        justify-content: center;
+        border-left: none;
+        border-top: 4px solid #667eea;
+        border-radius: 16px;
+    }
+
+    .assignments a:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 16px 40px rgba(102, 126, 234, 0.35);
+        border-top-color: #764ba2;
+    }
+
+    main > p {
+        font-size: 1.2rem;
+    }
+}
